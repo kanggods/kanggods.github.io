@@ -64,6 +64,48 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Java基础知识点" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/14/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" class="article-date">
+  <time datetime="2020-07-14T12:37:00.000Z" itemprop="datePublished">2020-07-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/14/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">Java基础知识点</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java类对象"><a href="#Java类对象" class="headerlink" title="Java类对象"></a>Java类对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* public 修饰的类名必须是文件名</span><br><span class="line">* 类中有且只有吴大成分</span><br><span class="line">* 1成员变量</span><br><span class="line">* 2成员方法</span><br><span class="line">* 3构造器（Constructor）初始化一个类对象返回引用</span><br><span class="line">* 4代码块</span><br><span class="line">* 5内部类</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">面向对象的三大特征，封装，继承，多态</span><br><span class="line">封装作用：</span><br><span class="line">1 提高安全性</span><br><span class="line">2 可以实现代码的组件化</span><br><span class="line"></span><br><span class="line">封装规范：</span><br><span class="line">1.建议成员变量私有：用private修饰</span><br><span class="line">private修饰的方法，成员变量，构造器只能在本类被直接访问</span><br><span class="line">2.提供getter setter方法暴露成员变量取值</span><br><span class="line"></span><br><span class="line">小结：</span><br><span class="line">成员变量私有：合理隐藏和暴露</span><br><span class="line">封装是java代码的特点.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Static &#x3D; 静态 &#x3D; 修饰的成员*（方法和变量） 属于类本身的。</span><br><span class="line">按照有无static 修饰，成员变量和方法可以分为“</span><br><span class="line">成员变量：  </span><br><span class="line">1.静态成员变量（类变量）：</span><br><span class="line">   有static修饰的成员变量称为静态成员变量属于类本身的。直接用类名访问即可。</span><br><span class="line">2.实例成员变量</span><br><span class="line">  无static 修饰的成员变量实例属于每个对象的。无需类的对象来访问。</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/14/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" data-id="ckcoskr7z0000lgvp8q37eazr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Spring学习" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/07/14/Spring%E5%AD%A6%E4%B9%A0/" class="article-date">
@@ -103,6 +145,8 @@
 <p>导入jar包</p>
 <h5 id="5-创建Spring配置文件"><a href="#5-创建Spring配置文件" class="headerlink" title="5 创建Spring配置文件"></a>5 创建Spring配置文件</h5><p> Spring 配置文件是XML格式</p>
 <p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200714144033651.png" alt="image-20200714144033651"></p>
+<h1 id="2、控制反转IOC"><a href="#2、控制反转IOC" class="headerlink" title="2、控制反转IOC"></a>2、控制反转IOC</h1><p>1、把对象的创建和对象之间的调用过程都交给Spring进行管理。为了降低耦合度。</p>
+<h6 id="1、IOC底层原理"><a href="#1、IOC底层原理" class="headerlink" title="1、IOC底层原理"></a>1、IOC底层原理</h6><p>（1）xml解析、工厂模式、反射</p>
 
       
     </div>
@@ -270,6 +314,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/07/14/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">Java基础知识点</a>
+          </li>
         
           <li>
             <a href="/2020/07/14/Spring%E5%AD%A6%E4%B9%A0/">Spring学习</a>
