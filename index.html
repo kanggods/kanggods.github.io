@@ -64,6 +64,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JAVA-基本-API" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/19/JAVA-%E5%9F%BA%E6%9C%AC-API/" class="article-date">
+  <time datetime="2020-07-19T06:49:49.000Z" itemprop="datePublished">2020-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/19/JAVA-%E5%9F%BA%E6%9C%AC-API/">JAVA 基本 API</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">toString 是用来重写的。子类默认继承Object</span><br></pre></td></tr></table></figure>
+
+<h3 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">日期toString</span><br><span class="line">时间毫秒：getTime</span><br><span class="line">  用于代码执行性能分析。</span><br><span class="line">   SimpleDateFormat s &#x3D; new SimpleDateFormat(&quot;&quot;);</span><br><span class="line">Date and Time Pattern  Result  </span><br><span class="line">&quot;yyyy.MM.dd G &#39;at&#39; HH:mm:ss z&quot;  2001.07.04 AD at 12:08:56 PDT </span><br><span class="line">&quot;EEE, MMM d, &#39;&#39;yy&quot;  Wed, Jul 4, &#39;01  </span><br><span class="line">&quot;h:mm a&quot;  12:08 PM  </span><br><span class="line">&quot;hh &#39;o&#39;&#39;clock&#39; a, zzzz&quot;  12 o&#39;clock PM, Pacific Daylight Time </span><br><span class="line">&quot;K:mm a, z&quot;  0:08 PM, PDT  </span><br><span class="line">&quot;yyyyy.MMMMM.dd GGG hh:mm aaa&quot;  02001.July.04 AD 12:08 PM  </span><br><span class="line">&quot;EEE, d MMM yyyy HH:mm:ss Z&quot;  Wed, 4 Jul 2001 12:08:56 -0700  </span><br><span class="line">&quot;yyMMddHHmmssZ&quot;  010704120856-0700  </span><br><span class="line">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&quot;  2001-07-04T12:08:56.235-0700  </span><br><span class="line">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSXXX&quot;  2001-07-04T12:08:56.235-07:00 </span><br><span class="line">&quot;YYYY-&#39;W&#39;ww-u&quot;  2001-W27-3  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">        Date d &#x3D; new Date();</span><br><span class="line">        SimpleDateFormat s &#x3D; new SimpleDateFormat(&quot;yyyy年MM月dd日 EEE a HH时:mm分:ss秒&quot;);</span><br><span class="line">        System.out.println(s.format(d));</span><br><span class="line">    &#125;</span><br><span class="line">2020年07月19日 星期日 下午 15时:42分:56秒</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> parse 把格式化字符串的时间转换成日期对象Date</span><br></pre></td></tr></table></figure>
+
+<h3 id="日历对象Calendar"><a href="#日历对象Calendar" class="headerlink" title="日历对象Calendar"></a>日历对象Calendar</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不必new直接使用类</span><br></pre></td></tr></table></figure>
+
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">泛型就是标签，泛型和集合都只能支持引用数据类型，不支持基本数据类型。</span><br><span class="line">要用基本类型要转换成Inteer</span><br><span class="line"></span><br><span class="line">自定义泛型：</span><br><span class="line">    修饰符  class 类名 &lt;E、T、K、V&gt;定义泛型使用</span><br><span class="line">接口 修饰符 interface 接口名称&lt;泛型变量&gt;&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">通配符：</span><br><span class="line">？ 使用问号就可以匹配所有泛型</span><br><span class="line">泛型上下限 </span><br><span class="line">？extends Car  只能在Car里这是上限</span><br><span class="line">？super Car 必须是Car的父类。  下限</span><br></pre></td></tr></table></figure>
+
+<h3 id="集合Collection"><a href="#集合Collection" class="headerlink" title="集合Collection"></a>集合Collection</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">集合是大小可变的容器。</span><br><span class="line">数组：类型和长度一旦定义出来就固定了；</span><br><span class="line">经常对元素进行增删改查。集合是非常合适的。</span><br><span class="line">集合特点：</span><br><span class="line">Set 系列集合：添加的元素是无序，不重复，无索引的。</span><br><span class="line"> -- HashSet:添加的元素是无序，不重复，无索引的。</span><br><span class="line"> -- LinkedHashSet 添加的元素是有序，不重复，无索引的。</span><br><span class="line"> -- TreeSet 不重复，无索引的。按照大小默认升序排列！</span><br><span class="line"> List 系列:添加的元素有序，可重复，索引。</span><br><span class="line">  --ArrayList：添加的元素是有序，可重复，有索引的。</span><br><span class="line">  --LinekdList 添加的元素是有序，可重复，有索引的。</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/19/JAVA-%E5%9F%BA%E6%9C%AC-API/" data-id="ckcu59ag00000r8vp4695e1b0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Java基础知识点" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/07/14/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" class="article-date">
@@ -97,6 +143,16 @@
 <h3 id="Abstract抽象类的基本准则"><a href="#Abstract抽象类的基本准则" class="headerlink" title="Abstract抽象类的基本准则"></a>Abstract抽象类的基本准则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">抽象类存在的意义：</span><br><span class="line">1；抽象类就是为了被子类继承 就是为了派生子类，否则抽象类毫无意义！</span><br><span class="line">2；抽象类体现的是模板思想，部分实现 ，部分抽象，可以设计模板设计模式（总共有24种设计模式）</span><br><span class="line">模板设计模式&#123;</span><br><span class="line">优化代码架构，提高代码复用。相同功能代码无需反复书写。</span><br><span class="line">可以做到部分实现，部分抽象。抽象的东西交给使用模板的人重写实现、</span><br><span class="line">&#125;</span><br><span class="line">3.抽象类不能创建对象。</span><br><span class="line">4.抽象类一定有而且有构造器</span><br><span class="line">5.抽象类的子类，必须重写抽象父类中所有的抽象方法。</span><br></pre></td></tr></table></figure>
 
 <h4 id="接口interface"><a href="#接口interface" class="headerlink" title="接口interface"></a>接口interface</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">接口不能创建对象。接口中只有常量和抽象方法（JDK1.8之前）</span><br><span class="line">修饰符 interface 接口名称&#123;</span><br><span class="line">&#x2F;&#x2F;抽象方法</span><br><span class="line">&#125;</span><br><span class="line">public 缺省（可以省略public abstarct 不写默认加上） 声明 interface</span><br><span class="line">接口名称满足驼峰模式</span><br><span class="line">public static final String MY_NAME &#x3D; &quot;常量&quot;;</span><br><span class="line">建议名称字母全部大写。多个单词用—_链接,接口可以默认不写public static final</span><br><span class="line"></span><br><span class="line">implements 实现接口,接口可以多实现，一个类实现接口必须重写完接口中全部的抽象方法。</span><br></pre></td></tr></table></figure>
+
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">静态代码块，实例代码块</span><br><span class="line">静态格式</span><br><span class="line">static&#123;</span><br><span class="line"> 必须用static修饰。属于类。会与类一起优先加载，会自动触发执行。</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">多态的优点</span><br><span class="line">1. 消除类型之间的耦合关系</span><br><span class="line">2. 可替换性</span><br><span class="line">3. 可扩充性</span><br><span class="line">4. 接口性</span><br><span class="line">5. 灵活性</span><br><span class="line">6. 简化性</span><br><span class="line">多态存在的三个必要条件</span><br><span class="line">继承</span><br><span class="line">重写</span><br><span class="line">父类引用指向子类对象</span><br></pre></td></tr></table></figure>
+
+<p>内部类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">静态内部类  实例内部类 局部内部类。</span><br><span class="line">Public class InnerClass&#123;</span><br><span class="line">( 权限修饰符 ) class inner&#123;</span><br><span class="line">    public inner()&#123;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">InnerClass.inner i &#x3D; new Innercalss.inner();</span><br><span class="line"></span><br><span class="line">静态内部类可以访问外部静态类</span><br><span class="line">静态内部类不可以访问外部实例；</span><br></pre></td></tr></table></figure>
+
+<p>权限修饰符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">				private  缺省  protected public</span><br><span class="line">本类中                  </span><br><span class="line">本包下其他类中     X</span><br><span class="line">其他包下的类汇总   X        X       X </span><br><span class="line">其他包下的子类中   X        X</span><br></pre></td></tr></table></figure>
 
 
       
@@ -158,81 +214,6 @@
     </div>
     <footer class="article-footer">
       <a data-url="http://yoursite.com/2020/07/14/Spring%E5%AD%A6%E4%B9%A0/" data-id="ckclhxdo20000c0vp00k769x7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-我的第一个博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time datetime="2020-07-13T06:36:17.000Z" itemprop="datePublished">2020-07-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">我的第一个博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" data-id="ckck53rzz0000ssvpb0u1bdoc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-我的第二篇文章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/" class="article-date">
-  <time datetime="2020-07-13T06:36:17.000Z" itemprop="datePublished">2020-07-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/">我的第二篇博客文章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>关于你</p>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>关于我</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/" data-id="ckck56bn40001ssvpfj5x3eeo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -322,19 +303,15 @@
       <ul>
         
           <li>
+            <a href="/2020/07/19/JAVA-%E5%9F%BA%E6%9C%AC-API/">JAVA 基本 API</a>
+          </li>
+        
+          <li>
             <a href="/2020/07/14/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">Java基础知识点</a>
           </li>
         
           <li>
             <a href="/2020/07/14/Spring%E5%AD%A6%E4%B9%A0/">Spring学习</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">我的第一个博客</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/">我的第二篇博客文章</a>
           </li>
         
           <li>

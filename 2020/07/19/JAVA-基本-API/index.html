@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>JAVA 基本 API | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="toString1toString 是用来重写的。子类默认继承Object  Date123456789101112131415161718192021222324252627日期toString时间毫秒：getTime  用于代码执行性能分析。   SimpleDateFormat s &#x3D; new SimpleDateFormat(&quot;&quot;);Date and Time">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA 基本 API">
+<meta property="og:url" content="http://yoursite.com/2020/07/19/JAVA-%E5%9F%BA%E6%9C%AC-API/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="toString1toString 是用来重写的。子类默认继承Object  Date123456789101112131415161718192021222324252627日期toString时间毫秒：getTime  用于代码执行性能分析。   SimpleDateFormat s &#x3D; new SimpleDateFormat(&quot;&quot;);Date and Time">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-19T06:49:49.000Z">
+<meta property="article:modified_time" content="2020-07-20T06:43:06.345Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JAVA-基本-API" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/19/JAVA-%E5%9F%BA%E6%9C%AC-API/" class="article-date">
+  <time datetime="2020-07-19T06:49:49.000Z" itemprop="datePublished">2020-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JAVA 基本 API
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">toString 是用来重写的。子类默认继承Object</span><br></pre></td></tr></table></figure>
+
+<h3 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">日期toString</span><br><span class="line">时间毫秒：getTime</span><br><span class="line">  用于代码执行性能分析。</span><br><span class="line">   SimpleDateFormat s &#x3D; new SimpleDateFormat(&quot;&quot;);</span><br><span class="line">Date and Time Pattern  Result  </span><br><span class="line">&quot;yyyy.MM.dd G &#39;at&#39; HH:mm:ss z&quot;  2001.07.04 AD at 12:08:56 PDT </span><br><span class="line">&quot;EEE, MMM d, &#39;&#39;yy&quot;  Wed, Jul 4, &#39;01  </span><br><span class="line">&quot;h:mm a&quot;  12:08 PM  </span><br><span class="line">&quot;hh &#39;o&#39;&#39;clock&#39; a, zzzz&quot;  12 o&#39;clock PM, Pacific Daylight Time </span><br><span class="line">&quot;K:mm a, z&quot;  0:08 PM, PDT  </span><br><span class="line">&quot;yyyyy.MMMMM.dd GGG hh:mm aaa&quot;  02001.July.04 AD 12:08 PM  </span><br><span class="line">&quot;EEE, d MMM yyyy HH:mm:ss Z&quot;  Wed, 4 Jul 2001 12:08:56 -0700  </span><br><span class="line">&quot;yyMMddHHmmssZ&quot;  010704120856-0700  </span><br><span class="line">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&quot;  2001-07-04T12:08:56.235-0700  </span><br><span class="line">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSXXX&quot;  2001-07-04T12:08:56.235-07:00 </span><br><span class="line">&quot;YYYY-&#39;W&#39;ww-u&quot;  2001-W27-3  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">        Date d &#x3D; new Date();</span><br><span class="line">        SimpleDateFormat s &#x3D; new SimpleDateFormat(&quot;yyyy年MM月dd日 EEE a HH时:mm分:ss秒&quot;);</span><br><span class="line">        System.out.println(s.format(d));</span><br><span class="line">    &#125;</span><br><span class="line">2020年07月19日 星期日 下午 15时:42分:56秒</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> parse 把格式化字符串的时间转换成日期对象Date</span><br></pre></td></tr></table></figure>
+
+<h3 id="日历对象Calendar"><a href="#日历对象Calendar" class="headerlink" title="日历对象Calendar"></a>日历对象Calendar</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不必new直接使用类</span><br></pre></td></tr></table></figure>
+
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">泛型就是标签，泛型和集合都只能支持引用数据类型，不支持基本数据类型。</span><br><span class="line">要用基本类型要转换成Inteer</span><br><span class="line"></span><br><span class="line">自定义泛型：</span><br><span class="line">    修饰符  class 类名 &lt;E、T、K、V&gt;定义泛型使用</span><br><span class="line">接口 修饰符 interface 接口名称&lt;泛型变量&gt;&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">通配符：</span><br><span class="line">？ 使用问号就可以匹配所有泛型</span><br><span class="line">泛型上下限 </span><br><span class="line">？extends Car  只能在Car里这是上限</span><br><span class="line">？super Car 必须是Car的父类。  下限</span><br></pre></td></tr></table></figure>
+
+<h3 id="集合Collection"><a href="#集合Collection" class="headerlink" title="集合Collection"></a>集合Collection</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">集合是大小可变的容器。</span><br><span class="line">数组：类型和长度一旦定义出来就固定了；</span><br><span class="line">经常对元素进行增删改查。集合是非常合适的。</span><br><span class="line">集合特点：</span><br><span class="line">Set 系列集合：添加的元素是无序，不重复，无索引的。</span><br><span class="line"> -- HashSet:添加的元素是无序，不重复，无索引的。</span><br><span class="line"> -- LinkedHashSet 添加的元素是有序，不重复，无索引的。</span><br><span class="line"> -- TreeSet 不重复，无索引的。按照大小默认升序排列！</span><br><span class="line"> List 系列:添加的元素有序，可重复，索引。</span><br><span class="line">  --ArrayList：添加的元素是有序，可重复，有索引的。</span><br><span class="line">  --LinekdList 添加的元素是有序，可重复，有索引的。</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/19/JAVA-%E5%9F%BA%E6%9C%AC-API/" data-id="ckcu59ag00000r8vp4695e1b0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/14/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java基础知识点</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/19/JAVA-%E5%9F%BA%E6%9C%AC-API/">JAVA 基本 API</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/14/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">Java基础知识点</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/14/Spring%E5%AD%A6%E4%B9%A0/">Spring学习</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/13/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
