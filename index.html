@@ -154,6 +154,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Map实现图书管理系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/23/Map%E5%AE%9E%E7%8E%B0%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">Map实现图书管理系统</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/23/Map%E5%AE%9E%E7%8E%B0%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
+  	<time datetime="2020-07-23T07:27:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Book类"><a href="#Book类" class="headerlink" title="Book类"></a>Book类</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">package 图书管理系统;</span><br><span class="line"></span><br><span class="line">public class Book &#123;</span><br><span class="line">    private String bookname;</span><br><span class="line">    private double bookprice;</span><br><span class="line">    private String author;</span><br><span class="line"></span><br><span class="line">    public Book(String bookname, double bookprice, String author) &#123;</span><br><span class="line">        this.bookname &#x3D; bookname;</span><br><span class="line">        this.bookprice &#x3D; bookprice;</span><br><span class="line">        this.author &#x3D; author;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getBookname() &#123;</span><br><span class="line">        return bookname;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setBookname(String bookname) &#123;</span><br><span class="line">        this.bookname &#x3D; bookname;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public double getBookprice() &#123;</span><br><span class="line">        return bookprice;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setBookprice(double bookprice) &#123;</span><br><span class="line">        this.bookprice &#x3D; bookprice;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getAuthor() &#123;</span><br><span class="line">        return author;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setAuthor(String author) &#123;</span><br><span class="line">        this.author &#x3D; author;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Book&#123;&quot; +</span><br><span class="line">                &quot;bookname&#x3D;&#39;&quot; + bookname + &#39;\&#39;&#39; +</span><br><span class="line">                &quot;, bookprice&#x3D;&quot; + bookprice +</span><br><span class="line">                &quot;, author&#x3D;&#39;&quot; + author + &#39;\&#39;&#39; +</span><br><span class="line">                &#39;&#125;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="增删改查实现"><a href="#增删改查实现" class="headerlink" title="增删改查实现"></a>增删改查实现</h1><h2 id="增（add）"><a href="#增（add）" class="headerlink" title="增（add）"></a>增（add）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">private static void addBook() &#123;</span><br><span class="line">    System.out.println(&quot;添加书本&quot;);</span><br><span class="line">    System.out.println(&quot;请添加书本的分类信息&quot;);</span><br><span class="line">    &#x2F;&#x2F;1判断是否存在该分类。</span><br><span class="line">    String type &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">    List&lt;Book&gt; books &#x3D; null;</span><br><span class="line">    if(BOOK_STORE.containsKey(type))&#123;</span><br><span class="line">        books &#x3D; BOOK_STORE.get(type);</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        &#x2F;&#x2F;不存在</span><br><span class="line">       &#x2F;&#x2F;把用户输入的录入到书本对象中.细节强制转换类型，让书本价格成为Double</span><br><span class="line">        books &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">        BOOK_STORE.put(type,books);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(&quot;类型&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;书名&#x3D;&#x3D;&#x3D;&#x3D;价格&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;作者&quot;);</span><br><span class="line">    System.out.println(&quot;请输入您的书本信息&quot;);</span><br><span class="line">    String bookname &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">    System.out.println(&quot;请输入书本价格&quot;);</span><br><span class="line">    String bookprice &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">    System.out.println(&quot;请输入书本作者&quot;);</span><br><span class="line">    String author &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">    Book book &#x3D; new Book(bookname,Double.valueOf(bookprice),author);</span><br><span class="line">    books.add(book);</span><br><span class="line">    System.out.println(&quot;你添加在&quot;+type+&quot;的书&quot;+book.getBookname()+&quot;成功&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除-delete"><a href="#删除-delete" class="headerlink" title="删除(delete)"></a>删除(delete)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">private static void deleteBook() &#123;</span><br><span class="line">    queryBooks();</span><br><span class="line">    System.out.println(&quot;&#x3D;&#x3D;&#x3D;欢迎进入删除图书系统&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">    System.out.println(&quot;请输入图书类型&quot;);</span><br><span class="line">    String type &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">    if(BOOK_STORE.containsKey(type))&#123;</span><br><span class="line">      while (true)&#123;</span><br><span class="line">          System.out.println(&quot;请输入删除书籍名称&quot;);</span><br><span class="line">          String bookname &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">          Book book &#x3D; getBookByTypeAndName(type,bookname);</span><br><span class="line">          if (book&#x3D;&#x3D;null)&#123;</span><br><span class="line">              System.err.println(&quot;没得这本书&quot;);</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">              List&lt;Book&gt; books &#x3D; BOOK_STORE.get(type);</span><br><span class="line">              books.remove(book);</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        System.err.println(&quot;没有此分类&quot;);</span><br><span class="line">        deleteBook();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查query"><a href="#查query" class="headerlink" title="查query"></a>查query</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">private static void queryBooks() &#123;</span><br><span class="line">    System.out.println(&quot;&#x3D;&#x3D;&#x3D;欢迎进入查询书本系统&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">    System.out.println(&quot;类型\t\t\t\t\t书名\t\t\t\t\t价格\t\t\t\t\t作者&quot;);</span><br><span class="line">    BOOK_STORE.forEach((type,books)-&gt;&#123;</span><br><span class="line">        System.out.println(type);</span><br><span class="line">        for (Book book : books)&#123;</span><br><span class="line">            System.out.println(&quot;\t\t\t\t&quot;+book.getBookname()+&quot;\t\t\t\t&quot;+book.getBookprice()+&quot;\t\t\t\t&quot;+book.getAuthor());</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="改（update）"><a href="#改（update）" class="headerlink" title="改（update）"></a>改（update）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">private static void qudateBook() &#123;</span><br><span class="line">    queryBooks();</span><br><span class="line">    System.out.println(&quot;&#x3D;&#x3D;&#x3D;欢迎进入修改图书系统&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">    System.out.println(&quot;&#x3D;&#x3D;&#x3D;欢请输入修改蓝门&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">    String type &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">    if(BOOK_STORE.containsKey(type))&#123;</span><br><span class="line">        System.out.println(&quot;&#x3D;&#x3D;&#x3D;请输入修改书名&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">        String name &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">        Book book &#x3D; getBookByTypeAndName(type,name);</span><br><span class="line">        if (book&#x3D;&#x3D;null)&#123;</span><br><span class="line">            System.err.println(&quot;你的栏目不纯在&quot;);</span><br><span class="line">            qudateBook();</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            System.out.println(&quot;请输入您的修改书本信息&quot;);</span><br><span class="line">            String newBookName &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">            System.out.println(&quot;请输入新书本价格&quot;);</span><br><span class="line">            String newBookPrice &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">            System.out.println(&quot;请输入新书本作者&quot;);</span><br><span class="line">            String newAuthor &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">            book.setBookname(newBookName);</span><br><span class="line">            book.setBookprice(Double.valueOf(newBookPrice));</span><br><span class="line">            book.setAuthor(newAuthor);</span><br><span class="line">            queryBooks();</span><br><span class="line">            System.out.println(&quot;修改成功&quot;);</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        System.err.println(&quot;你的栏目不纯在&quot;);</span><br><span class="line">        qudateBook();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取链表中书名-getBookByTypeAndName"><a href="#获取链表中书名-getBookByTypeAndName" class="headerlink" title="获取链表中书名(getBookByTypeAndName)"></a>获取链表中书名(getBookByTypeAndName)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public static Book getBookByTypeAndName(String type,String name)&#123;</span><br><span class="line">    List&lt;Book&gt; books &#x3D; BOOK_STORE.get(type);</span><br><span class="line">    for (Book book:books)&#123;</span><br><span class="line">        if (book.getBookname().equals(name))&#123;</span><br><span class="line">            return book;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="全体变量及菜单"><a href="#全体变量及菜单" class="headerlink" title="全体变量及菜单"></a>全体变量及菜单</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">public static final Map&lt;String, List&lt;Book&gt;&gt; BOOK_STORE &#x3D; new HashMap&lt;&gt;();</span><br><span class="line">public static final Scanner SYS_CANNER &#x3D; new Scanner(System.in);</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    showCommand();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private static void showCommand() &#123;</span><br><span class="line">    System.out.println(&quot;&#x3D;&#x3D;&#x3D;欢迎进入系统&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">    System.out.println(&quot;1,查看全部图书.query&quot;);</span><br><span class="line">    System.out.println(&quot;2,推荐全部图书.add&quot;);</span><br><span class="line">    System.out.println(&quot;3,删除全部图书.delete&quot;);</span><br><span class="line">    System.out.println(&quot;4,修改全部图书.update&quot;);</span><br><span class="line">    System.out.println(&quot;5,退出全部图书.exit&quot;);</span><br><span class="line">    System.out.print(&quot;请你输入操作系统：&quot;);</span><br><span class="line">    String command &#x3D; SYS_CANNER.nextLine();</span><br><span class="line">    switch (command)&#123;</span><br><span class="line">        case &quot;query&quot;:</span><br><span class="line">            queryBooks();</span><br><span class="line">            break;</span><br><span class="line">        case &quot;add&quot;:</span><br><span class="line">            addBook();</span><br><span class="line">            break;</span><br><span class="line">        case &quot;delete&quot;:</span><br><span class="line">            deleteBook();</span><br><span class="line">            break;</span><br><span class="line">        case &quot;update&quot;:</span><br><span class="line">            qudateBook();</span><br><span class="line">            break;</span><br><span class="line">        case &quot;exit&quot;:</span><br><span class="line">            System.out.println(&quot;欢迎下次使用&quot;);</span><br><span class="line">            System.exit(0);</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            System.out.println(&quot;请不要瞎搞&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    showCommand();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/23/Map%E5%AE%9E%E7%8E%B0%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-list斗地主综合应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -324,13 +398,15 @@
 
 <h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">泛型就是标签，泛型和集合都只能支持引用数据类型，不支持基本数据类型。</span><br><span class="line">要用基本类型要转换成Inteer</span><br><span class="line"></span><br><span class="line">自定义泛型：</span><br><span class="line">    修饰符  class 类名 &lt;E、T、K、V&gt;定义泛型使用</span><br><span class="line">接口 修饰符 interface 接口名称&lt;泛型变量&gt;&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">通配符：</span><br><span class="line">？ 使用问号就可以匹配所有泛型</span><br><span class="line">泛型上下限 </span><br><span class="line">？extends Car  只能在Car里这是上限</span><br><span class="line">？super Car 必须是Car的父类。  下限</span><br></pre></td></tr></table></figure>
 
-<h2 id="集合Collection"><a href="#集合Collection" class="headerlink" title="集合Collection"></a>集合Collection</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">集合是大小可变的容器。</span><br><span class="line">数组：类型和长度一旦定义出来就固定了；</span><br><span class="line">经常对元素进行增删改查。集合是非常合适的。</span><br><span class="line">集合特点：</span><br><span class="line">Set 系列集合：添加的元素是无序，不重复，无索引的。</span><br><span class="line"> -- HashSet:添加的元素是无序，不重复，无索引的。</span><br><span class="line"> -- LinkedHashSet 添加的元素是有序，不重复，无索引的。</span><br><span class="line"> -- TreeSet 不重复，无索引的。按照大小默认升序排列！</span><br><span class="line"> List 系列:添加的元素有序，可重复，索引。</span><br><span class="line">  --ArrayList：添加的元素是有序，可重复，有索引的。</span><br><span class="line">  --LinekdList 添加的元素是有序，可重复，有索引的。</span><br></pre></td></tr></table></figure>
+<h2 id="集合Collection"><a href="#集合Collection" class="headerlink" title="集合Collection"></a>集合Collection</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">集合是大小可变的容器。</span><br><span class="line">数组：类型和长度一旦定义出来就固定了；</span><br><span class="line">经常对元素进行增删改查。集合是非常合适的。</span><br><span class="line">集合特点：</span><br><span class="line">Set 系列集合：添加的元素是无序，不重复，无索引的。</span><br><span class="line"> -- HashSet:添加的元素是无序，不重复，无索引的。</span><br><span class="line"> -- LinkedHashSet 添加的元素是有序，不重复，无索引的。</span><br><span class="line"> -- TreeSet 不重复，无索引的。按照大小默认升序排列！</span><br><span class="line">List 系列:添加的元素有序，可重复，索引。</span><br><span class="line">  --ArrayList：添加的元素是有序，可重复，有索引的。</span><br><span class="line">  --LinekdList 添加的元素是有序，可重复，有索引的。</span><br><span class="line">Map 系列添加的元素是无序，不重复，无索引的。</span><br><span class="line">--LinekdHashMap 元素是有序，不重复，无索引的</span><br><span class="line">--Map集合后面重复的键对应的元素会覆盖前面的整个元素‘</span><br><span class="line">--Map集合的值是无要求的</span><br><span class="line">--Map键值对都可以为null</span><br></pre></td></tr></table></figure>
 
 <h3 id="为什么Set存在是去重复的"><a href="#为什么Set存在是去重复的" class="headerlink" title="为什么Set存在是去重复的"></a>为什么Set存在是去重复的</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Set集合会让两两对象。先调用自己的hashCode（）方法得到彼此的哈希值（内存地址）</span><br><span class="line">然后比较两个对象的哈希值是否相同，如果不相同直接仍未两个对象不重复。如果相同会继续表equals比较内容是否相同。</span><br></pre></td></tr></table></figure>
 
 <h3 id="为什么Set存储无序"><a href="#为什么Set存储无序" class="headerlink" title="为什么Set存储无序"></a>为什么Set存储无序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">哈希表：</span><br><span class="line">    哈希表&#x3D;数组+链表+红黑树+（哈希算法）；</span><br><span class="line">     对象索引位置&#x3D;哈希值%底层数值长度</span><br><span class="line">     再把该元素存入到索引位置</span><br></pre></td></tr></table></figure>
 
 <h3 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--有特征的元素直接刻印用升序排序</span><br><span class="line">--字符串类型的元素会按照首字符的编号排序</span><br><span class="line">--对于自定义的引用数据类型，TreeSet默认无法排序。执行报错</span><br></pre></td></tr></table></figure>
+
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">map结合。Collection集合</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; names &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">Set&lt;String&gt; names &#x3D; new HashSet&lt;&gt;();</span><br><span class="line">Map&lt;String,String&gt; names &#x3D; new HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">map遍历方式</span><br><span class="line">1.键找值</span><br><span class="line">2.键值对</span><br><span class="line">3.lambda表达式</span><br><span class="line"></span><br><span class="line">  map.forEach((k,v)-&gt;&#123;</span><br><span class="line">            System.out.println(k+&quot;&#x3D;&quot;+v);</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
 
 
       
@@ -509,81 +585,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/07/14/Spring%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/13/hello-world/" class="archive-article-date">
-  	<time datetime="2020-07-13T06:01:48.763Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/13/hello-world/">展开全文 >></a>
         </p>
       
 
