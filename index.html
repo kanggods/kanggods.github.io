@@ -154,6 +154,136 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-8.31日志" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/31/8.31%E6%97%A5%E5%BF%97/">8.31日志</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/31/8.31%E6%97%A5%E5%BF%97/" class="archive-article-date">
+  	<time datetime="2020-08-31T08:56:29.764Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>2020.08.31</code><br>##实训大纲<br>######1.SSM框架<br>###JavaSe:<br>1.对象的基本概念:封装继承多态；<br>2.集合：ArrayList hashMap LinkedList<br>3.IO流：NIO 上传下载<br>4.线程：<br>5.Socket:网络编程 多人聊天室</p>
+<p>###JavaWeb<br>1.servlet<br>2.jsp<br>3.JDBC (Mybatis)<br>4.框架 SSM (spring springmvc (Hibernate) Mybatis)<br>5.springboot + mybatis<br>6.springCould 微服务<br>7.layui Vue 前端框架</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/31/8.31%E6%97%A5%E5%BF%97/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-注解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/31/%E6%B3%A8%E8%A7%A3/">注解</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/31/%E6%B3%A8%E8%A7%A3/" class="archive-article-date">
+  	<time datetime="2020-08-31T04:15:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Component表示Student 已经被我Spring接管了。</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class Student &#123;</span><br><span class="line">  private String name;</span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Value(&quot;ymk&quot;)</span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Student&#123;&quot; +</span><br><span class="line">                &quot;name&#x3D;&#39;&quot; + name + &#39;\&#39;&#39; +</span><br><span class="line">                &#39;&#125;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">配置文件</span><br><span class="line">@Configuration</span><br><span class="line">public class KangConfig &#123;</span><br><span class="line">    @Bean</span><br><span class="line">    public Student getStudent()&#123;</span><br><span class="line">        return new Student();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">测试类</span><br><span class="line">public class MyTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        ApplicationContext context &#x3D; new AnnotationConfigApplicationContext(KangConfig.class);</span><br><span class="line">        Student student &#x3D; (Student) context.getBean(&quot;getStudent&quot;);</span><br><span class="line">        System.out.println(student.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/31/%E6%B3%A8%E8%A7%A3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-多线程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -566,6 +696,16 @@
 <h3 id="权限修饰符"><a href="#权限修饰符" class="headerlink" title="权限修饰符"></a>权限修饰符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">				private  缺省  protected public</span><br><span class="line">本类中                  </span><br><span class="line">本包下其他类中     X</span><br><span class="line">其他包下的类汇总   X        X       X </span><br><span class="line">其他包下的子类中   X        X</span><br></pre></td></tr></table></figure>
 
 <h3 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">        Collection&lt;String&gt; coll &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">        coll.add(&quot;小灶&quot;);</span><br><span class="line">        coll.add(&quot;小明&quot;);</span><br><span class="line">        coll.add(&quot;对的&quot;);</span><br><span class="line">        System.out.println(coll);</span><br><span class="line">        &#x2F;&#x2F;迭代器专门为集合服务。</span><br><span class="line">        Iterator&lt;String&gt; it  &#x3D; coll.iterator();</span><br><span class="line">        coll.forEach(System.out::println);</span><br><span class="line">&#x2F;&#x2F;        coll.forEach(s-&gt;&#123;</span><br><span class="line">&#x2F;&#x2F;            System.out.printf(s);</span><br><span class="line">&#x2F;&#x2F;        &#125;);</span><br><span class="line">&#x2F;&#x2F;        for(String s:coll)&#123;</span><br><span class="line">&#x2F;&#x2F;            System.out.println(s);</span><br><span class="line">&#x2F;&#x2F;        &#125;</span><br><span class="line">&#x2F;&#x2F;        while (it.hasNext())&#123;</span><br><span class="line">&#x2F;&#x2F;            System.out.println(it.next());</span><br><span class="line">&#x2F;&#x2F;        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="TCP-IP协议"><a href="#TCP-IP协议" class="headerlink" title="TCP/IP协议"></a>TCP/IP协议</h1><p>t:</p>
+<p>面向连接的协议。</p>
+<p>只能由客户端主动到服务器端，服务器端接受数据。给客户端响应数据。</p>
+<p>通过三次握手连接，连接成功传输通道。</p>
+<p>通过四次挥手断开</p>
+<p>通过IO流进行数据传输。</p>
+<p>传输数据大小没有限制。</p>
+<p>面向协议，速度慢。但是是可靠的协议。 </p>
+
       
 
       
