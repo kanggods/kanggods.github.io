@@ -4,18 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>Hello World | Hexo</title>
+  <title>docker安装nacos | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="拉取docker镜像1docker pull nacos&#x2F;nacos-server:1.4.2 创建临时容器（用来拷贝配置、日志使用）1docker run -p 8848:8848 --name nacostest -d nacos&#x2F;nacos-server:1.4.2 创建文件夹1mkdir -p &#x2F;mydata&#x2F;nacos&#x2F;conf 1mkdir -p &#x2F;mydata&#x2F;nacos&#x2F;logs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://mink.yoonada.cn/2022/09/14/hello-world/index.html">
+<meta property="og:title" content="docker安装nacos">
+<meta property="og:url" content="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85nacos/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="拉取docker镜像1docker pull nacos&#x2F;nacos-server:1.4.2 创建临时容器（用来拷贝配置、日志使用）1docker run -p 8848:8848 --name nacostest -d nacos&#x2F;nacos-server:1.4.2 创建文件夹1mkdir -p &#x2F;mydata&#x2F;nacos&#x2F;conf 1mkdir -p &#x2F;mydata&#x2F;nacos&#x2F;logs">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-09-14T09:39:10.649Z">
-<meta property="article:modified_time" content="2022-09-14T09:39:10.649Z">
+<meta property="article:published_time" content="2022-07-01T03:49:11.000Z">
+<meta property="article:modified_time" content="2022-08-04T08:40:07.000Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="nacos">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -73,10 +75,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-docker安装nacos" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/09/14/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-09-14T09:39:10.649Z" itemprop="datePublished">2022-09-14</time>
+    <a href="/2022/07/01/docker%E5%AE%89%E8%A3%85nacos/" class="article-date">
+  <time class="dt-published" datetime="2022-07-01T03:49:11.000Z" itemprop="datePublished">2022-07-01</time>
 </a>
     
   </div>
@@ -87,7 +89,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Hello World
+      docker安装nacos
     </h1>
   
 
@@ -95,46 +97,44 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h2 id="拉取docker镜像"><a href="#拉取docker镜像" class="headerlink" title="拉取docker镜像"></a>拉取docker镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull nacos/nacos-server:1.4.2</span><br></pre></td></tr></table></figure>
+<h2 id="创建临时容器（用来拷贝配置、日志使用）"><a href="#创建临时容器（用来拷贝配置、日志使用）" class="headerlink" title="创建临时容器（用来拷贝配置、日志使用）"></a>创建临时容器（用来拷贝配置、日志使用）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8848:8848 --name nacostest -d nacos/nacos-server:1.4.2</span><br></pre></td></tr></table></figure>
+<h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /mydata/nacos/conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /mydata/nacos/logs</span><br></pre></td></tr></table></figure>
+<h2 id="配置文件复制"><a href="#配置文件复制" class="headerlink" title="配置文件复制"></a>配置文件复制</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp nacostest:/home/nacos/logs/ /mydata/nacos/</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp nacostest:/home/nacos/conf/ /mydata/nacos/</span><br></pre></td></tr></table></figure>
+<h2 id="删除临时容器"><a href="#删除临时容器" class="headerlink" title="删除临时容器"></a>删除临时容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop nacostest</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm nacostest</span><br></pre></td></tr></table></figure>
+<h2 id="创建并启动容器"><a href="#创建并启动容器" class="headerlink" title="创建并启动容器"></a>创建并启动容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">-e MODE=standalone \</span><br><span class="line">-e SPRING_DATASOURCE_PLATFORM=mysql \</span><br><span class="line">-e MYSQL_SERVICE_HOST=43.142.62.156 \</span><br><span class="line">-e MYSQL_SERVICE_PORT=3307 \</span><br><span class="line">-e MYSQL_SERVICE_USER=root \</span><br><span class="line">-e MYSQL_SERVICE_PASSWORD=DD123456aa \</span><br><span class="line">-e MYSQL_SERVICE_DB_NAME=nacos_config \</span><br><span class="line">-e TIME_ZONE=&#x27;Asia/Shanghai&#x27; \</span><br><span class="line">-v /mydata/nacos/logs:/home/nacos/logs \</span><br><span class="line">-v /mydata/nacos/conf:/home/nacos/conf \</span><br><span class="line">-p 8848:8848 \</span><br><span class="line">--name nacos \</span><br><span class="line">--restart=always \</span><br><span class="line">nacos/nacos-server:1.4.2</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://mink.yoonada.cn/2022/09/14/hello-world/" data-id="cl81floso000020vj6nmf338r" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85nacos/" data-id="cl81gd6ds000fskvj12cmaimk" data-title="docker安装nacos" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nacos/" rel="tag">nacos</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2022/09/14/centos7%E5%91%BD%E4%BB%A4/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/07/01/docker%E5%AE%89%E8%A3%85redis/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          centos7命令
+          docker安装redis
         
       </div>
     </a>
   
   
-    <a href="/2022/08/04/centos%E5%AE%89%E8%A3%85maven/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/07/01/docker%E5%AE%89%E8%A3%85MySQL/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">centos安装maven</div>
+      <div class="article-nav-title">docker安装MySQL</div>
     </a>
   
 </nav>
