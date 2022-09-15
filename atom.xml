@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="https://mink.yoonada.cn/atom.xml" rel="self"/>
+  
+  <link href="https://mink.yoonada.cn/"/>
+  <updated>2022-09-14T10:00:26.210Z</updated>
+  <id>https://mink.yoonada.cn/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos7命令</title>
+    <link href="https://mink.yoonada.cn/2022/09/14/centos7%E5%91%BD%E4%BB%A4/"/>
+    <id>https://mink.yoonada.cn/2022/09/14/centos7%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-09-14T10:00:05.000Z</published>
+    <updated>2022-09-14T10:00:26.210Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://mink.yoonada.cn/2022/09/14/hello-world/"/>
+    <id>https://mink.yoonada.cn/2022/09/14/hello-world/</id>
+    <published>2022-09-14T09:39:10.649Z</published>
+    <updated>2022-09-14T09:39:10.649Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>centos安装maven</title>
+    <link href="https://mink.yoonada.cn/2022/08/04/centos%E5%AE%89%E8%A3%85maven/"/>
+    <id>https://mink.yoonada.cn/2022/08/04/centos%E5%AE%89%E8%A3%85maven/</id>
+    <published>2022-08-04T07:22:00.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local</span><br></pre></td></tr></table></figure><h2 id="下载maven"><a href="#下载maven" class="headerlink" title="下载maven"></a>下载maven</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz</span><br></pre></td></tr></table></figure><h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf apache-maven-3.6.3-bin.tar.gz</span><br></pre></td></tr></table></figure><h2 id="重命名"><a href="#重命名" class="headerlink" title="重命名"></a>重命名</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv apache-maven-3.6.3 maven</span><br></pre></td></tr></table></figure><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure><h2 id="添加配置"><a href="#添加配置" class="headerlink" title="添加配置"></a>添加配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/usr/local/maven/bin:$PATH</span><br></pre></td></tr></table></figure><h2 id="重新加载配置"><a href="#重新加载配置" class="headerlink" title="重新加载配置"></a>重新加载配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure><h2 id="验证是否安装成功"><a href="#验证是否安装成功" class="headerlink" title="验证是否安装成功"></a>验证是否安装成功</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -V</span><br></pre></td></tr></table></figure><h2 id="进入maven"><a href="#进入maven" class="headerlink" title="进入maven"></a>进入maven</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd maven</span><br></pre></td></tr></table></figure><h2 id="创建repository目录"><a href="#创建repository目录" class="headerlink" title="创建repository目录"></a>创建repository目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir repository</span><br></pre></td></tr></table></figure><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd conf/</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim settings.xml</span><br></pre></td></tr></table></figure><h2 id="配置依赖存储路径"><a href="#配置依赖存储路径" class="headerlink" title="配置依赖存储路径"></a>配置依赖存储路径</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;localRepository&gt;<span class="regexp">/usr/</span>local/maven/repository&lt;/localRepository&gt;</span><br></pre></td></tr></table></figure><h2 id="配置阿里云镜像加速"><a href="#配置阿里云镜像加速" class="headerlink" title="配置阿里云镜像加速"></a>配置阿里云镜像加速</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">name</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;进入目录&quot;&gt;&lt;a href=&quot;#进入目录&quot; class=&quot;headerlink&quot; title=&quot;进入目录&quot;&gt;&lt;/a&gt;进入目录&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr</summary>
+      
+    
+    
+    
+    <category term="centos" scheme="https://mink.yoonada.cn/categories/centos/"/>
+    
+    
+    <category term="centos" scheme="https://mink.yoonada.cn/tags/centos/"/>
+    
+    <category term="maven" scheme="https://mink.yoonada.cn/tags/maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker-compose命令</title>
+    <link href="https://mink.yoonada.cn/2022/08/04/docker-compose%E5%91%BD%E4%BB%A4/"/>
+    <id>https://mink.yoonada.cn/2022/08/04/docker-compose%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-08-04T06:53:08.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="停掉服务，删除容器，不删除镜像"><a href="#停掉服务，删除容器，不删除镜像" class="headerlink" title="停掉服务，删除容器，不删除镜像"></a>停掉服务，删除容器，不删除镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose down</span><br></pre></td></tr></table></figure><h2 id="重启-x2F-开始-x2F-停止服务"><a href="#重启-x2F-开始-x2F-停止服务" class="headerlink" title="重启&#x2F;开始&#x2F;停止服务"></a>重启&#x2F;开始&#x2F;停止服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose restart/start/stop [服务名称]</span><br></pre></td></tr></table></figure><h2 id="运行某个服务"><a href="#运行某个服务" class="headerlink" title="运行某个服务"></a>运行某个服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose run [服务名称]</span><br></pre></td></tr></table></figure><h2 id="查看服务中使用的镜像"><a href="#查看服务中使用的镜像" class="headerlink" title="查看服务中使用的镜像"></a>查看服务中使用的镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose images [服务名称]</span><br></pre></td></tr></table></figure><h2 id="重新构建（强制删除之前的镜像重新打）并启动"><a href="#重新构建（强制删除之前的镜像重新打）并启动" class="headerlink" title="重新构建（强制删除之前的镜像重新打）并启动"></a>重新构建（强制删除之前的镜像重新打）并启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d --build --force-recreate</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;停掉服务，删除容器，不删除镜像&quot;&gt;&lt;a href=&quot;#停掉服务，删除容器，不删除镜像&quot; class=&quot;headerlink&quot; title=&quot;停掉服务，删除容器，不删除镜像&quot;&gt;&lt;/a&gt;停掉服务，删除容器，不删除镜像&lt;/h2&gt;&lt;figure class=&quot;highli</summary>
+      
+    
+    
+    
+    <category term="命令" scheme="https://mink.yoonada.cn/categories/%E5%91%BD%E4%BB%A4/"/>
+    
+    
+    <category term="docker-compose" scheme="https://mink.yoonada.cn/tags/docker-compose/"/>
+    
+    <category term="命令" scheme="https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo安装与搭建</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E6%90%AD%E5%BB%BA/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E6%90%AD%E5%BB%BA/</id>
+    <published>2022-07-01T09:01:39.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;安装hexo&quot;&gt;&lt;a href=&quot;#安装hexo&quot; class=&quot;headerlink&quot; title=&quot;安装hexo&quot;&gt;&lt;/a&gt;安装hexo&lt;/h1&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut</summary>
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="https://mink.yoonada.cn/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker常用命令</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-07-01T07:53:36.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h1><h2 id="启动docker服务"><a href="#启动docker服务" class="headerlink" title="启动docker服务"></a>启动docker服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure><h2 id="关闭docker服务"><a href="#关闭docker服务" class="headerlink" title="关闭docker服务"></a>关闭docker服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure><h2 id="重启docker服务"><a href="#重启docker服务" class="headerlink" title="重启docker服务"></a>重启docker服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure><h2 id="搜索镜像"><a href="#搜索镜像" class="headerlink" title="搜索镜像"></a>搜索镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search java</span><br></pre></td></tr></table></figure><h2 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull java:8</span><br></pre></td></tr></table></figure><h2 id="列出镜像"><a href="#列出镜像" class="headerlink" title="列出镜像"></a>列出镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure><h2 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h2><ul><li>指定名称删除镜像<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi java:8</span><br></pre></td></tr></table></figure></li><li>指定名称删除镜像（强制）<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi -f java:8</span><br></pre></td></tr></table></figure></li><li>删除所有没有引用的镜像<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi `docker images | grep none | awk &#x27;&#123;print $3&#125;&#x27;`</span><br></pre></td></tr></table></figure></li><li>强制删除所有镜像<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi -f $(docker images)</span><br></pre></td></tr></table></figure></li></ul><h2 id="列出容器"><a href="#列出容器" class="headerlink" title="列出容器"></a>列出容器</h2><ul><li>列出运行中的容器<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure></li><li>列出所有容器<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure></li></ul><h2 id="停止容器"><a href="#停止容器" class="headerlink" title="停止容器"></a>停止容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop $ContainerName(or $ContainerId)</span><br></pre></td></tr></table></figure><h2 id="强制停止容器"><a href="#强制停止容器" class="headerlink" title="强制停止容器"></a>强制停止容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker kill $ContainerName</span><br></pre></td></tr></table></figure><h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start $ContainerName</span><br></pre></td></tr></table></figure><h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><ul><li>先查询出容器的pid<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect --format &quot;&#123;&#123;.State.Pid&#125;&#125;&quot; $ContainerName</span><br></pre></td></tr></table></figure></li><li>根据容器的pid进入容器<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nsenter --target &quot;$pid&quot; --mount --uts --ipc --net --pid</span><br></pre></td></tr></table></figure></li></ul><h2 id="查看容器的IP地址"><a href="#查看容器的IP地址" class="headerlink" title="查看容器的IP地址"></a>查看容器的IP地址</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect --format &#x27;&#123;&#123; .NetworkSettings.IPAddress &#125;&#125;&#x27; $ContainerName</span><br></pre></td></tr></table></figure><h2 id="将容器启动方式改为always"><a href="#将容器启动方式改为always" class="headerlink" title="将容器启动方式改为always"></a>将容器启动方式改为always</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将容器启动方式改为always</span></span><br><span class="line">docker container update --restart=always $ContainerName</span><br></pre></td></tr></table></figure><h2 id="同步宿主机时间到容器"><a href="#同步宿主机时间到容器" class="headerlink" title="同步宿主机时间到容器"></a>同步宿主机时间到容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp /etc/localtime $ContainerName:/etc/</span><br></pre></td></tr></table></figure><h2 id="指定容器时区"><a href="#指定容器时区" class="headerlink" title="指定容器时区"></a>指定容器时区</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 80:80 --name nginx \</span><br><span class="line">-e TZ=&quot;Asia/Shanghai&quot; \</span><br><span class="line">-d nginx:1.17.0</span><br></pre></td></tr></table></figure><h2 id="查看容器资源占用状况"><a href="#查看容器资源占用状况" class="headerlink" title="查看容器资源占用状况"></a>查看容器资源占用状况</h2><ul><li>查看指定容器资源占用状况，比如cpu、内存、网络、io状态<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stats $ContainerName</span><br></pre></td></tr></table></figure></li><li>查看所有容器资源占用情况<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stats -a</span><br></pre></td></tr></table></figure></li></ul><h2 id="查看容器磁盘使用情况"><a href="#查看容器磁盘使用情况" class="headerlink" title="查看容器磁盘使用情况"></a>查看容器磁盘使用情况</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker system df</span><br></pre></td></tr></table></figure><h2 id="执行容器内部命令"><a href="#执行容器内部命令" class="headerlink" title="执行容器内部命令"></a>执行容器内部命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it $ContainerName /bin/bash</span><br></pre></td></tr></table></figure><h2 id="指定账号进入容器内部"><a href="#指定账号进入容器内部" class="headerlink" title="指定账号进入容器内部"></a>指定账号进入容器内部</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用root账号进入容器内部</span></span><br><span class="line">docker exec -it --user root $ContainerName /bin/bash</span><br></pre></td></tr></table></figure><h2 id="查看所有网络"><a href="#查看所有网络" class="headerlink" title="查看所有网络"></a>查看所有网络</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network ls</span><br></pre></td></tr></table></figure><h2 id="创建外部网络"><a href="#创建外部网络" class="headerlink" title="创建外部网络"></a>创建外部网络</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network create -d bridge my-bridge-network</span><br></pre></td></tr></table></figure><h2 id="指定容器网络"><a href="#指定容器网络" class="headerlink" title="指定容器网络"></a>指定容器网络</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 80:80 --name nginx \</span><br><span class="line">--network my-bridge-network \</span><br><span class="line">-d nginx:1.17.0</span><br></pre></td></tr></table></figure><h2 id="Docker容器清理"><a href="#Docker容器清理" class="headerlink" title="Docker容器清理"></a>Docker容器清理</h2><ul><li>查看Docker占用的磁盘空间情况<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker system df</span><br></pre></td></tr></table></figure></li><li>删除所有关闭的容器<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a | grep Exit | cut -d &#x27; &#x27; -f 1 | xargs docker rm</span><br></pre></td></tr></table></figure></li><li>删除所有dangling镜像(没有Tag的镜像)<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi $(docker images | grep &quot;^&lt;none&gt;&quot; | awk &quot;&#123;print $3&#125;&quot;)</span><br></pre></td></tr></table></figure></li><li>删除所有dangling数据卷(即无用的 volume)<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume rm $(docker volume ls -qf dangling=true)</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;docker&quot;&gt;&lt;a href=&quot;#docker&quot; class=&quot;headerlink&quot; title=&quot;docker&quot;&gt;&lt;/a&gt;docker&lt;/h1&gt;&lt;h2 id=&quot;启动docker服务&quot;&gt;&lt;a href=&quot;#启动docker服务&quot; class=&quot;headerli</summary>
+      
+    
+    
+    
+    
+    <category term="命令" scheme="https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git配置ssh</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/git%E9%85%8D%E7%BD%AEssh/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/git%E9%85%8D%E7%BD%AEssh/</id>
+    <published>2022-07-01T07:40:04.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="配置用户名"><a href="#配置用户名" class="headerlink" title="配置用户名"></a>配置用户名</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yoonada&quot;</span><br></pre></td></tr></table></figure><h2 id="配置邮箱"><a href="#配置邮箱" class="headerlink" title="配置邮箱"></a>配置邮箱</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;m15602498163@163.com&quot;</span><br></pre></td></tr></table></figure><h2 id="生成-ssh-key"><a href="#生成-ssh-key" class="headerlink" title="生成 ssh key"></a>生成 ssh key</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &quot;m15602498163@163.com&quot;</span><br></pre></td></tr></table></figure><h2 id="生成路径"><a href="#生成路径" class="headerlink" title="生成路径"></a>生成路径</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">window的生成路径：C:\Users\用户\.ssh</span><br><span class="line">Linux的生成路径：/etc/ssh</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;配置用户名&quot;&gt;&lt;a href=&quot;#配置用户名&quot; class=&quot;headerlink&quot; title=&quot;配置用户名&quot;&gt;&lt;/a&gt;配置用户名&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;</summary>
+      
+    
+    
+    
+    
+    <category term="Git" scheme="https://mink.yoonada.cn/tags/Git/"/>
+    
+    <category term="SSH" scheme="https://mink.yoonada.cn/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker安装RabbitMQ</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85RabbitMQ/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85RabbitMQ/</id>
+    <published>2022-07-01T03:49:55.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name rabbitmq -p 5672:5672 -p 15672:15672 -d --restart=always rabbitmq:management</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
+      
+    
+    
+    
+    
+    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    
+    <category term="RabbitMQ" scheme="https://mink.yoonada.cn/tags/RabbitMQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker安装redis</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/</id>
+    <published>2022-07-01T03:49:20.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name redis -p 6380:6379 -d --restart=always redis:latest redis-server --appendonly yes --requirepass &quot;DD123456aa&quot;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
+      
+    
+    
+    
+    
+    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    
+    <category term="redis" scheme="https://mink.yoonada.cn/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker安装nacos</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85nacos/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85nacos/</id>
+    <published>2022-07-01T03:49:11.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="拉取docker镜像"><a href="#拉取docker镜像" class="headerlink" title="拉取docker镜像"></a>拉取docker镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull nacos/nacos-server:1.4.2</span><br></pre></td></tr></table></figure><h2 id="创建临时容器（用来拷贝配置、日志使用）"><a href="#创建临时容器（用来拷贝配置、日志使用）" class="headerlink" title="创建临时容器（用来拷贝配置、日志使用）"></a>创建临时容器（用来拷贝配置、日志使用）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8848:8848 --name nacostest -d nacos/nacos-server:1.4.2</span><br></pre></td></tr></table></figure><h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /mydata/nacos/conf</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /mydata/nacos/logs</span><br></pre></td></tr></table></figure><h2 id="配置文件复制"><a href="#配置文件复制" class="headerlink" title="配置文件复制"></a>配置文件复制</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp nacostest:/home/nacos/logs/ /mydata/nacos/</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp nacostest:/home/nacos/conf/ /mydata/nacos/</span><br></pre></td></tr></table></figure><h2 id="删除临时容器"><a href="#删除临时容器" class="headerlink" title="删除临时容器"></a>删除临时容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop nacostest</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm nacostest</span><br></pre></td></tr></table></figure><h2 id="创建并启动容器"><a href="#创建并启动容器" class="headerlink" title="创建并启动容器"></a>创建并启动容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">-e MODE=standalone \</span><br><span class="line">-e SPRING_DATASOURCE_PLATFORM=mysql \</span><br><span class="line">-e MYSQL_SERVICE_HOST=43.142.62.156 \</span><br><span class="line">-e MYSQL_SERVICE_PORT=3307 \</span><br><span class="line">-e MYSQL_SERVICE_USER=root \</span><br><span class="line">-e MYSQL_SERVICE_PASSWORD=DD123456aa \</span><br><span class="line">-e MYSQL_SERVICE_DB_NAME=nacos_config \</span><br><span class="line">-e TIME_ZONE=&#x27;Asia/Shanghai&#x27; \</span><br><span class="line">-v /mydata/nacos/logs:/home/nacos/logs \</span><br><span class="line">-v /mydata/nacos/conf:/home/nacos/conf \</span><br><span class="line">-p 8848:8848 \</span><br><span class="line">--name nacos \</span><br><span class="line">--restart=always \</span><br><span class="line">nacos/nacos-server:1.4.2</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;拉取docker镜像&quot;&gt;&lt;a href=&quot;#拉取docker镜像&quot; class=&quot;headerlink&quot; title=&quot;拉取docker镜像&quot;&gt;&lt;/a&gt;拉取docker镜像&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;t</summary>
+      
+    
+    
+    
+    
+    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    
+    <category term="nacos" scheme="https://mink.yoonada.cn/tags/nacos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker安装MySQL</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85MySQL/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85MySQL/</id>
+    <published>2022-07-01T03:49:00.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="拉取5-7的镜像"><a href="#拉取5-7的镜像" class="headerlink" title="拉取5.7的镜像"></a>拉取5.7的镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:5.7</span><br></pre></td></tr></table></figure><h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name mysql -p 3307:3306 --restart=always -e MYSQL_ROOT_PASSWORD=DD123456aa -d mysql:5.7</span><br></pre></td></tr></table></figure><h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it mysql bash</span><br></pre></td></tr></table></figure><h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure><h2 id="开启远程连接"><a href="#开启远程连接" class="headerlink" title="开启远程连接"></a>开启远程连接</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;%&#x27; IDENTIFIED WITH mysql_native_password BY &#x27;DD123456aa&#x27;;</span><br></pre></td></tr></table></figure><h2 id="刷新"><a href="#刷新" class="headerlink" title="刷新"></a>刷新</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;拉取5-7的镜像&quot;&gt;&lt;a href=&quot;#拉取5-7的镜像&quot; class=&quot;headerlink&quot; title=&quot;拉取5.7的镜像&quot;&gt;&lt;/a&gt;拉取5.7的镜像&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl</summary>
+      
+    
+    
+    
+    
+    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    
+    <category term="MySQL" scheme="https://mink.yoonada.cn/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos常用命令</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/centos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/centos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-07-01T03:39:11.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="开启防火墙"><a href="#开启防火墙" class="headerlink" title="开启防火墙"></a>开启防火墙</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start firewalld</span><br></pre></td></tr></table></figure><h2 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure><h2 id="查看防火墙状态"><a href="#查看防火墙状态" class="headerlink" title="查看防火墙状态"></a>查看防火墙状态</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld </span><br></pre></td></tr></table></figure><h2 id="开放某个端口"><a href="#开放某个端口" class="headerlink" title="开放某个端口"></a>开放某个端口</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent</span><br></pre></td></tr></table></figure><h2 id="重新加载配置"><a href="#重新加载配置" class="headerlink" title="重新加载配置"></a>重新加载配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure><h2 id="查看已经开放的端口"><a href="#查看已经开放的端口" class="headerlink" title="查看已经开放的端口"></a>查看已经开放的端口</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --list-ports</span><br></pre></td></tr></table></figure><h2 id="查找（在-中填写你要的查找的路径）"><a href="#查找（在-中填写你要的查找的路径）" class="headerlink" title="查找（在**中填写你要的查找的路径）"></a>查找（在**中填写你要的查找的路径）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -name **</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;开启防火墙&quot;&gt;&lt;a href=&quot;#开启防火墙&quot; class=&quot;headerlink&quot; title=&quot;开启防火墙&quot;&gt;&lt;/a&gt;开启防火墙&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;</summary>
+      
+    
+    
+    
+    <category term="命令" scheme="https://mink.yoonada.cn/categories/%E5%91%BD%E4%BB%A4/"/>
+    
+    
+    <category term="centos" scheme="https://mink.yoonada.cn/tags/centos/"/>
+    
+    <category term="命令" scheme="https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos安装nginx</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/centos%E5%AE%89%E8%A3%85nginx/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/centos%E5%AE%89%E8%A3%85nginx/</id>
+    <published>2022-07-01T03:23:10.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel</span><br></pre></td></tr></table></figure><h2 id="下载稳定版本"><a href="#下载稳定版本" class="headerlink" title="下载稳定版本"></a>下载稳定版本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://nginx.org/download/nginx-1.16.1.tar.gz</span><br></pre></td></tr></table></figure><h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf nginx-1.16.1.tar.gz</span><br></pre></td></tr></table></figure><h2 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd nginx-1.16.1</span><br></pre></td></tr></table></figure><h2 id="配置编译"><a href="#配置编译" class="headerlink" title="配置编译"></a>配置编译</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module</span><br></pre></td></tr></table></figure><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure><h2 id="被安装的目录"><a href="#被安装的目录" class="headerlink" title="被安装的目录"></a>被安装的目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;安装依赖&quot;&gt;&lt;a href=&quot;#安装依赖&quot; class=&quot;headerlink&quot; title=&quot;安装依赖&quot;&gt;&lt;/a&gt;安装依赖&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr</summary>
+      
+    
+    
+    
+    <category term="centos装机必备" scheme="https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/"/>
+    
+    
+    <category term="centos" scheme="https://mink.yoonada.cn/tags/centos/"/>
+    
+    <category term="nginx" scheme="https://mink.yoonada.cn/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos安装docker-compose</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/centos%E5%AE%89%E8%A3%85docker-compose/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/centos%E5%AE%89%E8%A3%85docker-compose/</id>
+    <published>2022-07-01T02:57:31.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://github.com/docker/compose/releases/download/1.23.1/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
+      
+    
+    
+    
+    <category term="centos装机必备" scheme="https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/"/>
+    
+    
+    <category term="centos" scheme="https://mink.yoonada.cn/tags/centos/"/>
+    
+    <category term="docker-compose" scheme="https://mink.yoonada.cn/tags/docker-compose/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos安装docker</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/centos%E5%AE%89%E8%A3%85docker/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/centos%E5%AE%89%E8%A3%85docker/</id>
+    <published>2022-07-01T02:57:10.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="卸载旧版本"><a href="#卸载旧版本" class="headerlink" title="卸载旧版本"></a>卸载旧版本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure><h2 id="安装配置相关依赖"><a href="#安装配置相关依赖" class="headerlink" title="安装配置相关依赖"></a>安装配置相关依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure><h2 id="安装docker引擎"><a href="#安装docker引擎" class="headerlink" title="安装docker引擎"></a>安装docker引擎</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure><h2 id="启动docker"><a href="#启动docker" class="headerlink" title="启动docker"></a>启动docker</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure><h2 id="设置开机自启动"><a href="#设置开机自启动" class="headerlink" title="设置开机自启动"></a>设置开机自启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable docker</span><br></pre></td></tr></table></figure><h2 id="验证是否正确安装"><a href="#验证是否正确安装" class="headerlink" title="验证是否正确安装"></a>验证是否正确安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run hello-world</span><br></pre></td></tr></table></figure><h2 id="配置阿里云镜像加速"><a href="#配置阿里云镜像加速" class="headerlink" title="配置阿里云镜像加速"></a>配置阿里云镜像加速</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [&quot;https://9w9zqgnf.mirror.aliyuncs.com&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;卸载旧版本&quot;&gt;&lt;a href=&quot;#卸载旧版本&quot; class=&quot;headerlink&quot; title=&quot;卸载旧版本&quot;&gt;&lt;/a&gt;卸载旧版本&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;</summary>
+      
+    
+    
+    
+    <category term="centos装机必备" scheme="https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/"/>
+    
+    
+    <category term="centos" scheme="https://mink.yoonada.cn/tags/centos/"/>
+    
+    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    
+  </entry>
+  
+</feed>
