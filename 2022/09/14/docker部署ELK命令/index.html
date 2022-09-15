@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+  
+  <title>Linux命令 | Mink的个人博客</title>
+  <meta name="author" content="Mink" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="" />
+  
+  <meta name="description" content="Linux命令防火墙命令 systemctl start firewalld  systemctl stop firewalld  systemctl status firewalld   firewall-cmd –zone&#x3D;public –add-port&#x3D;5045&#x2F;tcp –permanent   firewall-cmd –reload  firewall-c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux命令">
+<meta property="og:url" content="https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="Mink的个人博客">
+<meta property="og:description" content="Linux命令防火墙命令 systemctl start firewalld  systemctl stop firewalld  systemctl status firewalld   firewall-cmd –zone&#x3D;public –add-port&#x3D;5045&#x2F;tcp –permanent   firewall-cmd –reload  firewall-c">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-09-14T10:00:05.000Z">
+<meta property="article:modified_time" content="2022-09-15T10:32:21.539Z">
+<meta property="article:author" content="Mink">
+<meta name="twitter:card" content="summary">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" media="all"></script>
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" media="(prefers-color-scheme: dark)"></script>
+    <script src="/js/kr-dark.min.js"></script>
+  
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" media="all"></script>
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></script>
+  <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></script>
+  
+  
+    <link rel="stylesheet" href="/vendors/aplayer@1.10.1/dist/APlayer.min.css"></script>
+  
+  
+    <link rel="stylesheet" href="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"></script>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="/vendors/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="/vendors/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Mink的个人博客" type="application/atom+xml">
+</head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">Mink的个人博客</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>Mink的个人博客</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        
+
+            <section class="col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    
+    <link itemprop="mainEntityOfPage" href="https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/">
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
+            
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">Linux命令</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><time datetime="2022-09-14T10:00:05.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-09-14</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">Mink</span>
+                </li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        ~4.02K
+                    
+                    字
+                </li>
+                
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1663237941539"></time> 前，其中的内容可能需要更新。</p></div>
+            </div>
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><h1 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h1><h3 id="防火墙命令"><a href="#防火墙命令" class="headerlink" title="防火墙命令"></a>防火墙命令</h3><!--开启防火墙-->
+<p>systemctl start firewalld</p>
+<!--关闭防火墙-->
+<p>systemctl stop firewalld</p>
+<!--查看防火墙状态-->
+<p>systemctl status firewalld </p>
+<!--开放某个端口-->
+<p>firewall-cmd –zone&#x3D;public –add-port&#x3D;5045&#x2F;tcp –permanent </p>
+<!--重新加载配置-->
+<p>firewall-cmd –reload</p>
+<!--查看已经开放的端口-->
+<p>firewall-cmd –zone&#x3D;public –list-ports</p>
+<h3 id="删除挖矿病毒"><a href="#删除挖矿病毒" class="headerlink" title="删除挖矿病毒"></a>删除挖矿病毒</h3><ol>
+<li>top查看占有率</li>
+<li>ll &#x2F;proc&#x2F;pid(病毒pid)</li>
+<li>rm -rf &#x2F;boot&#x2F;grub2&#x2F;fonts&#x2F;0wrasx&#x2F;kthreaddk (deleted)</li>
+<li>crontab -e  </li>
+<li>dd</li>
+<li>reboot</li>
+</ol>
+<h1 id="docker部署"><a href="#docker部署" class="headerlink" title="docker部署"></a>docker部署</h1><h3 id="1、docker部署elasticsearch"><a href="#1、docker部署elasticsearch" class="headerlink" title="1、docker部署elasticsearch"></a>1、docker部署elasticsearch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">docker pull elasticsearch:7.14.0</span><br><span class="line">mkdir -p /gdgx/ymk/elk/es/&#123;config,data,logs&#125;</span><br><span class="line">chown -R 1000:1000 /gdgx/ymk/elk</span><br><span class="line">cd /gdgx/ymk/elk/es/config</span><br><span class="line">touch elasticsearch.yml</span><br><span class="line">-----------------------配置内容----------------------------------</span><br><span class="line">cluster.name: &quot;my-es&quot;</span><br><span class="line">network.host: 0.0.0.0</span><br><span class="line">http.port: 9200</span><br><span class="line">-----------------------启动命令--------------------------------</span><br><span class="line">docker run -it  -d -p 4200:9200 -p 4000:9300 --name kes -e ES_JAVA_OPTS=&quot;-Xms1g -Xmx1g&quot; -e &quot;discovery.type=single-node&quot; --restart=always -v /gdgx/ymk/elk/es/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml -v /gdgx/ymk/elk/es/data:/usr/share/elasticsearch/data -v /gdgx/ymk/elk/es/logs:/usr/share/elasticsearch/logs elasticsearch:7.14.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、docker-部署kibana"><a href="#2、docker-部署kibana" class="headerlink" title="2、docker 部署kibana"></a>2、docker 部署kibana</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">docker pull kibana:7.14.0</span><br><span class="line">docker inspect --format &#x27;&#123;&#123; .NetworkSettings.IPAddress &#125;&#125;&#x27; es</span><br><span class="line">mkdir -p /gdgx/ymk/elk/kibana/</span><br><span class="line">vim /gdgx/ymk/elk/kibana/kibana.yml</span><br><span class="line">-------------配置信息---------------</span><br><span class="line">server.name: kibana</span><br><span class="line">server.host: &quot;0&quot;</span><br><span class="line">elasticsearch.hosts: [&quot;http://172.17.0.5:9200&quot;]</span><br><span class="line">xpack.monitoring.ui.container.elasticsearch.enabled: true</span><br><span class="line">i18n.locale: &quot;zh-CN&quot;</span><br><span class="line">--------------启动命令--------------------</span><br><span class="line"></span><br><span class="line">docker run -d --restart=always --log-driver json-file --log-opt max-size=100m --log-opt max-file=2 --name kibana -p 4001:5601 -v /gdgx/ymk/elk/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml kibana:7.14.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、部署logstash日志过滤、转换工具"><a href="#3、部署logstash日志过滤、转换工具" class="headerlink" title="3、部署logstash日志过滤、转换工具"></a>3、部署logstash日志过滤、转换工具</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">docker pull logstash:7.14.0</span><br><span class="line">docker run -d --name=logstash logstash:7.14.0</span><br><span class="line">docker logs -f logstash</span><br><span class="line">docker cp logstash:/usr/share/logstash /docker/elk/</span><br><span class="line">mkdir /docker/elk/logstash</span><br><span class="line">chmod 777 -R /docker/elk/logstash</span><br><span class="line">----------yml配置信息——--------------------------</span><br><span class="line">vi /docker/elk/logstash/config/logstash.yml</span><br><span class="line">http.host: &quot;0.0.0.0&quot;</span><br><span class="line">xpack.monitoring.elasticsearch.hosts: [&quot;http://114.55.238.234:9200&quot;]</span><br><span class="line">path.config: /usr/share/logstash/config/*.conf</span><br><span class="line">path.logs: /usr/share/logstash/logs</span><br><span class="line">-----------配置信息——------------</span><br><span class="line">vi /data/elk/logstash/config/logstash.conf</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Sample Logstash configuration <span class="keyword">for</span> creating a simple</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Beats -&gt; Logstash -&gt; Elasticsearch pipeline.</span></span><br><span class="line">input &#123;</span><br><span class="line">  tcp &#123;</span><br><span class="line">    port =&gt; 5045</span><br><span class="line">    type =&gt; syslog</span><br><span class="line">  &#125;</span><br><span class="line"> beats &#123;</span><br><span class="line">   port =&gt; &quot;5044&quot;</span><br><span class="line">   type =&gt; file</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">output &#123;</span><br><span class="line"> stdout &#123; codec =&gt; rubydebug &#125;</span><br><span class="line">  </span><br><span class="line">  if[type] == &quot;file&quot; &#123;</span><br><span class="line"> elasticsearch&#123;</span><br><span class="line">   hosts =&gt; [&quot;http://114.55.238.234:9200&quot;]</span><br><span class="line">    index =&gt; &quot;filelogs-%&#123;+YYYY.MM.dd&#125;&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">  elasticsearch&#123;</span><br><span class="line">   hosts =&gt; [&quot;http://114.55.238.234:9200&quot;]</span><br><span class="line">    index =&gt; &quot;mylogs-%&#123;+YYYY.MM.dd&#125;&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">docker rm -f logstash</span><br><span class="line">-----------启动命令----------</span><br><span class="line">docker run -d \</span><br><span class="line">  --name=logstash \</span><br><span class="line">  --restart=always \</span><br><span class="line">  -p 5044:5044 \</span><br><span class="line">  -v /docker/elk/logstash:/usr/share/logstash \</span><br><span class="line">  -v /var/log/messages:/var/log/messages \</span><br><span class="line">  logstash:7.14.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、docker安装Filebeat"><a href="#4、docker安装Filebeat" class="headerlink" title="4、docker安装Filebeat"></a>4、docker安装Filebeat</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">docker pull docker.elastic.co/beats/filebeat:7.14.0</span><br><span class="line"></span><br><span class="line">---------修改yml配置文件----------</span><br><span class="line">vim /docker/elk/filebeat/filebeat.yml</span><br><span class="line"></span><br><span class="line">---------配置信息-----------------</span><br><span class="line">filebeat.inputs:</span><br><span class="line">- type: log</span><br><span class="line">  enabled: true</span><br><span class="line">  paths:</span><br><span class="line">    - /home/log/*.log</span><br><span class="line"></span><br><span class="line">  multiline.pattern: &#x27;^\[&#x27;</span><br><span class="line">  multiline.negate: true</span><br><span class="line">  multiline.match: after</span><br><span class="line"></span><br><span class="line">output.logstash:</span><br><span class="line">  hosts: [&quot;114.55.238.234:5044&quot;]</span><br><span class="line"></span><br><span class="line">----------启动命令---------------</span><br><span class="line">docker run --name filebeat -d \</span><br><span class="line">    -v /home/logs:/home/logs:ro \</span><br><span class="line">    -v /docker/elk/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml \</span><br><span class="line">    docker.elastic.co/beats/filebeat:7.14.0</span><br></pre></td></tr></table></figure>
+
+
+
+</div>
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <h5 itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/";
+            const title         = "「Linux命令」";
+            const excerpt       = `Linux命令防火墙命令
+systemctl start firewalld
+
+systemctl stop firewalld
+
+systemctl status firewalld 
+
+firewall-cmd –zone&#x3...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    
+                </div>
+                <div class="pull-date">
+                    <time datetime="2022-09-15T10:32:21.539Z" itemprop="dateModified">最后编辑：2022-09-15</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" Linux命令" href="/2022/09/14/hadoop入门笔记/">&lt; 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" centos7命令" href="/2022/09/14/centos7命令/">下一篇 &gt;</a>
+            </div>
+            
+        </nav>
+    
+    
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/avatar.webp" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">用于记录一些有意思的事</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                24
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                3
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                13
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/centos/">centos</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/">centos装机必备</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%91%BD%E4%BB%A4/">命令</a><span class="category-list-count">2</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/Git/" style="font-size: 0.6em;">Git</a> <a href="/tags/MySQL/" style="font-size: 0.6em;">MySQL</a> <a href="/tags/RabbitMQ/" style="font-size: 0.6em;">RabbitMQ</a> <a href="/tags/SSH/" style="font-size: 0.6em;">SSH</a> <a href="/tags/centos/" style="font-size: 0.75em;">centos</a> <a href="/tags/docker/" style="font-size: 0.8em;">docker</a> <a href="/tags/docker-compose/" style="font-size: 0.65em;">docker-compose</a> <a href="/tags/hexo/" style="font-size: 0.6em;">hexo</a> <a href="/tags/maven/" style="font-size: 0.6em;">maven</a> <a href="/tags/nacos/" style="font-size: 0.6em;">nacos</a> <a href="/tags/nginx/" style="font-size: 0.6em;">nginx</a> <a href="/tags/redis/" style="font-size: 0.6em;">redis</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 0.7em;">命令</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2022/09/14/1%E3%80%81%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/"><i class="fa  fa-book"></i> 后端存储实战</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/09/14/JVM%E5%85%A5%E9%97%A8/"><i class="fa  fa-book"></i> Linux命令</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/09/14/centos7%E5%91%BD%E4%BB%A4/"><i class="fa  fa-book"></i> centos7命令</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/"><i class="fa  fa-book"></i> Linux命令</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"><i class="fa  fa-book"></i> Linux命令</a>
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  class="ap-lrc"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="me" href="https://nya.one/@Candinya"><i class="fa fa fa-share-alt-square"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/Candinya"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2022 Mink的个人博客 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by Mink.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="/vendors/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+    <script async src="/js/candy.min.js"></script>
+
+
+
+    <script defer src="/vendors/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="/vendors/meting@2.0.1/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="3204190542"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="/vendors/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+    </body>
+</html>
