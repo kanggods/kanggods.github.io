@@ -141,9 +141,9 @@
     
     
     
-    <category term="命令" scheme="https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/"/>
-    
     <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    
+    <category term="命令" scheme="https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
