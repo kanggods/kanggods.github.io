@@ -36,6 +36,14 @@ https://mink.yoonada.cn/tags/redis/
 https://mink.yoonada.cn/tags/Git/
 https://mink.yoonada.cn/tags/SSH/
 https://mink.yoonada.cn/tags/hexo/
+https://mink.yoonada.cn/tags/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/
+https://mink.yoonada.cn/tags/JVM/
+https://mink.yoonada.cn/tags/sql/
+https://mink.yoonada.cn/tags/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/
+https://mink.yoonada.cn/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/
+https://mink.yoonada.cn/tags/Java%E5%9F%BA%E7%A1%80/
+https://mink.yoonada.cn/tags/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/
 https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/
 https://mink.yoonada.cn/categories/centos/
 https://mink.yoonada.cn/categories/%E5%91%BD%E4%BB%A4/
+https://mink.yoonada.cn/categories/docker/

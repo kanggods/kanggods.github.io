@@ -12,18 +12,30 @@
       
       
       
+        <tags>
+            
+            <tag> 后端存储实战 </tag>
+            
+        </tags>
+      
     </entry>
     
     
     
     <entry>
-      <title>Linux命令</title>
+      <title>JVM入门</title>
       <link href="/2022/09/14/JVM%E5%85%A5%E9%97%A8/"/>
       <url>/2022/09/14/JVM%E5%85%A5%E9%97%A8/</url>
       
         <content type="html"><![CDATA[<h1 id="JVM入门"><a href="#JVM入门" class="headerlink" title="JVM入门"></a>JVM入门</h1><h3 id="1、什么是垃圾"><a href="#1、什么是垃圾" class="headerlink" title="1、什么是垃圾"></a>1、什么是垃圾</h3><ul><li>引用计数算法：为对象添加一个引用计数器，每当对象在一个地方被引用，则该计数器加1；每当对象引用失效时，计数器减1。但计数器为0的时候，就表白该对象没有被引用。</li><li>可达性分析算法：通过一系列被称之为“GC Roots”的根节点开始，沿着引用链进行搜索，凡是在引用链上的对象都不会被回收。</li></ul><p>什么是GC roots</p><ul><li><strong>Java虚拟机栈中被引用的对象，各个线程调用的参数、局部变量、临时变量等。</strong></li><li><strong>方法区中类静态属性引用的对象，比如引用类型的静态变量</strong></li><li><strong>方法区中常量引用的对象</strong></li><li><strong>本地方法栈中所引用的对象</strong></li><li><strong>Java虚拟机内部的引用，基本数据类型对应的Class对象。一些常驻的异常对象</strong></li><li><strong>被同步锁（synchronized）持有的对象</strong></li></ul><h3 id="2、垃圾回收算法"><a href="#2、垃圾回收算法" class="headerlink" title="2、垃圾回收算法"></a>2、垃圾回收算法</h3><h4 id="标记–清除算法"><a href="#标记–清除算法" class="headerlink" title="标记–清除算法"></a>标记–清除算法</h4><p>  字面含义，对无效的对象进行标记，然后清除。</p><p>优点：哪里不对标哪里后面直接清除就完事，简单快捷。</p><p>缺点：进行垃圾回收后，堆空间会有大量的碎片，出现了不规整的情况，在给大对象分配内存的时候由于无法找到足够连续的内存空间，就不得补再一次触发垃圾收集，另外，如果Java堆中存在大量的垃圾对象，那么垃圾回收就必然进行大量的标记和清除动作，这个会造成回收效率的降低。</p><h4 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h4><p>  复制算法就是把Java堆分成两块，每次垃圾回收时只使用其中一块，然后把存活的对象全部移动到另一块区域。</p><p>优点。解决了清除算法导致的碎片化空间，</p><p>缺点，每次只使用堆空间的一半，造成了java堆空间使用率的下降。</p><h4 id="标记整理算法"><a href="#标记整理算法" class="headerlink" title="标记整理算法"></a>标记整理算法</h4><p>标记–整理算法算是一种折中的垃圾收集算法，在对象标记的过程，和前面两个执行的是一样步骤。但是，进行标记之后，存活的对象会移动到堆的一端，然后直接清理存活对象以外的区域就可以了。这样，既避免了内存碎片，也不存在堆空间浪费的说法了。但是，每次进行垃圾回收的时候，都要暂停所有的用户线程，特别是对老年代的对象回收，则需要更长的回收时间，这对用户体验是非常不好的。</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> JVM </tag>
+            
+        </tags>
       
     </entry>
     
@@ -43,20 +55,32 @@
     
     
     <entry>
-      <title>Linux命令</title>
+      <title>docker部署ELK</title>
       <link href="/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/"/>
       <url>/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/</url>
       
         <content type="html"><![CDATA[<h1 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h1><h3 id="防火墙命令"><a href="#防火墙命令" class="headerlink" title="防火墙命令"></a>防火墙命令</h3><!--开启防火墙--><p>systemctl start firewalld</p><!--关闭防火墙--><p>systemctl stop firewalld</p><!--查看防火墙状态--><p>systemctl status firewalld </p><!--开放某个端口--><p>firewall-cmd –zone&#x3D;public –add-port&#x3D;5045&#x2F;tcp –permanent </p><!--重新加载配置--><p>firewall-cmd –reload</p><!--查看已经开放的端口--><p>firewall-cmd –zone&#x3D;public –list-ports</p><h3 id="删除挖矿病毒"><a href="#删除挖矿病毒" class="headerlink" title="删除挖矿病毒"></a>删除挖矿病毒</h3><ol><li>top查看占有率</li><li>ll &#x2F;proc&#x2F;pid(病毒pid)</li><li>rm -rf &#x2F;boot&#x2F;grub2&#x2F;fonts&#x2F;0wrasx&#x2F;kthreaddk (deleted)</li><li>crontab -e  </li><li>dd</li><li>reboot</li></ol><h1 id="docker部署"><a href="#docker部署" class="headerlink" title="docker部署"></a>docker部署</h1><h3 id="1、docker部署elasticsearch"><a href="#1、docker部署elasticsearch" class="headerlink" title="1、docker部署elasticsearch"></a>1、docker部署elasticsearch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">docker pull elasticsearch:7.14.0</span><br><span class="line">mkdir -p /gdgx/ymk/elk/es/&#123;config,data,logs&#125;</span><br><span class="line">chown -R 1000:1000 /gdgx/ymk/elk</span><br><span class="line">cd /gdgx/ymk/elk/es/config</span><br><span class="line">touch elasticsearch.yml</span><br><span class="line">-----------------------配置内容----------------------------------</span><br><span class="line">cluster.name: &quot;my-es&quot;</span><br><span class="line">network.host: 0.0.0.0</span><br><span class="line">http.port: 9200</span><br><span class="line">-----------------------启动命令--------------------------------</span><br><span class="line">docker run -it  -d -p 4200:9200 -p 4000:9300 --name kes -e ES_JAVA_OPTS=&quot;-Xms1g -Xmx1g&quot; -e &quot;discovery.type=single-node&quot; --restart=always -v /gdgx/ymk/elk/es/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml -v /gdgx/ymk/elk/es/data:/usr/share/elasticsearch/data -v /gdgx/ymk/elk/es/logs:/usr/share/elasticsearch/logs elasticsearch:7.14.0</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="2、docker-部署kibana"><a href="#2、docker-部署kibana" class="headerlink" title="2、docker 部署kibana"></a>2、docker 部署kibana</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">docker pull kibana:7.14.0</span><br><span class="line">docker inspect --format &#x27;&#123;&#123; .NetworkSettings.IPAddress &#125;&#125;&#x27; es</span><br><span class="line">mkdir -p /gdgx/ymk/elk/kibana/</span><br><span class="line">vim /gdgx/ymk/elk/kibana/kibana.yml</span><br><span class="line">-------------配置信息---------------</span><br><span class="line">server.name: kibana</span><br><span class="line">server.host: &quot;0&quot;</span><br><span class="line">elasticsearch.hosts: [&quot;http://172.17.0.5:9200&quot;]</span><br><span class="line">xpack.monitoring.ui.container.elasticsearch.enabled: true</span><br><span class="line">i18n.locale: &quot;zh-CN&quot;</span><br><span class="line">--------------启动命令--------------------</span><br><span class="line"></span><br><span class="line">docker run -d --restart=always --log-driver json-file --log-opt max-size=100m --log-opt max-file=2 --name kibana -p 4001:5601 -v /gdgx/ymk/elk/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml kibana:7.14.0</span><br></pre></td></tr></table></figure><h3 id="3、部署logstash日志过滤、转换工具"><a href="#3、部署logstash日志过滤、转换工具" class="headerlink" title="3、部署logstash日志过滤、转换工具"></a>3、部署logstash日志过滤、转换工具</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">docker pull logstash:7.14.0</span><br><span class="line">docker run -d --name=logstash logstash:7.14.0</span><br><span class="line">docker logs -f logstash</span><br><span class="line">docker cp logstash:/usr/share/logstash /docker/elk/</span><br><span class="line">mkdir /docker/elk/logstash</span><br><span class="line">chmod 777 -R /docker/elk/logstash</span><br><span class="line">----------yml配置信息——--------------------------</span><br><span class="line">vi /docker/elk/logstash/config/logstash.yml</span><br><span class="line">http.host: &quot;0.0.0.0&quot;</span><br><span class="line">xpack.monitoring.elasticsearch.hosts: [&quot;http://114.55.238.234:9200&quot;]</span><br><span class="line">path.config: /usr/share/logstash/config/*.conf</span><br><span class="line">path.logs: /usr/share/logstash/logs</span><br><span class="line">-----------配置信息——------------</span><br><span class="line">vi /data/elk/logstash/config/logstash.conf</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Sample Logstash configuration <span class="keyword">for</span> creating a simple</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Beats -&gt; Logstash -&gt; Elasticsearch pipeline.</span></span><br><span class="line">input &#123;</span><br><span class="line">  tcp &#123;</span><br><span class="line">    port =&gt; 5045</span><br><span class="line">    type =&gt; syslog</span><br><span class="line">  &#125;</span><br><span class="line"> beats &#123;</span><br><span class="line">   port =&gt; &quot;5044&quot;</span><br><span class="line">   type =&gt; file</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">output &#123;</span><br><span class="line"> stdout &#123; codec =&gt; rubydebug &#125;</span><br><span class="line">  </span><br><span class="line">  if[type] == &quot;file&quot; &#123;</span><br><span class="line"> elasticsearch&#123;</span><br><span class="line">   hosts =&gt; [&quot;http://114.55.238.234:9200&quot;]</span><br><span class="line">    index =&gt; &quot;filelogs-%&#123;+YYYY.MM.dd&#125;&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">  elasticsearch&#123;</span><br><span class="line">   hosts =&gt; [&quot;http://114.55.238.234:9200&quot;]</span><br><span class="line">    index =&gt; &quot;mylogs-%&#123;+YYYY.MM.dd&#125;&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">docker rm -f logstash</span><br><span class="line">-----------启动命令----------</span><br><span class="line">docker run -d \</span><br><span class="line">  --name=logstash \</span><br><span class="line">  --restart=always \</span><br><span class="line">  -p 5044:5044 \</span><br><span class="line">  -v /docker/elk/logstash:/usr/share/logstash \</span><br><span class="line">  -v /var/log/messages:/var/log/messages \</span><br><span class="line">  logstash:7.14.0</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="4、docker安装Filebeat"><a href="#4、docker安装Filebeat" class="headerlink" title="4、docker安装Filebeat"></a>4、docker安装Filebeat</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">docker pull docker.elastic.co/beats/filebeat:7.14.0</span><br><span class="line"></span><br><span class="line">---------修改yml配置文件----------</span><br><span class="line">vim /docker/elk/filebeat/filebeat.yml</span><br><span class="line"></span><br><span class="line">---------配置信息-----------------</span><br><span class="line">filebeat.inputs:</span><br><span class="line">- type: log</span><br><span class="line">  enabled: true</span><br><span class="line">  paths:</span><br><span class="line">    - /home/log/*.log</span><br><span class="line"></span><br><span class="line">  multiline.pattern: &#x27;^\[&#x27;</span><br><span class="line">  multiline.negate: true</span><br><span class="line">  multiline.match: after</span><br><span class="line"></span><br><span class="line">output.logstash:</span><br><span class="line">  hosts: [&quot;114.55.238.234:5044&quot;]</span><br><span class="line"></span><br><span class="line">----------启动命令---------------</span><br><span class="line">docker run --name filebeat -d \</span><br><span class="line">    -v /home/logs:/home/logs:ro \</span><br><span class="line">    -v /docker/elk/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml \</span><br><span class="line">    docker.elastic.co/beats/filebeat:7.14.0</span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title>Linux命令</title>
+      <title>Hadoop</title>
       <link href="/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"/>
       <url>/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</url>
       
@@ -64,12 +88,18 @@
       
       
       
+        <tags>
+            
+            <tag> 环境部署 </tag>
+            
+        </tags>
+      
     </entry>
     
     
     
     <entry>
-      <title>Linux命令</title>
+      <title>SQL优化</title>
       <link href="/2022/09/14/sql%E4%BC%98%E5%8C%96/"/>
       <url>/2022/09/14/sql%E4%BC%98%E5%8C%96/</url>
       
@@ -77,12 +107,18 @@
       
       
       
+        <tags>
+            
+            <tag> sql </tag>
+            
+        </tags>
+      
     </entry>
     
     
     
     <entry>
-      <title>Linux命令</title>
+      <title>spring事务</title>
       <link href="/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/"/>
       <url>/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/</url>
       
@@ -90,12 +126,18 @@
       
       
       
+        <tags>
+            
+            <tag> sql </tag>
+            
+        </tags>
+      
     </entry>
     
     
     
     <entry>
-      <title>Linux命令</title>
+      <title>微服务环境搭建</title>
       <link href="/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/"/>
       <url>/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/</url>
       
@@ -103,12 +145,18 @@
       
       
       
+        <tags>
+            
+            <tag> 微服务 </tag>
+            
+        </tags>
+      
     </entry>
     
     
     
     <entry>
-      <title>Linux命令</title>
+      <title>多线程</title>
       <link href="/2022/09/14/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
       <url>/2022/09/14/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
       
@@ -116,18 +164,30 @@
       
       
       
+        <tags>
+            
+            <tag> Java基础 </tag>
+            
+        </tags>
+      
     </entry>
     
     
     
     <entry>
-      <title>Linux命令</title>
+      <title>设计模式</title>
       <link href="/2022/09/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
       <url>/2022/09/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
       
         <content type="html"><![CDATA[<h2 id="设计原理"><a href="#设计原理" class="headerlink" title="设计原理"></a>设计原理</h2><ol><li><p>SRP单一职责原则。</p></li><li><p>OCP开闭原则。</p></li><li><p>LSP里氏替换原则。</p></li><li><p>ISP接口隔离原则。</p></li><li><p>DIP依赖倒置原则。</p></li><li><p>DRY原则，KISS原则、YAGNI原则、LOD法则 。</p><h2 id=""><a href="#" class="headerlink" title=""></a></h2></li></ol><h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><h3 id="1、创造型"><a href="#1、创造型" class="headerlink" title="1、创造型"></a>1、创造型</h3><p>常用：单例模式、工厂模式（工厂方法和抽象工厂）、建造者模式。</p><p>不常用：原型模式</p><h3 id="2、结构模式"><a href="#2、结构模式" class="headerlink" title="2、结构模式"></a>2、结构模式</h3><p>常用：代理模式、桥接模式、装饰者模式、适配器模式。</p><p>不常用: 门面模式、组合模式、享元模式。</p><h3 id="3、行为模式"><a href="#3、行为模式" class="headerlink" title="3、行为模式"></a>3、行为模式</h3><p>常用：观察者模式、模板模式、策略模式、职责链模式、迭代器模式、状态模式。</p><p>不常用：访问者模式、备忘录模式、命令模式、解释器模式、中介模式。</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 面对对象编程 </tag>
+            
+        </tags>
       
     </entry>
     
