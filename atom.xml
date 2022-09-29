@@ -1,513 +1,513 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Mink的个人博客</title>
-
-
+  
+  
   <link href="https://mink.yoonada.cn/atom.xml" rel="self"/>
-
+  
   <link href="https://mink.yoonada.cn/"/>
   <updated>2022-09-29T06:18:11.461Z</updated>
   <id>https://mink.yoonada.cn/</id>
-
+  
   <author>
     <name>Mink</name>
-
+    
   </author>
-
+  
   <generator uri="https://hexo.io/">Hexo</generator>
-
+  
   <entry>
     <title>linux部署环境</title>
     <link href="https://mink.yoonada.cn/2022/09/29/linux%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83/"/>
     <id>https://mink.yoonada.cn/2022/09/29/linux%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83/</id>
     <published>2022-09-29T06:13:27.000Z</published>
     <updated>2022-09-29T06:18:11.461Z</updated>
-
+    
     <content type="html"><![CDATA[<p><a href="http://114.55.238.234/:9000/images/%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E5%92%8C%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C.pdf">http://114.55.238.234/:9000/images/编程环境和软件工具安装手册.pdf</a></p>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;p&gt;&lt;a href=&quot;http://114.55.238.234/:9000/images/%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E5%92%8C%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8</summary>
-
-
-
-
-
+      
+    
+    
+    
+    
     <category term="环境部署" scheme="https://mink.yoonada.cn/tags/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>后端存储实战</title>
     <link href="https://mink.yoonada.cn/2022/09/14/1%E3%80%81%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/"/>
     <id>https://mink.yoonada.cn/2022/09/14/1%E3%80%81%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-16T03:01:38.179Z</updated>
-
+    
     <content type="html"><![CDATA[<h1 id="1、后端存储实战"><a href="#1、后端存储实战" class="headerlink" title="1、后端存储实战"></a>1、后端存储实战</h1><h3 id="1、如何避免重复下单？"><a href="#1、如何避免重复下单？" class="headerlink" title="1、如何避免重复下单？"></a>1、如何避免重复下单？</h3><p>接下来我们来看一个场景。一个订单系统，提供创建订单的 HTTP 接口，用户在浏览器页面上点击“提交订单”按钮的时候，浏览器就会给订单系统发一个创建订单的请求，订单系统的后端服务，在收到请求之后，往数据库的订单表插入一条订单数据，创建订单成功。假如说，用户点击“创建订单”的按钮时手一抖，点了两下，浏览器发了两个 HTTP 请求，结果是什么？创建了两条一模一样的订单。这样肯定不行，需要做防重</p><p><img src="https://static001.geekbang.org/resource/image/66/17/667089ecbfdf18733c83c3d07783fa17.jpg" alt="img"></p><p><strong>解决方法：生成订单id</strong></p><h3 id="2、如何解决-ABA-问题？"><a href="#2、如何解决-ABA-问题？" class="headerlink" title="2、如何解决 ABA 问题？"></a>2、如何解决 ABA 问题？</h3><p>正常情况下，订单中的快递单号会先更新成 666，再更新成 888，这是没问题的。那不正常情况呢？666 请求到了，单号更新成 666，然后 888 请求到了，单号又更新成 888，但是 666 更新成功的响应丢了，调用方没收到成功响应，自动重试，再次发起 666 请求，单号又被更新成 666 了，这数据显然就错了。这就是非常有名的 ABA 问题。</p><p><strong>解决方法：给订单主表生成一个版本号.执行更新请求比较版本号类似于乐观锁。</strong></p>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h1 id=&quot;1、后端存储实战&quot;&gt;&lt;a href=&quot;#1、后端存储实战&quot; class=&quot;headerlink&quot; title=&quot;1、后端存储实战&quot;&gt;&lt;/a&gt;1、后端存储实战&lt;/h1&gt;&lt;h3 id=&quot;1、如何避免重复下单？&quot;&gt;&lt;a href=&quot;#1、如何避免重复下单？&quot; class</summary>
-
-
-
-
-
+      
+    
+    
+    
+    
     <category term="后端存储实战" scheme="https://mink.yoonada.cn/tags/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>JVM入门</title>
     <link href="https://mink.yoonada.cn/2022/09/14/JVM%E5%85%A5%E9%97%A8/"/>
     <id>https://mink.yoonada.cn/2022/09/14/JVM%E5%85%A5%E9%97%A8/</id>
     <published>2022-09-14T10:00:05.000Z</published>
-    <updated>2022-09-29T06:22:23.550Z</updated>
-
-    <content type="html"><![CDATA[<h1 id="JVM入门"><a href="#JVM入门" class="headerlink" title="JVM入门"></a>JVM入门</h1><h3 id="1、什么是垃圾"><a href="#1、什么是垃圾" class="headerlink" title="1、什么是垃圾"></a>1、什么是垃圾</h3><ul><li>引用计数算法：为对象添加一个引用计数器，每当对象在一个地方被引用，则该计数器加1；每当对象引用失效时，计数器减1。但计数器为0的时候，就表白该对象没有被引用。</li><li>可达性分析算法：通过一系列被称之为“GC Roots”的根节点开始，沿着引用链进行搜索，凡是在引用链上的对象都不会被回收。</li></ul><p>什么是GC roots</p><ul><li><strong>Java虚拟机栈中被引用的对象，各个线程调用的参数、局部变量、临时变量等。</strong></li><li><strong>方法区中类静态属性引用的对象，比如引用类型的静态变量</strong></li><li><strong>方法区中常量引用的对象</strong></li><li><strong>本地方法栈中所引用的对象</strong></li><li><strong>Java虚拟机内部的引用，基本数据类型对应的Class对象。一些常驻的异常对象</strong></li><li><strong>被同步锁（synchronized）持有的对象</strong></li></ul><h3 id="2、垃圾回收算法"><a href="#2、垃圾回收算法" class="headerlink" title="2、垃圾回收算法"></a>2、垃圾回收算法</h3><h4 id="标记–清除算法"><a href="#标记–清除算法" class="headerlink" title="标记–清除算法"></a>标记–清除算法</h4><p>  字面含义，对无效的对象进行标记，然后清除。</p><p>优点：哪里不对标哪里后面直接清除就完事，简单快捷。</p><p>缺点：进行垃圾回收后，堆空间会有大量的碎片，出现了不规整的情况，在给大对象分配内存的时候由于无法找到足够连续的内存空间，就不得补再一次触发垃圾收集，另外，如果Java堆中存在大量的垃圾对象，那么垃圾回收就必然进行大量的标记和清除动作，这个会造成回收效率的降低。</p><h4 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h4><p>  复制算法就是把Java堆分成两块，每次垃圾回收时只使用其中一块，然后把存活的对象全部移动到另一块区域。</p><p>优点。解决了清除算法导致的碎片化空间，</p><p>缺点，每次只使用堆空间的一半，造成了java堆空间使用率的下降。</p><h4 id="标记整理算法"><a href="#标记整理算法" class="headerlink" title="标记整理算法"></a>标记整理算法</h4><p>​标记–整理算法算是一种折中的垃圾收集算法，在对象标记的过程，和前面两个执行的是一样步骤。但是，进行标记之后，存活的对象会移动到堆的一端，然后直接清理存活对象以外的区域就可以了。这样，既避免了内存碎片，也不存在堆空间浪费的说法了。但是，每次进行垃圾回收的时候，都要暂停所有的用户线程，特别是对老年代的对象回收，则需要更长的回收时间，这对用户体验是非常不好的。</p><h4 id="分代算法"><a href="#分代算法" class="headerlink" title="分代算法"></a>分代算法</h4><p>​当前虚拟机的垃圾收集都采用分代收集算法，这种算法没有什么新的思想，只是根据对象存活周期的不同将内存分为几块。一般将 java 堆分为新生代和老年代，这样我们就可以根据各个年代的特点选择合适的垃圾收集算法。</p><p><strong>比如在新生代中，每次收集都会有大量对象死去，所以可以选择”标记-复制“算法，只需要付出少量对象的复制成本就可以完成每次垃圾收集。而老年代的对象存活几率是比较高的，而且没有额外的空间对它进行分配担保，所以我们必须选择“标记-清除”或“标记-整理”算法进行垃圾收集。</strong></p><h3 id="3、垃圾回收详解"><a href="#3、垃圾回收详解" class="headerlink" title="3、垃圾回收详解"></a>3、垃圾回收详解</h3><pre><code> 先按照图中的操作打印出GC详情数据。JDK1.8 分为年轻代，老年代。元空间。</code></pre><p><img src="http://114.55.238.234:9000/images\image-20220923104626763.png" alt="image-20220923104626763"></p><p><img src="http://114.55.238.234:9000/images\image-20220923104724909.png" alt="image-20220923104724909"></p><p>当 Eden 区没有足够空间进行分配时，虚拟机将发起一次 Minor GC。GC 期间虚拟机又发现 <code>allocation1</code> 无法存入 Survivor 空间，所以只好通过 <strong>分配担保机制</strong> 把新生代的对象提前转移到老年代中去，老年代上的空间足够存放 <code>allocation1</code>，所以不会出现 Full GC。执行 Minor GC 后，后面分配的对象如果能够存在 Eden 区的话，还是会在 Eden 区分配内存。</p><h4 id="大对象直接进入老年代"><a href="#大对象直接进入老年代" class="headerlink" title="大对象直接进入老年代"></a>大对象直接进入老年代</h4><p>大对象就是需要大量连续内存空间的对象（比如：字符串、数组）。</p><p>大对象直接进入老年代主要是为了避免为大对象分配内存时由于分配担保机制带来的复制而降低效率</p><h4 id="长期存活的对象将进入老年代"><a href="#长期存活的对象将进入老年代" class="headerlink" title="长期存活的对象将进入老年代"></a>长期存活的对象将进入老年代</h4><p>既然虚拟机采用了分代收集的思想来管理内存，那么内存回收时就必须能识别哪些对象应放在新生代，哪些对象应放在老年代中。为了做到这一点，虚拟机给每个对象一个对象年龄（Age）计数器。</p><p>大部分情况，对象都会首先在 Eden 区域分配。如果对象在 Eden 出生并经过第一次 Minor GC 后仍然能够存活，并且能被 Survivor 容纳的话，将被移动到 Survivor 空间（s0 或者 s1）中，并将对象年龄设为 1(Eden 区-&gt;Survivor 区后对象的初始年龄变为 1)。</p><p>Hotspot 遍历所有对象时，按照年龄从小到大对其所占用的大小进行累积，当累积的某个年龄大小超过了 survivor 区的 50% 时（默认值是 50%，可以通过 <code>-XX:TargetSurvivorRatio=percent</code> 来设置，取这个年龄和 MaxTenuringThreshold 中更小的一个值，作为新的晋升年龄阈值,可以通过参数 <code>-XX:MaxTenuringThreshold</code></p><p>针对 HotSpot VM 的实现，它里面的 GC 其实准确分类只有两大种：</p><p>部分收集 (Partial GC)：</p><ul><li>新生代收集（Minor GC &#x2F; Young GC）：只对新生代进行垃圾收集；</li><li>老年代收集（Major GC &#x2F; Old GC）：只对老年代进行垃圾收集。需要注意的是 Major GC 在有的语境中也用于指代整堆收集；</li><li>混合收集（Mixed GC）：对整个新生代和部分老年代进行垃圾收集。</li><li>整堆收集 (Full GC)：收集整个 Java 堆和方法区</li></ul>]]></content>
-
-
-
-
+    <updated>2022-09-29T06:26:23.933Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JVM入门"><a href="#JVM入门" class="headerlink" title="JVM入门"></a>JVM入门</h1><h3 id="1、什么是垃圾"><a href="#1、什么是垃圾" class="headerlink" title="1、什么是垃圾"></a>1、什么是垃圾</h3><ul><li>引用计数算法：为对象添加一个引用计数器，每当对象在一个地方被引用，则该计数器加1；每当对象引用失效时，计数器减1。但计数器为0的时候，就表白该对象没有被引用。</li><li>可达性分析算法：通过一系列被称之为“GC Roots”的根节点开始，沿着引用链进行搜索，凡是在引用链上的对象都不会被回收。</li></ul><p>什么是GC roots</p><ul><li><strong>Java虚拟机栈中被引用的对象，各个线程调用的参数、局部变量、临时变量等。</strong></li><li><strong>方法区中类静态属性引用的对象，比如引用类型的静态变量</strong></li><li><strong>方法区中常量引用的对象</strong></li><li><strong>本地方法栈中所引用的对象</strong></li><li><strong>Java虚拟机内部的引用，基本数据类型对应的Class对象。一些常驻的异常对象</strong></li><li><strong>被同步锁（synchronized）持有的对象</strong></li></ul><h3 id="2、垃圾回收算法"><a href="#2、垃圾回收算法" class="headerlink" title="2、垃圾回收算法"></a>2、垃圾回收算法</h3><h4 id="标记–清除算法"><a href="#标记–清除算法" class="headerlink" title="标记–清除算法"></a>标记–清除算法</h4><p>  字面含义，对无效的对象进行标记，然后清除。</p><p>优点：哪里不对标哪里后面直接清除就完事，简单快捷。</p><p>缺点：进行垃圾回收后，堆空间会有大量的碎片，出现了不规整的情况，在给大对象分配内存的时候由于无法找到足够连续的内存空间，就不得补再一次触发垃圾收集，另外，如果Java堆中存在大量的垃圾对象，那么垃圾回收就必然进行大量的标记和清除动作，这个会造成回收效率的降低。</p><h4 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h4><p>  复制算法就是把Java堆分成两块，每次垃圾回收时只使用其中一块，然后把存活的对象全部移动到另一块区域。</p><p>优点。解决了清除算法导致的碎片化空间，</p><p>缺点，每次只使用堆空间的一半，造成了java堆空间使用率的下降。</p><h4 id="标记整理算法"><a href="#标记整理算法" class="headerlink" title="标记整理算法"></a>标记整理算法</h4><p>​标记–整理算法算是一种折中的垃圾收集算法，在对象标记的过程，和前面两个执行的是一样步骤。但是，进行标记之后，存活的对象会移动到堆的一端，然后直接清理存活对象以外的区域就可以了。这样，既避免了内存碎片，也不存在堆空间浪费的说法了。但是，每次进行垃圾回收的时候，都要暂停所有的用户线程，特别是对老年代的对象回收，则需要更长的回收时间，这对用户体验是非常不好的。</p><h4 id="分代算法"><a href="#分代算法" class="headerlink" title="分代算法"></a>分代算法</h4><p>​当前虚拟机的垃圾收集都采用分代收集算法，这种算法没有什么新的思想，只是根据对象存活周期的不同将内存分为几块。一般将 java 堆分为新生代和老年代，这样我们就可以根据各个年代的特点选择合适的垃圾收集算法。</p><p><strong>比如在新生代中，每次收集都会有大量对象死去，所以可以选择”标记-复制“算法，只需要付出少量对象的复制成本就可以完成每次垃圾收集。而老年代的对象存活几率是比较高的，而且没有额外的空间对它进行分配担保，所以我们必须选择“标记-清除”或“标记-整理”算法进行垃圾收集。</strong></p><h3 id="3、垃圾回收详解"><a href="#3、垃圾回收详解" class="headerlink" title="3、垃圾回收详解"></a>3、垃圾回收详解</h3><pre><code> 先按照图中的操作打印出GC详情数据。JDK1.8 分为年轻代，老年代。元空间。</code></pre><p><img src="http://114.55.238.234:9000/images/image-20220923104626763.png" alt="image-20220923104626763"></p><p><img src="http://114.55.238.234:9000/images/image-20220923104724909.png" alt="image-20220923104724909"></p><p>当 Eden 区没有足够空间进行分配时，虚拟机将发起一次 Minor GC。GC 期间虚拟机又发现 <code>allocation1</code> 无法存入 Survivor 空间，所以只好通过 <strong>分配担保机制</strong> 把新生代的对象提前转移到老年代中去，老年代上的空间足够存放 <code>allocation1</code>，所以不会出现 Full GC。执行 Minor GC 后，后面分配的对象如果能够存在 Eden 区的话，还是会在 Eden 区分配内存。</p><h4 id="大对象直接进入老年代"><a href="#大对象直接进入老年代" class="headerlink" title="大对象直接进入老年代"></a>大对象直接进入老年代</h4><p>大对象就是需要大量连续内存空间的对象（比如：字符串、数组）。</p><p>大对象直接进入老年代主要是为了避免为大对象分配内存时由于分配担保机制带来的复制而降低效率</p><h4 id="长期存活的对象将进入老年代"><a href="#长期存活的对象将进入老年代" class="headerlink" title="长期存活的对象将进入老年代"></a>长期存活的对象将进入老年代</h4><p>既然虚拟机采用了分代收集的思想来管理内存，那么内存回收时就必须能识别哪些对象应放在新生代，哪些对象应放在老年代中。为了做到这一点，虚拟机给每个对象一个对象年龄（Age）计数器。</p><p>大部分情况，对象都会首先在 Eden 区域分配。如果对象在 Eden 出生并经过第一次 Minor GC 后仍然能够存活，并且能被 Survivor 容纳的话，将被移动到 Survivor 空间（s0 或者 s1）中，并将对象年龄设为 1(Eden 区-&gt;Survivor 区后对象的初始年龄变为 1)。</p><p>Hotspot 遍历所有对象时，按照年龄从小到大对其所占用的大小进行累积，当累积的某个年龄大小超过了 survivor 区的 50% 时（默认值是 50%，可以通过 <code>-XX:TargetSurvivorRatio=percent</code> 来设置，取这个年龄和 MaxTenuringThreshold 中更小的一个值，作为新的晋升年龄阈值,可以通过参数 <code>-XX:MaxTenuringThreshold</code></p><p>针对 HotSpot VM 的实现，它里面的 GC 其实准确分类只有两大种：</p><p>部分收集 (Partial GC)：</p><ul><li>新生代收集（Minor GC &#x2F; Young GC）：只对新生代进行垃圾收集；</li><li>老年代收集（Major GC &#x2F; Old GC）：只对老年代进行垃圾收集。需要注意的是 Major GC 在有的语境中也用于指代整堆收集；</li><li>混合收集（Mixed GC）：对整个新生代和部分老年代进行垃圾收集。</li><li>整堆收集 (Full GC)：收集整个 Java 堆和方法区</li></ul>]]></content>
+    
+    
+      
+      
     <summary type="html">&lt;h1 id=&quot;JVM入门&quot;&gt;&lt;a href=&quot;#JVM入门&quot; class=&quot;headerlink&quot; title=&quot;JVM入门&quot;&gt;&lt;/a&gt;JVM入门&lt;/h1&gt;&lt;h3 id=&quot;1、什么是垃圾&quot;&gt;&lt;a href=&quot;#1、什么是垃圾&quot; class=&quot;headerlink&quot; title=</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="Java基础" scheme="https://mink.yoonada.cn/categories/Java%E5%9F%BA%E7%A1%80/"/>
-
-
+    
+    
     <category term="JVM" scheme="https://mink.yoonada.cn/tags/JVM/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>docker部署ELK</title>
     <link href="https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/"/>
     <id>https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-16T03:01:38.154Z</updated>
-
+    
     <content type="html"><![CDATA[<h1 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h1><h3 id="防火墙命令"><a href="#防火墙命令" class="headerlink" title="防火墙命令"></a>防火墙命令</h3><!--开启防火墙--><p>systemctl start firewalld</p><!--关闭防火墙--><p>systemctl stop firewalld</p><!--查看防火墙状态--><p>systemctl status firewalld </p><!--开放某个端口--><p>firewall-cmd –zone&#x3D;public –add-port&#x3D;5045&#x2F;tcp –permanent </p><!--重新加载配置--><p>firewall-cmd –reload</p><!--查看已经开放的端口--><p>firewall-cmd –zone&#x3D;public –list-ports</p><h3 id="删除挖矿病毒"><a href="#删除挖矿病毒" class="headerlink" title="删除挖矿病毒"></a>删除挖矿病毒</h3><ol><li>top查看占有率</li><li>ll &#x2F;proc&#x2F;pid(病毒pid)</li><li>rm -rf &#x2F;boot&#x2F;grub2&#x2F;fonts&#x2F;0wrasx&#x2F;kthreaddk (deleted)</li><li>crontab -e  </li><li>dd</li><li>reboot</li></ol><h1 id="docker部署"><a href="#docker部署" class="headerlink" title="docker部署"></a>docker部署</h1><h3 id="1、docker部署elasticsearch"><a href="#1、docker部署elasticsearch" class="headerlink" title="1、docker部署elasticsearch"></a>1、docker部署elasticsearch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">docker pull elasticsearch:7.14.0</span><br><span class="line">mkdir -p /gdgx/ymk/elk/es/&#123;config,data,logs&#125;</span><br><span class="line">chown -R 1000:1000 /gdgx/ymk/elk</span><br><span class="line">cd /gdgx/ymk/elk/es/config</span><br><span class="line">touch elasticsearch.yml</span><br><span class="line">-----------------------配置内容----------------------------------</span><br><span class="line">cluster.name: &quot;my-es&quot;</span><br><span class="line">network.host: 0.0.0.0</span><br><span class="line">http.port: 9200</span><br><span class="line">-----------------------启动命令--------------------------------</span><br><span class="line">docker run -it  -d -p 4200:9200 -p 4000:9300 --name kes -e ES_JAVA_OPTS=&quot;-Xms1g -Xmx1g&quot; -e &quot;discovery.type=single-node&quot; --restart=always -v /gdgx/ymk/elk/es/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml -v /gdgx/ymk/elk/es/data:/usr/share/elasticsearch/data -v /gdgx/ymk/elk/es/logs:/usr/share/elasticsearch/logs elasticsearch:7.14.0</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="2、docker-部署kibana"><a href="#2、docker-部署kibana" class="headerlink" title="2、docker 部署kibana"></a>2、docker 部署kibana</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">docker pull kibana:7.14.0</span><br><span class="line">docker inspect --format &#x27;&#123;&#123; .NetworkSettings.IPAddress &#125;&#125;&#x27; es</span><br><span class="line">mkdir -p /gdgx/ymk/elk/kibana/</span><br><span class="line">vim /gdgx/ymk/elk/kibana/kibana.yml</span><br><span class="line">-------------配置信息---------------</span><br><span class="line">server.name: kibana</span><br><span class="line">server.host: &quot;0&quot;</span><br><span class="line">elasticsearch.hosts: [&quot;http://172.17.0.5:9200&quot;]</span><br><span class="line">xpack.monitoring.ui.container.elasticsearch.enabled: true</span><br><span class="line">i18n.locale: &quot;zh-CN&quot;</span><br><span class="line">--------------启动命令--------------------</span><br><span class="line"></span><br><span class="line">docker run -d --restart=always --log-driver json-file --log-opt max-size=100m --log-opt max-file=2 --name kibana -p 4001:5601 -v /gdgx/ymk/elk/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml kibana:7.14.0</span><br></pre></td></tr></table></figure><h3 id="3、部署logstash日志过滤、转换工具"><a href="#3、部署logstash日志过滤、转换工具" class="headerlink" title="3、部署logstash日志过滤、转换工具"></a>3、部署logstash日志过滤、转换工具</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">docker pull logstash:7.14.0</span><br><span class="line">docker run -d --name=logstash logstash:7.14.0</span><br><span class="line">docker logs -f logstash</span><br><span class="line">docker cp logstash:/usr/share/logstash /docker/elk/</span><br><span class="line">mkdir /docker/elk/logstash</span><br><span class="line">chmod 777 -R /docker/elk/logstash</span><br><span class="line">----------yml配置信息——--------------------------</span><br><span class="line">vi /docker/elk/logstash/config/logstash.yml</span><br><span class="line">http.host: &quot;0.0.0.0&quot;</span><br><span class="line">xpack.monitoring.elasticsearch.hosts: [&quot;http://114.55.238.234:9200&quot;]</span><br><span class="line">path.config: /usr/share/logstash/config/*.conf</span><br><span class="line">path.logs: /usr/share/logstash/logs</span><br><span class="line">-----------配置信息——------------</span><br><span class="line">vi /data/elk/logstash/config/logstash.conf</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Sample Logstash configuration <span class="keyword">for</span> creating a simple</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Beats -&gt; Logstash -&gt; Elasticsearch pipeline.</span></span><br><span class="line">input &#123;</span><br><span class="line">  tcp &#123;</span><br><span class="line">    port =&gt; 5045</span><br><span class="line">    type =&gt; syslog</span><br><span class="line">  &#125;</span><br><span class="line"> beats &#123;</span><br><span class="line">   port =&gt; &quot;5044&quot;</span><br><span class="line">   type =&gt; file</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">output &#123;</span><br><span class="line"> stdout &#123; codec =&gt; rubydebug &#125;</span><br><span class="line">  </span><br><span class="line">  if[type] == &quot;file&quot; &#123;</span><br><span class="line"> elasticsearch&#123;</span><br><span class="line">   hosts =&gt; [&quot;http://114.55.238.234:9200&quot;]</span><br><span class="line">    index =&gt; &quot;filelogs-%&#123;+YYYY.MM.dd&#125;&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">  elasticsearch&#123;</span><br><span class="line">   hosts =&gt; [&quot;http://114.55.238.234:9200&quot;]</span><br><span class="line">    index =&gt; &quot;mylogs-%&#123;+YYYY.MM.dd&#125;&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">docker rm -f logstash</span><br><span class="line">-----------启动命令----------</span><br><span class="line">docker run -d \</span><br><span class="line">  --name=logstash \</span><br><span class="line">  --restart=always \</span><br><span class="line">  -p 5044:5044 \</span><br><span class="line">  -v /docker/elk/logstash:/usr/share/logstash \</span><br><span class="line">  -v /var/log/messages:/var/log/messages \</span><br><span class="line">  logstash:7.14.0</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="4、docker安装Filebeat"><a href="#4、docker安装Filebeat" class="headerlink" title="4、docker安装Filebeat"></a>4、docker安装Filebeat</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">docker pull docker.elastic.co/beats/filebeat:7.14.0</span><br><span class="line"></span><br><span class="line">---------修改yml配置文件----------</span><br><span class="line">vim /docker/elk/filebeat/filebeat.yml</span><br><span class="line"></span><br><span class="line">---------配置信息-----------------</span><br><span class="line">filebeat.inputs:</span><br><span class="line">- type: log</span><br><span class="line">  enabled: true</span><br><span class="line">  paths:</span><br><span class="line">    - /home/log/*.log</span><br><span class="line"></span><br><span class="line">  multiline.pattern: &#x27;^\[&#x27;</span><br><span class="line">  multiline.negate: true</span><br><span class="line">  multiline.match: after</span><br><span class="line"></span><br><span class="line">output.logstash:</span><br><span class="line">  hosts: [&quot;114.55.238.234:5044&quot;]</span><br><span class="line"></span><br><span class="line">----------启动命令---------------</span><br><span class="line">docker run --name filebeat -d \</span><br><span class="line">    -v /home/logs:/home/logs:ro \</span><br><span class="line">    -v /docker/elk/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml \</span><br><span class="line">    docker.elastic.co/beats/filebeat:7.14.0</span><br></pre></td></tr></table></figure>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h1 id=&quot;Linux命令&quot;&gt;&lt;a href=&quot;#Linux命令&quot; class=&quot;headerlink&quot; title=&quot;Linux命令&quot;&gt;&lt;/a&gt;Linux命令&lt;/h1&gt;&lt;h3 id=&quot;防火墙命令&quot;&gt;&lt;a href=&quot;#防火墙命令&quot; class=&quot;headerlink&quot; ti</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
-
-
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>Hadoop</title>
     <link href="https://mink.yoonada.cn/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"/>
     <id>https://mink.yoonada.cn/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-16T03:17:33.692Z</updated>
-
+    
     <content type="html"><![CDATA[<h2 id="hadoop入门笔记"><a href="#hadoop入门笔记" class="headerlink" title="hadoop入门笔记"></a>hadoop入门笔记</h2><h3 id="1、hadoop-安装"><a href="#1、hadoop-安装" class="headerlink" title="1、hadoop 安装"></a>1、hadoop 安装</h3><h5 id="1-、服务器设置"><a href="#1-、服务器设置" class="headerlink" title="1 、服务器设置"></a>1 、服务器设置</h5><p>1、配置服务器别名和访问  vim  &#x2F;etc&#x2F;hosts</p><p>2、将三台服务器的ip输入 xxx.xxx.xx hadoop1  xxx.xxx.xx hadoop3<br>                                            xxx.xxx.xx hadoop2</p><p>3、阿里云服务器下本机地址要设置为私有ip（注意）</p><h5 id="2-、jdk环境搭建"><a href="#2-、jdk环境搭建" class="headerlink" title="2 、jdk环境搭建"></a>2 、jdk环境搭建</h5><p>1、解压jdk</p><p>2、配置环境变量</p><p>3、使环境变量生效</p><p>4、查看java版本是否安装成功</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf /root/jdk-8u161-linux-x64.tar.gz -C ./</span><br><span class="line">vim /etc/profile</span><br><span class="line">JAVA_HOME=/usr/local/java/jdk1.8.0_161</span><br><span class="line">CLASSPATH=$JAVA_HOME/lib/</span><br><span class="line">PATH=$PATH:$JAVA_HOME/bin</span><br><span class="line">export PATH JAVA_HOME CLASSPATH</span><br><span class="line">source /etc/profile</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure><p>​</p><h5 id="3、hadoop环境搭建"><a href="#3、hadoop环境搭建" class="headerlink" title="3、hadoop环境搭建"></a>3、hadoop环境搭建</h5><p>1、解压hadoop</p><p>2、配置环境变量</p><p>3、使环境变量生效</p><p>4、查看hadoop版本是否安装成功</p><p><strong>遇到的坑：ERROR: Invalid HADOOP_HDFS_HOME 需要在系统下添加</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@duan local]# vim ~/.bashrc</span><br><span class="line">[root@duan local]# source ~/.bash_profile</span><br></pre></td></tr></table></figure><h5 id="4、务器直接免密码登录"><a href="#4、务器直接免密码登录" class="headerlink" title="4、务器直接免密码登录"></a>4、务器直接免密码登录</h5><p>1、ssh-keygen -t rsa 再 .ssh目录下生成公私密钥</p><p>2、 ssh-copy-id duan 公钥给duan</p><h5 id="5、hadoop集群配置"><a href="#5、hadoop集群配置" class="headerlink" title="5、hadoop集群配置"></a>5、hadoop集群配置</h5><p>权能划分：duan nameNode gao secord nameNode zou RM</p><h5 id="6、分发脚本"><a href="#6、分发脚本" class="headerlink" title="6、分发脚本"></a>6、分发脚本</h5><p>每台机器执行 yum -y install rsync 安装工具</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1.获取输入参数个数，如果没有参数，直接退出</span></span><br><span class="line">pcount=$#</span><br><span class="line">if((pcount==0)); then</span><br><span class="line">echo no args;</span><br><span class="line">exit;</span><br><span class="line">fi</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">2.获取文件名称</span></span><br><span class="line">p1=$1</span><br><span class="line">fname=`basename $p1`</span><br><span class="line">echo fname=$fname</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">3.获取上级目录到绝对路径</span></span><br><span class="line">pdir=`cd -P $(dirname $p1); pwd`</span><br><span class="line">echo pdir=$pdir</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">4.获取当前用户名称</span></span><br><span class="line">user=`whoami`</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">5.循环（191,192,193三台机器是我的集群ip）</span></span><br><span class="line">echo ------------------- hadoop$host --------------</span><br><span class="line">rsync -rvl $pdir/$fname $user@zou:$pdir</span><br><span class="line">rsync -rvl $pdir/$fname $user@duan:$pdir</span><br><span class="line">rsync -rvl $pdir/$fname $user@gao:$pdir</span><br><span class="line"></span><br></pre></td></tr></table></figure><h5 id="7、启动停止"><a href="#7、启动停止" class="headerlink" title="7、启动停止"></a>7、启动停止</h5><p>start-dfs.sh&#x2F;stop-dfs.sh</p><p>start-yarn.sh&#x2F;stop-yarn.sh</p><h5 id="8、常用端口号"><a href="#8、常用端口号" class="headerlink" title="8、常用端口号"></a>8、常用端口号</h5><p>1、HDFS  NameNode 内部通讯端口：8020、9000、9820</p><p>2、HDFS  NameNode web端口 ：9870</p><p>3、YARN 查看运行情况得端口8088</p><p>4、历史服务器：19888</p><h3 id="core-site-xml"><a href="#core-site-xml" class="headerlink" title="core-site.xml"></a>core-site.xml</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--设置全局参数，指定HDFS上NN地址为master，端口9000--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.default.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://master:9000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--指定HDFS执行时的临时目录，指定NameNode、DataNode、JournalNode等存放数据的公共目录。用户也可以自己单独指定这三类节点的目录。以下的/hdfs/tmp目录与文件都是自己创建的 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>/usr/hadoop/hadoop-2.7.3/hdfs/tmp<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">description</span>&gt;</span>A base for other tempory directories<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>io.file.buffer.size<span class="tag">&lt;/<span class="name">name</span>&gt;</span>                                       </span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>131072<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">final</span>&gt;</span>4096<span class="tag">&lt;/<span class="name">final</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">description</span>&gt;</span>流文件的缓冲区为4K<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.checkpoint.period<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>60<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.checkpoint.size<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>67108864<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="2、hadoop-hdfs入门操作"><a href="#2、hadoop-hdfs入门操作" class="headerlink" title="2、hadoop hdfs入门操作"></a>2、hadoop hdfs入门操作</h3>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h2 id=&quot;hadoop入门笔记&quot;&gt;&lt;a href=&quot;#hadoop入门笔记&quot; class=&quot;headerlink&quot; title=&quot;hadoop入门笔记&quot;&gt;&lt;/a&gt;hadoop入门笔记&lt;/h2&gt;&lt;h3 id=&quot;1、hadoop-安装&quot;&gt;&lt;a href=&quot;#1、hadoop-安</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
-
-
+    
+    
     <category term="环境部署" scheme="https://mink.yoonada.cn/tags/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>SQL优化</title>
     <link href="https://mink.yoonada.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/"/>
     <id>https://mink.yoonada.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/</id>
     <published>2022-09-14T10:00:05.000Z</published>
-    <updated>2022-09-16T03:01:38.276Z</updated>
-
-    <content type="html"><![CDATA[<h3 id="十万条数据用全匹配查询"><a href="#十万条数据用全匹配查询" class="headerlink" title="十万条数据用全匹配查询"></a>十万条数据用全匹配查询</h3><p>SELECT * FROM index_test;</p><p>48.459 s</p><p><img src="http://114.55.238.234:9000/images\image-20220329163736996.png" alt="image-20220329163736996"></p><p><img src="http://114.55.238.234:9000/images\image-20220329164458264.png" alt="image-20220329164458264"></p><p>走index索引</p><p>0.35s</p><p><img src="http://114.55.238.234:9000/images\image-20220329164957753.png" alt="image-20220329164957753"></p><p>不走</p><p>0.38</p>]]></content>
-
-
-
-
+    <updated>2022-09-29T06:26:23.927Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="十万条数据用全匹配查询"><a href="#十万条数据用全匹配查询" class="headerlink" title="十万条数据用全匹配查询"></a>十万条数据用全匹配查询</h3><p>SELECT * FROM index_test;</p><p>48.459 s</p><p><img src="http://114.55.238.234:9000/images/image-20220329163736996.png" alt="image-20220329163736996"></p><p><img src="http://114.55.238.234:9000/images/image-20220329164458264.png" alt="image-20220329164458264"></p><p>走index索引</p><p>0.35s</p><p><img src="http://114.55.238.234:9000/images/image-20220329164957753.png" alt="image-20220329164957753"></p><p>不走</p><p>0.38</p>]]></content>
+    
+    
+      
+      
     <summary type="html">&lt;h3 id=&quot;十万条数据用全匹配查询&quot;&gt;&lt;a href=&quot;#十万条数据用全匹配查询&quot; class=&quot;headerlink&quot; title=&quot;十万条数据用全匹配查询&quot;&gt;&lt;/a&gt;十万条数据用全匹配查询&lt;/h3&gt;&lt;p&gt;SELECT * FROM index_test;&lt;/p&gt;
 &lt;p&gt;4</summary>
-
-
-
-
-
+      
+    
+    
+    
+    
     <category term="sql" scheme="https://mink.yoonada.cn/tags/sql/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>spring事务</title>
     <link href="https://mink.yoonada.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/"/>
     <id>https://mink.yoonada.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-16T03:17:58.433Z</updated>
-
+    
     <content type="html"><![CDATA[<h1 id="事务基本知识"><a href="#事务基本知识" class="headerlink" title="事务基本知识"></a>事务基本知识</h1><p>事务的四大特性分别是：原子性、一致性、隔离性、持久性</p><h1 id="1、Spring事务"><a href="#1、Spring事务" class="headerlink" title="1、Spring事务"></a>1、Spring事务</h1><h3 id="1、spring事务失效三种情况"><a href="#1、spring事务失效三种情况" class="headerlink" title="1、spring事务失效三种情况"></a>1、spring事务失效三种情况</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、方法修饰符不为public</span><br><span class="line"></span><br><span class="line">2、被try cath没抛出异常</span><br><span class="line"></span><br><span class="line">3、Transactional默认为runtime异常其他的不会回滚</span><br></pre></td></tr></table></figure><h3 id="2、spring事务传播机制"><a href="#2、spring事务传播机制" class="headerlink" title="2、spring事务传播机制"></a>2、spring事务传播机制</h3>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h1 id=&quot;事务基本知识&quot;&gt;&lt;a href=&quot;#事务基本知识&quot; class=&quot;headerlink&quot; title=&quot;事务基本知识&quot;&gt;&lt;/a&gt;事务基本知识&lt;/h1&gt;&lt;p&gt;事务的四大特性分别是：原子性、一致性、隔离性、持久性&lt;/p&gt;
 &lt;h1 id=&quot;1、Spring事务&quot;&gt;&lt;a </summary>
-
-
-
-
+      
+    
+    
+    
     <category term="spring事务" scheme="https://mink.yoonada.cn/categories/spring%E4%BA%8B%E5%8A%A1/"/>
-
-
+    
+    
     <category term="spring事务" scheme="https://mink.yoonada.cn/tags/spring%E4%BA%8B%E5%8A%A1/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>微服务环境搭建</title>
     <link href="https://mink.yoonada.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/"/>
     <id>https://mink.yoonada.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/</id>
     <published>2022-09-14T10:00:05.000Z</published>
-    <updated>2022-09-16T03:22:02.076Z</updated>
-
-    <content type="html"><![CDATA[<h3 id="从0到1搭建微服务项目-核心模块"><a href="#从0到1搭建微服务项目-核心模块" class="headerlink" title="从0到1搭建微服务项目-核心模块"></a>从0到1搭建微服务项目-核心模块</h3><p>1，微服务对应的springboot版本很重要，可以去官网查看对应版本知道你们懒，所以帮你们截图下来了。</p><p><img src="http://114.55.238.234:9000/images\image-20220901175350918.png" alt="image-20220901175350918"></p><p>  <strong>最新版本有很多坑</strong>，但是我们</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">spring-boot.version</span>&gt;</span>2.5.5<span class="tag">&lt;/<span class="name">spring-boot.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">spring-cloud.version</span>&gt;</span>2020.0.4<span class="tag">&lt;/<span class="name">spring-cloud.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">spring-cloud-alibaba.version</span>&gt;</span>2021.1<span class="tag">&lt;/<span class="name">spring-cloud-alibaba.version</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-
-
-
-
+    <updated>2022-09-29T06:26:23.993Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="从0到1搭建微服务项目-核心模块"><a href="#从0到1搭建微服务项目-核心模块" class="headerlink" title="从0到1搭建微服务项目-核心模块"></a>从0到1搭建微服务项目-核心模块</h3><p>1，微服务对应的springboot版本很重要，可以去官网查看对应版本知道你们懒，所以帮你们截图下来了。</p><p><img src="http://114.55.238.234:9000/images/image-20220901175350918.png" alt="image-20220901175350918"></p><p>  <strong>最新版本有很多坑</strong>，但是我们</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">spring-boot.version</span>&gt;</span>2.5.5<span class="tag">&lt;/<span class="name">spring-boot.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">spring-cloud.version</span>&gt;</span>2020.0.4<span class="tag">&lt;/<span class="name">spring-cloud.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">spring-cloud-alibaba.version</span>&gt;</span>2021.1<span class="tag">&lt;/<span class="name">spring-cloud-alibaba.version</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
     <summary type="html">&lt;h3 id=&quot;从0到1搭建微服务项目-核心模块&quot;&gt;&lt;a href=&quot;#从0到1搭建微服务项目-核心模块&quot; class=&quot;headerlink&quot; title=&quot;从0到1搭建微服务项目-核心模块&quot;&gt;&lt;/a&gt;从0到1搭建微服务项目-核心模块&lt;/h3&gt;&lt;p&gt;1，微服务对应的spring</summary>
-
-
-
-
-
+      
+    
+    
+    
+    
     <category term="微服务" scheme="https://mink.yoonada.cn/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>多线程</title>
     <link href="https://mink.yoonada.cn/2022/09/14/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     <id>https://mink.yoonada.cn/2022/09/14/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-16T03:17:33.699Z</updated>
-
+    
     <content type="html"><![CDATA[<h3 id="深入理解多线程"><a href="#深入理解多线程" class="headerlink" title="深入理解多线程"></a>深入理解多线程</h3><h4 id="1、线程基础概念"><a href="#1、线程基础概念" class="headerlink" title="1、线程基础概念"></a>1、线程基础概念</h4><p>​线程和进程一样分为五个阶段：创建、就绪、运行、阻塞、终止。Java有6种状态（初始化，运行，阻塞，等待，等待超时，终止）</p><p>1、新建状态（New）：新创建了一个线程对象。</p><p>2、就绪状态（Runnable）：线程对象创建后，其他线程调用了该对象的start()方法。该状态的线程位于可运行线程池中，变得可运行，等待获取CPU的使用权。</p><p>3、运行状态（Running）：就绪状态的线程获取了CPU，执行程序代码。</p><p>4、阻塞状态（Blocked）：阻塞状态是线程因为某种原因放弃CPU使用权，暂时停止运行。直到线程进入就绪状态，才有机会转到运行状态。阻塞的情况分三种：<br>（一）、等待阻塞：运行的线程执行wait()方法，JVM会把该线程放入等待池中。(wait会释放持有的锁)<br>（二）、同步阻塞：运行的线程在获取对象的同步锁时，若该同步锁被别的线程占用，则JVM会把该线程放入锁池中。<br>（三）、其他阻塞：运行的线程执行sleep()或join()方法，或者发出了I&#x2F;O请求时，JVM会把该线程置为阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I&#x2F;O处理完毕时，线程重新转入就绪状态。（注意,sleep是不会释放持有的锁）<br>5、死亡状态（Dead）：线程执行完了或者因异常退出了run()方法，该线程结束生命周期。<br>6、等待超时（TIMED_WAITING）：具有指定等待时间的等待线程的线程状态。由于以指定的正等待时间调用以下方法之一，线程处于定时等待状态：</p><p>Thread.sleep<br>Object.wait超时<br>Thread.join超时<br>LockSupport.parkNanos<br>LockSupport.parkUntil</p><h4 id="2、Thread类解析"><a href="#2、Thread类解析" class="headerlink" title="2、Thread类解析"></a>2、Thread类解析</h4><p>1、控制线程执行优先级</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> /**</span><br><span class="line">  * 线程可以拥有的最低优先级</span><br><span class="line">  */</span><br><span class="line"> public final static int MIN_PRIORITY = 1;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">  * 线程默认的优先级</span><br><span class="line">  */</span><br><span class="line"> public final static int NORM_PRIORITY = 5;</span><br><span class="line"></span><br><span class="line"> /**</span><br><span class="line">  * 线程最大优先级</span><br><span class="line">  */</span><br><span class="line"> public final static int MAX_PRIORITY = 10;</span><br></pre></td></tr></table></figure><p>通过getPriority() setPriority()来获取喝设置线程优先级，</p><p>1、java线程是通过映射到系统的原生线程上来实现的，所以线程的调度最终还是取决于操作系统，操作系统的优先级与java的优先级并不一一对应，如果操作系统的优先级级数大于java的优先级级数（10级）还好，但是如果小于得的话就不行了，这样会导致不同优先级的线程的优先级是一样的。<br>2、优先级可能会被系统自动改变，比如windows系统中就存在一个优先级推进器，大致功能就是如果一个线程执行的次数过多的话，可能会越过优先级为他分配执行时间。</p><p><strong>如果严格按照优先级，那么可能会出现某个线程一直不执行的情况</strong></p>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h3 id=&quot;深入理解多线程&quot;&gt;&lt;a href=&quot;#深入理解多线程&quot; class=&quot;headerlink&quot; title=&quot;深入理解多线程&quot;&gt;&lt;/a&gt;深入理解多线程&lt;/h3&gt;&lt;h4 id=&quot;1、线程基础概念&quot;&gt;&lt;a href=&quot;#1、线程基础概念&quot; class=&quot;headerli</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="Java基础" scheme="https://mink.yoonada.cn/categories/Java%E5%9F%BA%E7%A1%80/"/>
-
-
+    
+    
     <category term="Java基础" scheme="https://mink.yoonada.cn/tags/Java%E5%9F%BA%E7%A1%80/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>设计模式</title>
     <link href="https://mink.yoonada.cn/2022/09/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     <id>https://mink.yoonada.cn/2022/09/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-16T03:17:33.711Z</updated>
-
+    
     <content type="html"><![CDATA[<h2 id="设计原理"><a href="#设计原理" class="headerlink" title="设计原理"></a>设计原理</h2><ol><li><p>SRP单一职责原则。</p></li><li><p>OCP开闭原则。</p></li><li><p>LSP里氏替换原则。</p></li><li><p>ISP接口隔离原则。</p></li><li><p>DIP依赖倒置原则。</p></li><li><p>DRY原则，KISS原则、YAGNI原则、LOD法则 。</p><h2 id=""><a href="#" class="headerlink" title=""></a></h2></li></ol><h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><h3 id="1、创造型"><a href="#1、创造型" class="headerlink" title="1、创造型"></a>1、创造型</h3><p>常用：单例模式、工厂模式（工厂方法和抽象工厂）、建造者模式。</p><p>不常用：原型模式</p><h3 id="2、结构模式"><a href="#2、结构模式" class="headerlink" title="2、结构模式"></a>2、结构模式</h3><p>常用：代理模式、桥接模式、装饰者模式、适配器模式。</p><p>不常用: 门面模式、组合模式、享元模式。</p><h3 id="3、行为模式"><a href="#3、行为模式" class="headerlink" title="3、行为模式"></a>3、行为模式</h3><p>常用：观察者模式、模板模式、策略模式、职责链模式、迭代器模式、状态模式。</p><p>不常用：访问者模式、备忘录模式、命令模式、解释器模式、中介模式。</p>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h2 id=&quot;设计原理&quot;&gt;&lt;a href=&quot;#设计原理&quot; class=&quot;headerlink&quot; title=&quot;设计原理&quot;&gt;&lt;/a&gt;设计原理&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;SRP单一职责原则。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;OCP开闭原则。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="Java基础" scheme="https://mink.yoonada.cn/categories/Java%E5%9F%BA%E7%A1%80/"/>
-
-
+    
+    
     <category term="面对对象编程" scheme="https://mink.yoonada.cn/tags/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>springboot集成dubbo以nacos为注册中心</title>
     <link href="https://mink.yoonada.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
     <id>https://mink.yoonada.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-29T06:11:28.029Z</updated>
-
+    
     <content type="html"><![CDATA[<h3 id="1、依赖导入"><a href="#1、依赖导入" class="headerlink" title="1、依赖导入"></a>1、依赖导入</h3><p>注意：3.0以后的dubbo版本。nacos的客户端版本要2.0以上，不然会报错。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.dubbo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>dubbo-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.nacos<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>nacos-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.pua<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>pua-common-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.nacos<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>nacos-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="2、配置文件"><a href="#2、配置文件" class="headerlink" title="2、配置文件"></a>2、配置文件</h3><p>没啥好说的。nacos作为配置注册中心，dubbo，设置nacos为注册中心，设置接入协议。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">host:</span> <span class="number">47.98</span><span class="number">.236</span><span class="number">.213</span><span class="string">:8848</span></span><br><span class="line">      <span class="attr">namespace:</span> <span class="string">pua</span></span><br><span class="line">      <span class="attr">discovery:</span></span><br><span class="line">        <span class="attr">server-addr:</span> <span class="string">$&#123;spring.cloud.nacos.host&#125;</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">$&#123;spring.cloud.nacos.namespace&#125;</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">$&#123;spring.profiles.active&#125;</span></span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        <span class="attr">server-addr:</span> <span class="string">$&#123;spring.cloud.nacos.host&#125;</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">$&#123;spring.cloud.nacos.namespace&#125;</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">$&#123;spring.profiles.active&#125;</span></span><br><span class="line">        <span class="attr">file-extension:</span> <span class="string">yaml</span></span><br><span class="line">        <span class="attr">refresh-enabled:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">username:</span> <span class="string">nacos</span></span><br><span class="line">      <span class="attr">password:</span> <span class="string">ENC(F0qwKRQUWxXgXfNDN05yIg==)</span></span><br><span class="line"><span class="attr">dubbo:</span></span><br><span class="line">  <span class="attr">protocol:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">dubbo</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">-1</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">pua-producer</span></span><br><span class="line">  <span class="attr">registry:</span></span><br><span class="line">    <span class="attr">register-mode:</span> <span class="string">interface</span></span><br><span class="line">    <span class="attr">address:</span> <span class="string">nacos://47.98.236.213:8848</span></span><br><span class="line">    <span class="attr">parameters:</span></span><br><span class="line">      <span class="attr">namespace:</span> <span class="string">$&#123;spring.cloud.nacos.namespace&#125;</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">nacos</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">ENC(F0qwKRQUWxXgXfNDN05yIg==)</span></span><br></pre></td></tr></table></figure><h3 id="3、服务提供者使用"><a href="#3、服务提供者使用" class="headerlink" title="3、服务提供者使用"></a>3、服务提供者使用</h3><p>在启动类设置Dubbo启动扫描的。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableEncryptableProperties</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableDubbo(scanBasePackages = &quot;com.pua.producer.service&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ProducerApplication</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(ProducerApplication.class,args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="meta">@DubboService</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ProducerServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">ProducerService</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getId</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;110&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="4、消费者使用"><a href="#4、消费者使用" class="headerlink" title="4、消费者使用"></a>4、消费者使用</h3><p>直接引入和生产者一样的依赖还需要引入消费者模块。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.pua&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;producer&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.0&lt;/version&gt;</span><br><span class="line">    &lt;scope&gt;compile&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@DubboReference(interfaceClass = ProducerService.class)</span></span><br><span class="line"><span class="keyword">private</span> ProducerService producerService;</span><br><span class="line"></span><br><span class="line"><span class="meta">@ApiOperation(&quot;测试&quot;)</span></span><br><span class="line"><span class="meta">@GetMapping(&quot;/index&quot;)</span></span><br><span class="line"><span class="keyword">public</span> BaseResult&lt;String&gt; <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">id</span> <span class="operator">=</span> producerService.getId();</span><br><span class="line">    <span class="keyword">return</span> BaseResult.success(id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="5、结果"><a href="#5、结果" class="headerlink" title="5、结果"></a>5、结果</h3><p><img src="http://114.55.238.234:9000/images/image-20220929134726957.png" alt="image-20220929134726957"></p>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h3 id=&quot;1、依赖导入&quot;&gt;&lt;a href=&quot;#1、依赖导入&quot; class=&quot;headerlink&quot; title=&quot;1、依赖导入&quot;&gt;&lt;/a&gt;1、依赖导入&lt;/h3&gt;&lt;p&gt;注意：3.0以后的dubbo版本。nacos的客户端版本要2.0以上，不然会报错。&lt;/p&gt;
 &lt;figure </summary>
-
-
-
-
+      
+    
+    
+    
     <category term="RPC" scheme="https://mink.yoonada.cn/categories/RPC/"/>
-
-
+    
+    
     <category term="Dubbo" scheme="https://mink.yoonada.cn/tags/Dubbo/"/>
-
+    
     <category term="Nacos" scheme="https://mink.yoonada.cn/tags/Nacos/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>centos安装maven</title>
     <link href="https://mink.yoonada.cn/2022/08/04/centos%E5%AE%89%E8%A3%85maven/"/>
     <id>https://mink.yoonada.cn/2022/08/04/centos%E5%AE%89%E8%A3%85maven/</id>
     <published>2022-08-04T07:22:00.000Z</published>
     <updated>2022-08-04T08:40:07.000Z</updated>
-
+    
     <content type="html"><![CDATA[<h2 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local</span><br></pre></td></tr></table></figure><h2 id="下载maven"><a href="#下载maven" class="headerlink" title="下载maven"></a>下载maven</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz</span><br></pre></td></tr></table></figure><h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf apache-maven-3.6.3-bin.tar.gz</span><br></pre></td></tr></table></figure><h2 id="重命名"><a href="#重命名" class="headerlink" title="重命名"></a>重命名</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv apache-maven-3.6.3 maven</span><br></pre></td></tr></table></figure><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure><h2 id="添加配置"><a href="#添加配置" class="headerlink" title="添加配置"></a>添加配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/usr/local/maven/bin:$PATH</span><br></pre></td></tr></table></figure><h2 id="重新加载配置"><a href="#重新加载配置" class="headerlink" title="重新加载配置"></a>重新加载配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure><h2 id="验证是否安装成功"><a href="#验证是否安装成功" class="headerlink" title="验证是否安装成功"></a>验证是否安装成功</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -V</span><br></pre></td></tr></table></figure><h2 id="进入maven"><a href="#进入maven" class="headerlink" title="进入maven"></a>进入maven</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd maven</span><br></pre></td></tr></table></figure><h2 id="创建repository目录"><a href="#创建repository目录" class="headerlink" title="创建repository目录"></a>创建repository目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir repository</span><br></pre></td></tr></table></figure><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd conf/</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim settings.xml</span><br></pre></td></tr></table></figure><h2 id="配置依赖存储路径"><a href="#配置依赖存储路径" class="headerlink" title="配置依赖存储路径"></a>配置依赖存储路径</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;localRepository&gt;<span class="regexp">/usr/</span>local/maven/repository&lt;/localRepository&gt;</span><br></pre></td></tr></table></figure><h2 id="配置阿里云镜像加速"><a href="#配置阿里云镜像加速" class="headerlink" title="配置阿里云镜像加速"></a>配置阿里云镜像加速</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">name</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h2 id=&quot;进入目录&quot;&gt;&lt;a href=&quot;#进入目录&quot; class=&quot;headerlink&quot; title=&quot;进入目录&quot;&gt;&lt;/a&gt;进入目录&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="centos" scheme="https://mink.yoonada.cn/categories/centos/"/>
-
-
+    
+    
     <category term="centos" scheme="https://mink.yoonada.cn/tags/centos/"/>
-
+    
     <category term="maven" scheme="https://mink.yoonada.cn/tags/maven/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>docker-compose命令</title>
     <link href="https://mink.yoonada.cn/2022/08/04/docker-compose%E5%91%BD%E4%BB%A4/"/>
     <id>https://mink.yoonada.cn/2022/08/04/docker-compose%E5%91%BD%E4%BB%A4/</id>
     <published>2022-08-04T06:53:08.000Z</published>
     <updated>2022-08-04T08:40:07.000Z</updated>
-
+    
     <content type="html"><![CDATA[<h2 id="停掉服务，删除容器，不删除镜像"><a href="#停掉服务，删除容器，不删除镜像" class="headerlink" title="停掉服务，删除容器，不删除镜像"></a>停掉服务，删除容器，不删除镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose down</span><br></pre></td></tr></table></figure><h2 id="重启-x2F-开始-x2F-停止服务"><a href="#重启-x2F-开始-x2F-停止服务" class="headerlink" title="重启&#x2F;开始&#x2F;停止服务"></a>重启&#x2F;开始&#x2F;停止服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose restart/start/stop [服务名称]</span><br></pre></td></tr></table></figure><h2 id="运行某个服务"><a href="#运行某个服务" class="headerlink" title="运行某个服务"></a>运行某个服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose run [服务名称]</span><br></pre></td></tr></table></figure><h2 id="查看服务中使用的镜像"><a href="#查看服务中使用的镜像" class="headerlink" title="查看服务中使用的镜像"></a>查看服务中使用的镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose images [服务名称]</span><br></pre></td></tr></table></figure><h2 id="重新构建（强制删除之前的镜像重新打）并启动"><a href="#重新构建（强制删除之前的镜像重新打）并启动" class="headerlink" title="重新构建（强制删除之前的镜像重新打）并启动"></a>重新构建（强制删除之前的镜像重新打）并启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d --build --force-recreate</span><br></pre></td></tr></table></figure>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h2 id=&quot;停掉服务，删除容器，不删除镜像&quot;&gt;&lt;a href=&quot;#停掉服务，删除容器，不删除镜像&quot; class=&quot;headerlink&quot; title=&quot;停掉服务，删除容器，不删除镜像&quot;&gt;&lt;/a&gt;停掉服务，删除容器，不删除镜像&lt;/h2&gt;&lt;figure class=&quot;highli</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="命令" scheme="https://mink.yoonada.cn/categories/%E5%91%BD%E4%BB%A4/"/>
-
-
+    
+    
     <category term="docker-compose" scheme="https://mink.yoonada.cn/tags/docker-compose/"/>
-
+    
     <category term="命令" scheme="https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>hexo安装与搭建</title>
     <link href="https://mink.yoonada.cn/2022/07/01/hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E6%90%AD%E5%BB%BA/"/>
     <id>https://mink.yoonada.cn/2022/07/01/hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E6%90%AD%E5%BB%BA/</id>
     <published>2022-07-01T09:01:39.000Z</published>
     <updated>2022-08-04T08:40:07.000Z</updated>
-
+    
     <content type="html"><![CDATA[<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h1 id=&quot;安装hexo&quot;&gt;&lt;a href=&quot;#安装hexo&quot; class=&quot;headerlink&quot; title=&quot;安装hexo&quot;&gt;&lt;/a&gt;安装hexo&lt;/h1&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut</summary>
-
-
-
-
-
+      
+    
+    
+    
+    
     <category term="hexo" scheme="https://mink.yoonada.cn/tags/hexo/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>docker常用命令</title>
     <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>https://mink.yoonada.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
     <published>2022-07-01T07:53:36.000Z</published>
     <updated>2022-09-16T03:18:46.770Z</updated>
-
+    
     <content type="html"><![CDATA[<h1 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h1><h2 id="启动docker服务"><a href="#启动docker服务" class="headerlink" title="启动docker服务"></a>启动docker服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure><h2 id="关闭docker服务"><a href="#关闭docker服务" class="headerlink" title="关闭docker服务"></a>关闭docker服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure><h2 id="重启docker服务"><a href="#重启docker服务" class="headerlink" title="重启docker服务"></a>重启docker服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure><h2 id="搜索镜像"><a href="#搜索镜像" class="headerlink" title="搜索镜像"></a>搜索镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search java</span><br></pre></td></tr></table></figure><h2 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull java:8</span><br></pre></td></tr></table></figure><h2 id="列出镜像"><a href="#列出镜像" class="headerlink" title="列出镜像"></a>列出镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure><h2 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h2><ul><li>指定名称删除镜像<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi java:8</span><br></pre></td></tr></table></figure></li><li>指定名称删除镜像（强制）<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi -f java:8</span><br></pre></td></tr></table></figure></li><li>删除所有没有引用的镜像<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi `docker images | grep none | awk &#x27;&#123;print $3&#125;&#x27;`</span><br></pre></td></tr></table></figure></li><li>强制删除所有镜像<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi -f $(docker images)</span><br></pre></td></tr></table></figure></li></ul><h2 id="列出容器"><a href="#列出容器" class="headerlink" title="列出容器"></a>列出容器</h2><ul><li>列出运行中的容器<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure></li><li>列出所有容器<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure></li></ul><h2 id="停止容器"><a href="#停止容器" class="headerlink" title="停止容器"></a>停止容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop $ContainerName(or $ContainerId)</span><br></pre></td></tr></table></figure><h2 id="强制停止容器"><a href="#强制停止容器" class="headerlink" title="强制停止容器"></a>强制停止容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker kill $ContainerName</span><br></pre></td></tr></table></figure><h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start $ContainerName</span><br></pre></td></tr></table></figure><h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><ul><li>先查询出容器的pid<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect --format &quot;&#123;&#123;.State.Pid&#125;&#125;&quot; $ContainerName</span><br></pre></td></tr></table></figure></li><li>根据容器的pid进入容器<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nsenter --target &quot;$pid&quot; --mount --uts --ipc --net --pid</span><br></pre></td></tr></table></figure></li></ul><h2 id="查看容器的IP地址"><a href="#查看容器的IP地址" class="headerlink" title="查看容器的IP地址"></a>查看容器的IP地址</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect --format &#x27;&#123;&#123; .NetworkSettings.IPAddress &#125;&#125;&#x27; $ContainerName</span><br></pre></td></tr></table></figure><h2 id="将容器启动方式改为always"><a href="#将容器启动方式改为always" class="headerlink" title="将容器启动方式改为always"></a>将容器启动方式改为always</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将容器启动方式改为always</span></span><br><span class="line">docker container update --restart=always $ContainerName</span><br></pre></td></tr></table></figure><h2 id="同步宿主机时间到容器"><a href="#同步宿主机时间到容器" class="headerlink" title="同步宿主机时间到容器"></a>同步宿主机时间到容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp /etc/localtime $ContainerName:/etc/</span><br></pre></td></tr></table></figure><h2 id="指定容器时区"><a href="#指定容器时区" class="headerlink" title="指定容器时区"></a>指定容器时区</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 80:80 --name nginx \</span><br><span class="line">-e TZ=&quot;Asia/Shanghai&quot; \</span><br><span class="line">-d nginx:1.17.0</span><br></pre></td></tr></table></figure><h2 id="查看容器资源占用状况"><a href="#查看容器资源占用状况" class="headerlink" title="查看容器资源占用状况"></a>查看容器资源占用状况</h2><ul><li>查看指定容器资源占用状况，比如cpu、内存、网络、io状态<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stats $ContainerName</span><br></pre></td></tr></table></figure></li><li>查看所有容器资源占用情况<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stats -a</span><br></pre></td></tr></table></figure></li></ul><h2 id="查看容器磁盘使用情况"><a href="#查看容器磁盘使用情况" class="headerlink" title="查看容器磁盘使用情况"></a>查看容器磁盘使用情况</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker system df</span><br></pre></td></tr></table></figure><h2 id="执行容器内部命令"><a href="#执行容器内部命令" class="headerlink" title="执行容器内部命令"></a>执行容器内部命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it $ContainerName /bin/bash</span><br></pre></td></tr></table></figure><h2 id="指定账号进入容器内部"><a href="#指定账号进入容器内部" class="headerlink" title="指定账号进入容器内部"></a>指定账号进入容器内部</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用root账号进入容器内部</span></span><br><span class="line">docker exec -it --user root $ContainerName /bin/bash</span><br></pre></td></tr></table></figure><h2 id="查看所有网络"><a href="#查看所有网络" class="headerlink" title="查看所有网络"></a>查看所有网络</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network ls</span><br></pre></td></tr></table></figure><h2 id="创建外部网络"><a href="#创建外部网络" class="headerlink" title="创建外部网络"></a>创建外部网络</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network create -d bridge my-bridge-network</span><br></pre></td></tr></table></figure><h2 id="指定容器网络"><a href="#指定容器网络" class="headerlink" title="指定容器网络"></a>指定容器网络</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 80:80 --name nginx \</span><br><span class="line">--network my-bridge-network \</span><br><span class="line">-d nginx:1.17.0</span><br></pre></td></tr></table></figure><h2 id="Docker容器清理"><a href="#Docker容器清理" class="headerlink" title="Docker容器清理"></a>Docker容器清理</h2><ul><li>查看Docker占用的磁盘空间情况<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker system df</span><br></pre></td></tr></table></figure></li><li>删除所有关闭的容器<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a | grep Exit | cut -d &#x27; &#x27; -f 1 | xargs docker rm</span><br></pre></td></tr></table></figure></li><li>删除所有dangling镜像(没有Tag的镜像)<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi $(docker images | grep &quot;^&lt;none&gt;&quot; | awk &quot;&#123;print $3&#125;&quot;)</span><br></pre></td></tr></table></figure></li><li>删除所有dangling数据卷(即无用的 volume)<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume rm $(docker volume ls -qf dangling=true)</span><br></pre></td></tr></table></figure></li></ul>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h1 id=&quot;docker&quot;&gt;&lt;a href=&quot;#docker&quot; class=&quot;headerlink&quot; title=&quot;docker&quot;&gt;&lt;/a&gt;docker&lt;/h1&gt;&lt;h2 id=&quot;启动docker服务&quot;&gt;&lt;a href=&quot;#启动docker服务&quot; class=&quot;headerli</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
-
-
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
-
+    
     <category term="命令" scheme="https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>git配置ssh</title>
     <link href="https://mink.yoonada.cn/2022/07/01/git%E9%85%8D%E7%BD%AEssh/"/>
     <id>https://mink.yoonada.cn/2022/07/01/git%E9%85%8D%E7%BD%AEssh/</id>
     <published>2022-07-01T07:40:04.000Z</published>
     <updated>2022-08-04T08:40:07.000Z</updated>
-
+    
     <content type="html"><![CDATA[<h2 id="配置用户名"><a href="#配置用户名" class="headerlink" title="配置用户名"></a>配置用户名</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yoonada&quot;</span><br></pre></td></tr></table></figure><h2 id="配置邮箱"><a href="#配置邮箱" class="headerlink" title="配置邮箱"></a>配置邮箱</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;m15602498163@163.com&quot;</span><br></pre></td></tr></table></figure><h2 id="生成-ssh-key"><a href="#生成-ssh-key" class="headerlink" title="生成 ssh key"></a>生成 ssh key</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &quot;m15602498163@163.com&quot;</span><br></pre></td></tr></table></figure><h2 id="生成路径"><a href="#生成路径" class="headerlink" title="生成路径"></a>生成路径</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">window的生成路径：C:\Users\用户\.ssh</span><br><span class="line">Linux的生成路径：/etc/ssh</span><br></pre></td></tr></table></figure>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h2 id=&quot;配置用户名&quot;&gt;&lt;a href=&quot;#配置用户名&quot; class=&quot;headerlink&quot; title=&quot;配置用户名&quot;&gt;&lt;/a&gt;配置用户名&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;</summary>
-
-
-
-
-
+      
+    
+    
+    
+    
     <category term="Git" scheme="https://mink.yoonada.cn/tags/Git/"/>
-
+    
     <category term="SSH" scheme="https://mink.yoonada.cn/tags/SSH/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>docker安装RabbitMQ</title>
     <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85RabbitMQ/"/>
     <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85RabbitMQ/</id>
     <published>2022-07-01T03:49:55.000Z</published>
     <updated>2022-09-16T03:18:46.880Z</updated>
-
+    
     <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name rabbitmq -p 5672:5672 -p 15672:15672 -d --restart=always rabbitmq:management</span><br></pre></td></tr></table></figure>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
-
-
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
-
+    
     <category term="RabbitMQ" scheme="https://mink.yoonada.cn/tags/RabbitMQ/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>docker安装redis</title>
     <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/"/>
     <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/</id>
     <published>2022-07-01T03:49:20.000Z</published>
     <updated>2022-09-16T03:18:46.816Z</updated>
-
+    
     <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name redis -p 6380:6379 -d --restart=always redis:latest redis-server --appendonly yes --requirepass &quot;DD123456aa&quot;</span><br></pre></td></tr></table></figure>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
-
-
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
-
+    
     <category term="redis" scheme="https://mink.yoonada.cn/tags/redis/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>docker安装nacos</title>
     <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85nacos/"/>
     <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85nacos/</id>
     <published>2022-07-01T03:49:11.000Z</published>
     <updated>2022-09-16T03:18:46.908Z</updated>
-
+    
     <content type="html"><![CDATA[<h2 id="拉取docker镜像"><a href="#拉取docker镜像" class="headerlink" title="拉取docker镜像"></a>拉取docker镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull nacos/nacos-server:1.4.2</span><br></pre></td></tr></table></figure><h2 id="创建临时容器（用来拷贝配置、日志使用）"><a href="#创建临时容器（用来拷贝配置、日志使用）" class="headerlink" title="创建临时容器（用来拷贝配置、日志使用）"></a>创建临时容器（用来拷贝配置、日志使用）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8848:8848 --name nacostest -d nacos/nacos-server:1.4.2</span><br></pre></td></tr></table></figure><h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /mydata/nacos/conf</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /mydata/nacos/logs</span><br></pre></td></tr></table></figure><h2 id="配置文件复制"><a href="#配置文件复制" class="headerlink" title="配置文件复制"></a>配置文件复制</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp nacostest:/home/nacos/logs/ /mydata/nacos/</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp nacostest:/home/nacos/conf/ /mydata/nacos/</span><br></pre></td></tr></table></figure><h2 id="删除临时容器"><a href="#删除临时容器" class="headerlink" title="删除临时容器"></a>删除临时容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop nacostest</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm nacostest</span><br></pre></td></tr></table></figure><h2 id="创建并启动容器"><a href="#创建并启动容器" class="headerlink" title="创建并启动容器"></a>创建并启动容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">-e MODE=standalone \</span><br><span class="line">-e SPRING_DATASOURCE_PLATFORM=mysql \</span><br><span class="line">-e MYSQL_SERVICE_HOST=43.142.62.156 \</span><br><span class="line">-e MYSQL_SERVICE_PORT=3307 \</span><br><span class="line">-e MYSQL_SERVICE_USER=root \</span><br><span class="line">-e MYSQL_SERVICE_PASSWORD=DD123456aa \</span><br><span class="line">-e MYSQL_SERVICE_DB_NAME=nacos_config \</span><br><span class="line">-e TIME_ZONE=&#x27;Asia/Shanghai&#x27; \</span><br><span class="line">-v /mydata/nacos/logs:/home/nacos/logs \</span><br><span class="line">-v /mydata/nacos/conf:/home/nacos/conf \</span><br><span class="line">-p 8848:8848 \</span><br><span class="line">--name nacos \</span><br><span class="line">--restart=always \</span><br><span class="line">nacos/nacos-server:1.4.2</span><br></pre></td></tr></table></figure>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h2 id=&quot;拉取docker镜像&quot;&gt;&lt;a href=&quot;#拉取docker镜像&quot; class=&quot;headerlink&quot; title=&quot;拉取docker镜像&quot;&gt;&lt;/a&gt;拉取docker镜像&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;t</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
-
-
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
-
+    
     <category term="nacos" scheme="https://mink.yoonada.cn/tags/nacos/"/>
-
+    
   </entry>
-
+  
   <entry>
     <title>docker安装MySQL</title>
     <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85MySQL/"/>
     <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85MySQL/</id>
     <published>2022-07-01T03:49:00.000Z</published>
     <updated>2022-09-16T03:18:46.846Z</updated>
-
+    
     <content type="html"><![CDATA[<h2 id="拉取5-7的镜像"><a href="#拉取5-7的镜像" class="headerlink" title="拉取5.7的镜像"></a>拉取5.7的镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:5.7</span><br></pre></td></tr></table></figure><h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name mysql -p 3307:3306 --restart=always -e MYSQL_ROOT_PASSWORD=DD123456aa -d mysql:5.7</span><br></pre></td></tr></table></figure><h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it mysql bash</span><br></pre></td></tr></table></figure><h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure><h2 id="开启远程连接"><a href="#开启远程连接" class="headerlink" title="开启远程连接"></a>开启远程连接</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;%&#x27; IDENTIFIED WITH mysql_native_password BY &#x27;DD123456aa&#x27;;</span><br></pre></td></tr></table></figure><h2 id="刷新"><a href="#刷新" class="headerlink" title="刷新"></a>刷新</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>]]></content>
-
-
-
-
+    
+    
+      
+      
     <summary type="html">&lt;h2 id=&quot;拉取5-7的镜像&quot;&gt;&lt;a href=&quot;#拉取5-7的镜像&quot; class=&quot;headerlink&quot; title=&quot;拉取5.7的镜像&quot;&gt;&lt;/a&gt;拉取5.7的镜像&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl</summary>
-
-
-
-
+      
+    
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
-
-
+    
+    
     <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
-
+    
     <category term="MySQL" scheme="https://mink.yoonada.cn/tags/MySQL/"/>
-
+    
   </entry>
-
+  
 </feed>
