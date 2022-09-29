@@ -6,7 +6,7 @@
   <link href="https://mink.yoonada.cn/atom.xml" rel="self"/>
   
   <link href="https://mink.yoonada.cn/"/>
-  <updated>2022-09-16T03:01:38.179Z</updated>
+  <updated>2022-09-29T06:18:11.461Z</updated>
   <id>https://mink.yoonada.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux部署环境</title>
+    <link href="https://mink.yoonada.cn/2022/09/29/linux%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83/"/>
+    <id>https://mink.yoonada.cn/2022/09/29/linux%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83/</id>
+    <published>2022-09-29T06:13:27.000Z</published>
+    <updated>2022-09-29T06:18:11.461Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://114.55.238.234/:9000/images/%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E5%92%8C%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C.pdf">http://114.55.238.234/:9000/images/编程环境和软件工具安装手册.pdf</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;http://114.55.238.234/:9000/images/%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E5%92%8C%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8</summary>
+      
+    
+    
+    
+    
+    <category term="环境部署" scheme="https://mink.yoonada.cn/tags/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>后端存储实战</title>
@@ -485,32 +507,6 @@
     <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
     
     <category term="MySQL" scheme="https://mink.yoonada.cn/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>centos常用命令</title>
-    <link href="https://mink.yoonada.cn/2022/07/01/centos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://mink.yoonada.cn/2022/07/01/centos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
-    <published>2022-07-01T03:39:11.000Z</published>
-    <updated>2022-08-04T08:40:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="开启防火墙"><a href="#开启防火墙" class="headerlink" title="开启防火墙"></a>开启防火墙</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start firewalld</span><br></pre></td></tr></table></figure><h2 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure><h2 id="查看防火墙状态"><a href="#查看防火墙状态" class="headerlink" title="查看防火墙状态"></a>查看防火墙状态</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld </span><br></pre></td></tr></table></figure><h2 id="开放某个端口"><a href="#开放某个端口" class="headerlink" title="开放某个端口"></a>开放某个端口</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent</span><br></pre></td></tr></table></figure><h2 id="重新加载配置"><a href="#重新加载配置" class="headerlink" title="重新加载配置"></a>重新加载配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure><h2 id="查看已经开放的端口"><a href="#查看已经开放的端口" class="headerlink" title="查看已经开放的端口"></a>查看已经开放的端口</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --list-ports</span><br></pre></td></tr></table></figure><h2 id="查找（在-中填写你要的查找的路径）"><a href="#查找（在-中填写你要的查找的路径）" class="headerlink" title="查找（在**中填写你要的查找的路径）"></a>查找（在**中填写你要的查找的路径）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -name **</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;开启防火墙&quot;&gt;&lt;a href=&quot;#开启防火墙&quot; class=&quot;headerlink&quot; title=&quot;开启防火墙&quot;&gt;&lt;/a&gt;开启防火墙&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;</summary>
-      
-    
-    
-    
-    <category term="命令" scheme="https://mink.yoonada.cn/categories/%E5%91%BD%E4%BB%A4/"/>
-    
-    
-    <category term="centos" scheme="https://mink.yoonada.cn/tags/centos/"/>
-    
-    <category term="命令" scheme="https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   

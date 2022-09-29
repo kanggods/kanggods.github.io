@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mink.yoonada.cn/2022/09/29/linux%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83/</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mink.yoonada.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</loc>
     
     <lastmod>2022-09-29</lastmod>
