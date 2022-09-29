@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   
   
-  <title>centos安装maven | Mink的个人博客</title>
+  <title>springboot集成dubbo以nacos为注册中心 | Mink的个人博客</title>
   <meta name="author" content="Mink" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -14,21 +14,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="centos, maven" />
+    <meta name="keywords" content="Dubbo, Nacos" />
   
-  <meta name="description" content="进入目录1cd &#x2F;usr&#x2F;local 下载maven1wget https:&#x2F;&#x2F;archive.apache.org&#x2F;dist&#x2F;maven&#x2F;maven-3&#x2F;3.6.3&#x2F;binaries&#x2F;apache-maven-3.6.3-bin.tar.gz 解压1tar -xvf apache-maven-3.6.3-bin.tar.gz 重命名1mv apache-maven-3.6.3 maven  配置">
+  <meta name="description" content="1、依赖导入注意：3.0以后的dubbo版本。nacos的客户端版本要2.0以上，不然会报错。 123456789101112131415161718192021&lt;dependency&gt;    &lt;groupId&gt;org.apache.dubbo&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;dubbo-spring-boot-starter&amp;lt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos安装maven">
-<meta property="og:url" content="https://mink.yoonada.cn/2022/08/04/centos%E5%AE%89%E8%A3%85maven/index.html">
+<meta property="og:title" content="springboot集成dubbo以nacos为注册中心">
+<meta property="og:url" content="https://mink.yoonada.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/index.html">
 <meta property="og:site_name" content="Mink的个人博客">
-<meta property="og:description" content="进入目录1cd &#x2F;usr&#x2F;local 下载maven1wget https:&#x2F;&#x2F;archive.apache.org&#x2F;dist&#x2F;maven&#x2F;maven-3&#x2F;3.6.3&#x2F;binaries&#x2F;apache-maven-3.6.3-bin.tar.gz 解压1tar -xvf apache-maven-3.6.3-bin.tar.gz 重命名1mv apache-maven-3.6.3 maven  配置">
+<meta property="og:description" content="1、依赖导入注意：3.0以后的dubbo版本。nacos的客户端版本要2.0以上，不然会报错。 123456789101112131415161718192021&lt;dependency&gt;    &lt;groupId&gt;org.apache.dubbo&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;dubbo-spring-boot-starter&amp;lt">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-08-04T07:22:00.000Z">
-<meta property="article:modified_time" content="2022-08-04T08:40:07.000Z">
+<meta property="og:image" content="c:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20220929134726957.png">
+<meta property="article:published_time" content="2022-09-14T10:00:05.000Z">
+<meta property="article:modified_time" content="2022-09-29T05:59:49.677Z">
 <meta property="article:author" content="Mink">
-<meta property="article:tag" content="centos">
-<meta property="article:tag" content="maven">
+<meta property="article:tag" content="Dubbo">
+<meta property="article:tag" content="Nacos">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20220929134726957.png">
   
   <!-- 站点验证相关 -->
   
@@ -134,15 +136,15 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="https://mink.yoonada.cn/2022/08/04/centos%E5%AE%89%E8%A3%85maven/">
+    <link itemprop="mainEntityOfPage" href="https://mink.yoonada.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">centos安装maven</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">springboot集成dubbo以nacos为注册中心</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2022-08-04T07:22:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-08-04</time></li>
+                <li><time datetime="2022-09-14T10:00:05.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-09-14</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">Mink</span>
                 </li>
@@ -150,7 +152,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        718
+                        ~2.79K
                     
                     字
                 </li>
@@ -161,28 +163,27 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1659602407000"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1664431189677"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             
             <hr />
-            <div itemprop="articleBody"><h2 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local</span><br></pre></td></tr></table></figure>
-<h2 id="下载maven"><a href="#下载maven" class="headerlink" title="下载maven"></a>下载maven</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf apache-maven-3.6.3-bin.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="重命名"><a href="#重命名" class="headerlink" title="重命名"></a>重命名</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv apache-maven-3.6.3 maven</span><br></pre></td></tr></table></figure>
+            <div itemprop="articleBody"><h3 id="1、依赖导入"><a href="#1、依赖导入" class="headerlink" title="1、依赖导入"></a>1、依赖导入</h3><p>注意：3.0以后的dubbo版本。nacos的客户端版本要2.0以上，不然会报错。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.dubbo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>dubbo-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.nacos<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>nacos-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.pua<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>pua-common-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.nacos<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>nacos-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
-<h2 id="添加配置"><a href="#添加配置" class="headerlink" title="添加配置"></a>添加配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/usr/local/maven/bin:$PATH</span><br></pre></td></tr></table></figure>
-<h2 id="重新加载配置"><a href="#重新加载配置" class="headerlink" title="重新加载配置"></a>重新加载配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
-<h2 id="验证是否安装成功"><a href="#验证是否安装成功" class="headerlink" title="验证是否安装成功"></a>验证是否安装成功</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -V</span><br></pre></td></tr></table></figure>
-<h2 id="进入maven"><a href="#进入maven" class="headerlink" title="进入maven"></a>进入maven</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd maven</span><br></pre></td></tr></table></figure>
-<h2 id="创建repository目录"><a href="#创建repository目录" class="headerlink" title="创建repository目录"></a>创建repository目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir repository</span><br></pre></td></tr></table></figure>
-<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd conf/</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim settings.xml</span><br></pre></td></tr></table></figure>
-<h2 id="配置依赖存储路径"><a href="#配置依赖存储路径" class="headerlink" title="配置依赖存储路径"></a>配置依赖存储路径</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;localRepository&gt;<span class="regexp">/usr/</span>local/maven/repository&lt;/localRepository&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="配置阿里云镜像加速"><a href="#配置阿里云镜像加速" class="headerlink" title="配置阿里云镜像加速"></a>配置阿里云镜像加速</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">name</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2、配置文件"><a href="#2、配置文件" class="headerlink" title="2、配置文件"></a>2、配置文件</h3><p>没啥好说的。nacos作为配置注册中心，dubbo，设置nacos为注册中心，设置接入协议。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">host:</span> <span class="number">47.98</span><span class="number">.236</span><span class="number">.213</span><span class="string">:8848</span></span><br><span class="line">      <span class="attr">namespace:</span> <span class="string">pua</span></span><br><span class="line">      <span class="attr">discovery:</span></span><br><span class="line">        <span class="attr">server-addr:</span> <span class="string">$&#123;spring.cloud.nacos.host&#125;</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">$&#123;spring.cloud.nacos.namespace&#125;</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">$&#123;spring.profiles.active&#125;</span></span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        <span class="attr">server-addr:</span> <span class="string">$&#123;spring.cloud.nacos.host&#125;</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">$&#123;spring.cloud.nacos.namespace&#125;</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">$&#123;spring.profiles.active&#125;</span></span><br><span class="line">        <span class="attr">file-extension:</span> <span class="string">yaml</span></span><br><span class="line">        <span class="attr">refresh-enabled:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">username:</span> <span class="string">nacos</span></span><br><span class="line">      <span class="attr">password:</span> <span class="string">ENC(F0qwKRQUWxXgXfNDN05yIg==)</span></span><br><span class="line"><span class="attr">dubbo:</span></span><br><span class="line">  <span class="attr">protocol:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">dubbo</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">-1</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">pua-producer</span></span><br><span class="line">  <span class="attr">registry:</span></span><br><span class="line">    <span class="attr">register-mode:</span> <span class="string">interface</span></span><br><span class="line">    <span class="attr">address:</span> <span class="string">nacos://47.98.236.213:8848</span></span><br><span class="line">    <span class="attr">parameters:</span></span><br><span class="line">      <span class="attr">namespace:</span> <span class="string">$&#123;spring.cloud.nacos.namespace&#125;</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">nacos</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">ENC(F0qwKRQUWxXgXfNDN05yIg==)</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="3、服务提供者使用"><a href="#3、服务提供者使用" class="headerlink" title="3、服务提供者使用"></a>3、服务提供者使用</h3><p>在启动类设置Dubbo启动扫描的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableEncryptableProperties</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableDubbo(scanBasePackages = &quot;com.pua.producer.service&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ProducerApplication</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(ProducerApplication.class,args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="meta">@DubboService</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ProducerServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">ProducerService</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getId</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;110&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、消费者使用"><a href="#4、消费者使用" class="headerlink" title="4、消费者使用"></a>4、消费者使用</h3><p>直接引入和生产者一样的依赖还需要引入消费者模块。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.pua&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;producer&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.0&lt;/version&gt;</span><br><span class="line">    &lt;scope&gt;compile&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@DubboReference(interfaceClass = ProducerService.class)</span></span><br><span class="line"><span class="keyword">private</span> ProducerService producerService;</span><br><span class="line"></span><br><span class="line"><span class="meta">@ApiOperation(&quot;测试&quot;)</span></span><br><span class="line"><span class="meta">@GetMapping(&quot;/index&quot;)</span></span><br><span class="line"><span class="keyword">public</span> BaseResult&lt;String&gt; <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">id</span> <span class="operator">=</span> producerService.getId();</span><br><span class="line">    <span class="keyword">return</span> BaseResult.success(id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、结果"><a href="#5、结果" class="headerlink" title="5、结果"></a>5、结果</h3><p><img src="C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20220929134726957.png" alt="image-20220929134726957"></p>
 </div>
         </div>
         
@@ -236,7 +237,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://mink.yoonada.cn/2022/08/04/centos%E5%AE%89%E8%A3%85maven/",
+                text: "https://mink.yoonada.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -248,10 +249,10 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://mink.yoonada.cn/2022/08/04/centos%E5%AE%89%E8%A3%85maven/";
-            const title         = "「centos安装maven」";
-            const excerpt       = `进入目录1cd /usr/local
-下载maven1wget https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.t...`;
+            const hostUrl       = "https://mink.yoonada.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/";
+            const title         = "「springboot集成dubbo以nacos为注册中心」";
+            const excerpt       = `1、依赖导入注意：3.0以后的dubbo版本。nacos的客户端版本要2.0以上，不然会报错。
+123456789101112131415161718192021&lt;dependency&gt;    &lt;groupId&gt...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -270,10 +271,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/centos/" rel="tag">centos</a>, <a class="tag-none-link" href="/tags/maven/" rel="tag">maven</a>
+                    <a class="tag-none-link" href="/tags/Dubbo/" rel="tag">Dubbo</a>, <a class="tag-none-link" href="/tags/Nacos/" rel="tag">Nacos</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-08-04T08:40:07.000Z" itemprop="dateModified">最后编辑：2022-08-04</time>
+                    <time datetime="2022-09-29T05:59:49.677Z" itemprop="dateModified">最后编辑：2022-09-29</time>
                 </div>
             </div>
         </footer>
@@ -282,12 +283,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" docker-compose命令" href="/2022/08/04/docker-compose命令/">&lt; 上一篇</a>
+                <a title=" Hello World" href="/2022/09/14/hello-world/">&lt; 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" Hello World" href="/2022/09/14/hello-world/">下一篇 &gt;</a>
+                <a title=" 设计模式" href="/2022/09/14/设计模式/">下一篇 &gt;</a>
             </div>
             
         </nav>
