@@ -137,24 +137,6 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/centos7%E5%91%BD%E4%BB%A4/</loc>
-    
-    <lastmod>2022-09-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/hello-world/</loc>
-    
-    <lastmod>2022-09-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://mink.yoonada.cn/2022/07/01/centos%E5%AE%89%E8%A3%85docker/</loc>
     
     <lastmod>2022-08-04</lastmod>

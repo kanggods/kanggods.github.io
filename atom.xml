@@ -63,19 +63,6 @@
   </entry>
   
   <entry>
-    <title>centos7命令</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/centos7%E5%91%BD%E4%BB%A4/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/centos7%E5%91%BD%E4%BB%A4/</id>
-    <published>2022-09-14T10:00:05.000Z</published>
-    <updated>2022-09-14T10:00:26.210Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>docker部署ELK</title>
     <link href="https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/"/>
     <id>https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/</id>
@@ -270,26 +257,6 @@
     <category term="Dubbo" scheme="https://mink.yoonada.cn/tags/Dubbo/"/>
     
     <category term="Nacos" scheme="https://mink.yoonada.cn/tags/Nacos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/hello-world/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/hello-world/</id>
-    <published>2022-09-14T09:39:10.649Z</published>
-    <updated>2022-09-14T09:39:10.649Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
-    
-    
-    
     
   </entry>
   
@@ -492,6 +459,58 @@
     <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
     
     <category term="nacos" scheme="https://mink.yoonada.cn/tags/nacos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker安装MySQL</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85MySQL/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85MySQL/</id>
+    <published>2022-07-01T03:49:00.000Z</published>
+    <updated>2022-09-16T03:18:46.846Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="拉取5-7的镜像"><a href="#拉取5-7的镜像" class="headerlink" title="拉取5.7的镜像"></a>拉取5.7的镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:5.7</span><br></pre></td></tr></table></figure><h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name mysql -p 3307:3306 --restart=always -e MYSQL_ROOT_PASSWORD=DD123456aa -d mysql:5.7</span><br></pre></td></tr></table></figure><h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it mysql bash</span><br></pre></td></tr></table></figure><h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure><h2 id="开启远程连接"><a href="#开启远程连接" class="headerlink" title="开启远程连接"></a>开启远程连接</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;%&#x27; IDENTIFIED WITH mysql_native_password BY &#x27;DD123456aa&#x27;;</span><br></pre></td></tr></table></figure><h2 id="刷新"><a href="#刷新" class="headerlink" title="刷新"></a>刷新</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;拉取5-7的镜像&quot;&gt;&lt;a href=&quot;#拉取5-7的镜像&quot; class=&quot;headerlink&quot; title=&quot;拉取5.7的镜像&quot;&gt;&lt;/a&gt;拉取5.7的镜像&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl</summary>
+      
+    
+    
+    
+    <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
+    
+    
+    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    
+    <category term="MySQL" scheme="https://mink.yoonada.cn/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos常用命令</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/centos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/centos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-07-01T03:39:11.000Z</published>
+    <updated>2022-08-04T08:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="开启防火墙"><a href="#开启防火墙" class="headerlink" title="开启防火墙"></a>开启防火墙</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start firewalld</span><br></pre></td></tr></table></figure><h2 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure><h2 id="查看防火墙状态"><a href="#查看防火墙状态" class="headerlink" title="查看防火墙状态"></a>查看防火墙状态</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld </span><br></pre></td></tr></table></figure><h2 id="开放某个端口"><a href="#开放某个端口" class="headerlink" title="开放某个端口"></a>开放某个端口</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent</span><br></pre></td></tr></table></figure><h2 id="重新加载配置"><a href="#重新加载配置" class="headerlink" title="重新加载配置"></a>重新加载配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure><h2 id="查看已经开放的端口"><a href="#查看已经开放的端口" class="headerlink" title="查看已经开放的端口"></a>查看已经开放的端口</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --list-ports</span><br></pre></td></tr></table></figure><h2 id="查找（在-中填写你要的查找的路径）"><a href="#查找（在-中填写你要的查找的路径）" class="headerlink" title="查找（在**中填写你要的查找的路径）"></a>查找（在**中填写你要的查找的路径）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -name **</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;开启防火墙&quot;&gt;&lt;a href=&quot;#开启防火墙&quot; class=&quot;headerlink&quot; title=&quot;开启防火墙&quot;&gt;&lt;/a&gt;开启防火墙&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;</summary>
+      
+    
+    
+    
+    <category term="命令" scheme="https://mink.yoonada.cn/categories/%E5%91%BD%E4%BB%A4/"/>
+    
+    
+    <category term="centos" scheme="https://mink.yoonada.cn/tags/centos/"/>
+    
+    <category term="命令" scheme="https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   

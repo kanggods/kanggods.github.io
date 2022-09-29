@@ -13,8 +13,6 @@ https://mink.yoonada.cn/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/
 https://mink.yoonada.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/
 https://mink.yoonada.cn/2022/09/14/1%E3%80%81%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/
 https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/
-https://mink.yoonada.cn/2022/09/14/centos7%E5%91%BD%E4%BB%A4/
-https://mink.yoonada.cn/2022/09/14/hello-world/
 https://mink.yoonada.cn/2022/07/01/centos%E5%AE%89%E8%A3%85docker/
 https://mink.yoonada.cn/2022/07/01/centos%E5%AE%89%E8%A3%85docker-compose/
 https://mink.yoonada.cn/2022/08/04/centos%E5%AE%89%E8%A3%85maven/
