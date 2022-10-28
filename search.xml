@@ -52,6 +52,31 @@
     
     
     <entry>
+      <title>nacos集群出现Grpc问题</title>
+      <link href="/2022/09/29/nacos%E6%8F%90%E7%A4%BAGrpc%E9%97%AE%E9%A2%98/"/>
+      <url>/2022/09/29/nacos%E6%8F%90%E7%A4%BAGrpc%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、问题产生原因"><a href="#1、问题产生原因" class="headerlink" title="1、问题产生原因"></a>1、问题产生原因</h3><p>nacos2.x版本以后引入grpc，端口是默认偏移+1000。原来8848偏移1000就是9848。所以我们要开启两个端口。</p><h3 id="2、问题解决"><a href="#2、问题解决" class="headerlink" title="2、问题解决"></a>2、问题解决</h3><p>1、在nginx.conf文件下加入这行。</p><p>stream {<br>upstream nacosgrpcc {<br>server 116.62.190.20:9848;<br>server 47.98.236.213:9848;<br>server 114.55.238.234:9848;<br>}<br>server {<br>listen 9858;<br>proxy_connect_timeout 300s;<br>proxy_timeout 300s;<br>proxy_pass nacosgrpcc;<br>}<br>}</p><p>2、安装stream使nginx支持这个模块</p><p>yum install -y nginx-mod-stream</p><p>3、 nginx -s reload</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常问题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>centos安装maven</title>
       <link href="/2022/09/14/centos%E5%AE%89%E8%A3%85maven/"/>
       <url>/2022/09/14/centos%E5%AE%89%E8%A3%85maven/</url>

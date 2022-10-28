@@ -67,6 +67,30 @@
   </entry>
   
   <entry>
+    <title>nacos集群出现Grpc问题</title>
+    <link href="https://mink.yoonada.cn/2022/09/29/nacos%E6%8F%90%E7%A4%BAGrpc%E9%97%AE%E9%A2%98/"/>
+    <id>https://mink.yoonada.cn/2022/09/29/nacos%E6%8F%90%E7%A4%BAGrpc%E9%97%AE%E9%A2%98/</id>
+    <published>2022-09-29T06:13:27.000Z</published>
+    <updated>2022-10-28T06:52:29.174Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、问题产生原因"><a href="#1、问题产生原因" class="headerlink" title="1、问题产生原因"></a>1、问题产生原因</h3><p>nacos2.x版本以后引入grpc，端口是默认偏移+1000。原来8848偏移1000就是9848。所以我们要开启两个端口。</p><h3 id="2、问题解决"><a href="#2、问题解决" class="headerlink" title="2、问题解决"></a>2、问题解决</h3><p>1、在nginx.conf文件下加入这行。</p><p>stream {<br>upstream nacosgrpcc {<br>server 116.62.190.20:9848;<br>server 47.98.236.213:9848;<br>server 114.55.238.234:9848;<br>}<br>server {<br>listen 9858;<br>proxy_connect_timeout 300s;<br>proxy_timeout 300s;<br>proxy_pass nacosgrpcc;<br>}<br>}</p><p>2、安装stream使nginx支持这个模块</p><p>yum install -y nginx-mod-stream</p><p>3、 nginx -s reload</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1、问题产生原因&quot;&gt;&lt;a href=&quot;#1、问题产生原因&quot; class=&quot;headerlink&quot; title=&quot;1、问题产生原因&quot;&gt;&lt;/a&gt;1、问题产生原因&lt;/h3&gt;&lt;p&gt;nacos2.x版本以后引入grpc，端口是默认偏移+1000。原来8848偏移1000就是</summary>
+      
+    
+    
+    
+    <category term="日常问题" scheme="https://mink.yoonada.cn/categories/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98/"/>
+    
+    
+    <category term="nginx" scheme="https://mink.yoonada.cn/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>centos安装maven</title>
     <link href="https://mink.yoonada.cn/2022/09/14/centos%E5%AE%89%E8%A3%85maven/"/>
     <id>https://mink.yoonada.cn/2022/09/14/centos%E5%AE%89%E8%A3%85maven/</id>
@@ -495,34 +519,6 @@
     <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
     
     <category term="RabbitMQ" scheme="https://mink.yoonada.cn/tags/RabbitMQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker安装redis</title>
-    <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/"/>
-    <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/</id>
-    <published>2022-07-01T03:49:20.000Z</published>
-    <updated>2022-10-28T03:17:47.552Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name redis -p 6380:6379 -d --restart=always redis:latest redis-server --appendonly yes --requirepass &quot;DD123456aa&quot;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
-      
-    
-    
-    
-    <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
-    
-    <category term="部署" scheme="https://mink.yoonada.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
-    
-    
-    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
-    
-    <category term="redis" scheme="https://mink.yoonada.cn/tags/redis/"/>
     
   </entry>
   
