@@ -23,7 +23,6 @@ https://mink.yoonada.cn/2022/09/14/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A
 https://mink.yoonada.cn/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/
 https://mink.yoonada.cn/2022/09/14/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/
 https://mink.yoonada.cn/2022/07/01/git%E9%85%8D%E7%BD%AEssh/
-https://mink.yoonada.cn/2022/07/01/hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E6%90%AD%E5%BB%BA/
 https://mink.yoonada.cn/
 https://mink.yoonada.cn/tags/centos/
 https://mink.yoonada.cn/tags/docker/
@@ -37,7 +36,6 @@ https://mink.yoonada.cn/tags/nacos/
 https://mink.yoonada.cn/tags/redis/
 https://mink.yoonada.cn/tags/Git/
 https://mink.yoonada.cn/tags/SSH/
-https://mink.yoonada.cn/tags/hexo/
 https://mink.yoonada.cn/tags/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/
 https://mink.yoonada.cn/tags/JVM/
 https://mink.yoonada.cn/tags/sql/

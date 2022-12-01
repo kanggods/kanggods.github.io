@@ -226,15 +226,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://mink.yoonada.cn/2022/07/01/hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E6%90%AD%E5%BB%BA/</loc>
-    
-    <lastmod>2022-08-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://mink.yoonada.cn/</loc>
@@ -323,13 +314,6 @@
   
   <url>
     <loc>https://mink.yoonada.cn/tags/SSH/</loc>
-    <lastmod>2022-12-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mink.yoonada.cn/tags/hexo/</loc>
     <lastmod>2022-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

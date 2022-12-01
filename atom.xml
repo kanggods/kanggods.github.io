@@ -421,28 +421,6 @@
   </entry>
   
   <entry>
-    <title>hexo安装与搭建</title>
-    <link href="https://mink.yoonada.cn/2022/07/01/hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E6%90%AD%E5%BB%BA/"/>
-    <id>https://mink.yoonada.cn/2022/07/01/hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E6%90%AD%E5%BB%BA/</id>
-    <published>2022-07-01T09:01:39.000Z</published>
-    <updated>2022-08-04T08:40:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;安装hexo&quot;&gt;&lt;a href=&quot;#安装hexo&quot; class=&quot;headerlink&quot; title=&quot;安装hexo&quot;&gt;&lt;/a&gt;安装hexo&lt;/h1&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut</summary>
-      
-    
-    
-    
-    
-    <category term="hexo" scheme="https://mink.yoonada.cn/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>docker常用命令</title>
     <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>https://mink.yoonada.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
@@ -519,6 +497,34 @@
     <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
     
     <category term="RabbitMQ" scheme="https://mink.yoonada.cn/tags/RabbitMQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker安装redis</title>
+    <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/"/>
+    <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/</id>
+    <published>2022-07-01T03:49:20.000Z</published>
+    <updated>2022-10-28T03:17:47.552Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name redis -p 6380:6379 -d --restart=always redis:latest redis-server --appendonly yes --requirepass &quot;DD123456aa&quot;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
+      
+    
+    
+    
+    <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
+    
+    <category term="部署" scheme="https://mink.yoonada.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
+    
+    
+    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    
+    <category term="redis" scheme="https://mink.yoonada.cn/tags/redis/"/>
     
   </entry>
   
