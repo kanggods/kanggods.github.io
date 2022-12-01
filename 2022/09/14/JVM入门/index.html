@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mink.yoonada.cn/images/avatar.webp">
 <meta property="article:published_time" content="2022-09-14T10:00:05.000Z">
-<meta property="article:modified_time" content="2022-09-29T06:26:23.933Z">
+<meta property="article:modified_time" content="2022-12-01T05:48:37.262Z">
 <meta property="article:author" content="Mink">
 <meta property="article:tag" content="JVM">
 <meta name="twitter:card" content="summary">
@@ -187,7 +187,7 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1664432783933"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1669873717262"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
@@ -217,7 +217,7 @@
 <p><strong>比如在新生代中，每次收集都会有大量对象死去，所以可以选择”标记-复制“算法，只需要付出少量对象的复制成本就可以完成每次垃圾收集。而老年代的对象存活几率是比较高的，而且没有额外的空间对它进行分配担保，所以我们必须选择“标记-清除”或“标记-整理”算法进行垃圾收集。</strong></p>
 <h3 id="3、垃圾回收详解"><a href="#3、垃圾回收详解" class="headerlink" title="3、垃圾回收详解"></a>3、垃圾回收详解</h3><pre><code> 先按照图中的操作打印出GC详情数据。JDK1.8 分为年轻代，老年代。元空间。
 </code></pre>
-<p><img src="http://114.55.238.234:9000/images/image-20220923104626763.png" alt="image-20220923104626763"></p>
+<p><img src="https://blog.minkimm.cn/images/mink.jpg" alt="image-20220923104626763"></p>
 <p><img src="http://114.55.238.234:9000/images/image-20220923104724909.png" alt="image-20220923104724909"></p>
 <p>当 Eden 区没有足够空间进行分配时，虚拟机将发起一次 Minor GC。GC 期间虚拟机又发现 <code>allocation1</code> 无法存入 Survivor 空间，所以只好通过 <strong>分配担保机制</strong> 把新生代的对象提前转移到老年代中去，老年代上的空间足够存放 <code>allocation1</code>，所以不会出现 Full GC。执行 Minor GC 后，后面分配的对象如果能够存在 Eden 区的话，还是会在 Eden 区分配内存。</p>
 <h4 id="大对象直接进入老年代"><a href="#大对象直接进入老年代" class="headerlink" title="大对象直接进入老年代"></a>大对象直接进入老年代</h4><p>大对象就是需要大量连续内存空间的对象（比如：字符串、数组）。</p>
@@ -324,7 +324,7 @@
                     <a class="tag-none-link" href="/tags/JVM/" rel="tag">JVM</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-09-29T06:26:23.933Z" itemprop="dateModified">最后编辑：2022-09-29</time>
+                    <time datetime="2022-12-01T05:48:37.262Z" itemprop="dateModified">最后编辑：2022-12-01</time>
                 </div>
             </div>
         </footer>
