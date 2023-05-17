@@ -248,6 +248,29 @@
   </entry>
   
   <entry>
+    <title>SQL优化</title>
+    <link href="https://minkimm.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/"/>
+    <id>https://minkimm.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/</id>
+    <published>2022-09-14T10:00:05.000Z</published>
+    <updated>2022-09-29T06:26:23.927Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="十万条数据用全匹配查询"><a href="#十万条数据用全匹配查询" class="headerlink" title="十万条数据用全匹配查询"></a>十万条数据用全匹配查询</h3><p>SELECT * FROM index_test;</p><p>48.459 s</p><p><img src="http://114.55.238.234:9000/images/image-20220329163736996.png" alt="image-20220329163736996"></p><p><img src="http://114.55.238.234:9000/images/image-20220329164458264.png" alt="image-20220329164458264"></p><p>走index索引</p><p>0.35s</p><p><img src="http://114.55.238.234:9000/images/image-20220329164957753.png" alt="image-20220329164957753"></p><p>不走</p><p>0.38</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;十万条数据用全匹配查询&quot;&gt;&lt;a href=&quot;#十万条数据用全匹配查询&quot; class=&quot;headerlink&quot; title=&quot;十万条数据用全匹配查询&quot;&gt;&lt;/a&gt;十万条数据用全匹配查询&lt;/h3&gt;&lt;p&gt;SELECT * FROM index_test;&lt;/p&gt;
+&lt;p&gt;4</summary>
+      
+    
+    
+    
+    
+    <category term="sql" scheme="https://minkimm.cn/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>spring事务</title>
     <link href="https://minkimm.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/"/>
     <id>https://minkimm.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/</id>
@@ -269,29 +292,6 @@
     
     
     <category term="spring事务" scheme="https://minkimm.cn/tags/spring%E4%BA%8B%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL优化</title>
-    <link href="https://minkimm.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/"/>
-    <id>https://minkimm.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/</id>
-    <published>2022-09-14T10:00:05.000Z</published>
-    <updated>2022-09-29T06:26:23.927Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="十万条数据用全匹配查询"><a href="#十万条数据用全匹配查询" class="headerlink" title="十万条数据用全匹配查询"></a>十万条数据用全匹配查询</h3><p>SELECT * FROM index_test;</p><p>48.459 s</p><p><img src="http://114.55.238.234:9000/images/image-20220329163736996.png" alt="image-20220329163736996"></p><p><img src="http://114.55.238.234:9000/images/image-20220329164458264.png" alt="image-20220329164458264"></p><p>走index索引</p><p>0.35s</p><p><img src="http://114.55.238.234:9000/images/image-20220329164957753.png" alt="image-20220329164957753"></p><p>不走</p><p>0.38</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;十万条数据用全匹配查询&quot;&gt;&lt;a href=&quot;#十万条数据用全匹配查询&quot; class=&quot;headerlink&quot; title=&quot;十万条数据用全匹配查询&quot;&gt;&lt;/a&gt;十万条数据用全匹配查询&lt;/h3&gt;&lt;p&gt;SELECT * FROM index_test;&lt;/p&gt;
-&lt;p&gt;4</summary>
-      
-    
-    
-    
-    
-    <category term="sql" scheme="https://minkimm.cn/tags/sql/"/>
     
   </entry>
   

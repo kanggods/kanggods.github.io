@@ -271,14 +271,14 @@
   </url>
   
   <url>
-    <loc>https://minkimm.cn/tags/%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://minkimm.cn/tags/nginx/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://minkimm.cn/tags/nginx/</loc>
+    <loc>https://minkimm.cn/tags/%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -341,14 +341,14 @@
   </url>
   
   <url>
-    <loc>https://minkimm.cn/tags/spring%E4%BA%8B%E5%8A%A1/</loc>
+    <loc>https://minkimm.cn/tags/sql/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://minkimm.cn/tags/sql/</loc>
+    <loc>https://minkimm.cn/tags/spring%E4%BA%8B%E5%8A%A1/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -376,6 +376,13 @@
   </url>
   
   <url>
+    <loc>https://minkimm.cn/tags/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://minkimm.cn/tags/SpringBoot/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -384,13 +391,6 @@
   
   <url>
     <loc>https://minkimm.cn/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</loc>
-    <lastmod>2023-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://minkimm.cn/tags/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -413,7 +413,7 @@
   </url>
   
   <url>
-    <loc>https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/%E7%8E%AF%E5%A2%83/</loc>
+    <loc>https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -434,7 +434,7 @@
   </url>
   
   <url>
-    <loc>https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -455,14 +455,14 @@
   </url>
   
   <url>
-    <loc>https://minkimm.cn/categories/spring%E4%BA%8B%E5%8A%A1/</loc>
+    <loc>https://minkimm.cn/categories/docker/%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://minkimm.cn/categories/docker/%E9%83%A8%E7%BD%B2/</loc>
+    <loc>https://minkimm.cn/categories/spring%E4%BA%8B%E5%8A%A1/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
