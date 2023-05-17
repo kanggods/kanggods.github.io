@@ -257,13 +257,6 @@
   </url>
   
   <url>
-    <loc>https://minkimm.cn/tags/maven/</loc>
-    <lastmod>2023-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://minkimm.cn/tags/docker/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -278,6 +271,13 @@
   </url>
   
   <url>
+    <loc>https://minkimm.cn/tags/maven/</loc>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://minkimm.cn/tags/%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -285,14 +285,14 @@
   </url>
   
   <url>
-    <loc>https://minkimm.cn/tags/RabbitMQ/</loc>
+    <loc>https://minkimm.cn/tags/MySQL/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://minkimm.cn/tags/MySQL/</loc>
+    <loc>https://minkimm.cn/tags/RabbitMQ/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -341,14 +341,14 @@
   </url>
   
   <url>
-    <loc>https://minkimm.cn/tags/spring%E4%BA%8B%E5%8A%A1/</loc>
+    <loc>https://minkimm.cn/tags/sql/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://minkimm.cn/tags/sql/</loc>
+    <loc>https://minkimm.cn/tags/spring%E4%BA%8B%E5%8A%A1/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -455,14 +455,14 @@
   </url>
   
   <url>
-    <loc>https://minkimm.cn/categories/spring%E4%BA%8B%E5%8A%A1/</loc>
+    <loc>https://minkimm.cn/categories/docker/%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://minkimm.cn/categories/docker/%E9%83%A8%E7%BD%B2/</loc>
+    <loc>https://minkimm.cn/categories/spring%E4%BA%8B%E5%8A%A1/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
