@@ -239,6 +239,31 @@
     
     
     <entry>
+      <title>spring事务</title>
+      <link href="/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/"/>
+      <url>/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="事务基本知识"><a href="#事务基本知识" class="headerlink" title="事务基本知识"></a>事务基本知识</h1><p>事务的四大特性分别是：原子性、一致性、隔离性、持久性</p><h1 id="1、Spring事务"><a href="#1、Spring事务" class="headerlink" title="1、Spring事务"></a>1、Spring事务</h1><h3 id="1、spring事务失效三种情况"><a href="#1、spring事务失效三种情况" class="headerlink" title="1、spring事务失效三种情况"></a>1、spring事务失效三种情况</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、方法修饰符不为public</span><br><span class="line"></span><br><span class="line">2、被try cath没抛出异常</span><br><span class="line"></span><br><span class="line">3、Transactional默认为runtime异常其他的不会回滚</span><br></pre></td></tr></table></figure><h3 id="2、spring事务传播机制"><a href="#2、spring事务传播机制" class="headerlink" title="2、spring事务传播机制"></a>2、spring事务传播机制</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> spring事务 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> spring事务 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SQL优化</title>
       <link href="/2022/09/14/sql%E4%BC%98%E5%8C%96/"/>
       <url>/2022/09/14/sql%E4%BC%98%E5%8C%96/</url>
@@ -269,31 +294,6 @@
         <tags>
             
             <tag> 微服务 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>spring事务</title>
-      <link href="/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/"/>
-      <url>/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/</url>
-      
-        <content type="html"><![CDATA[<h1 id="事务基本知识"><a href="#事务基本知识" class="headerlink" title="事务基本知识"></a>事务基本知识</h1><p>事务的四大特性分别是：原子性、一致性、隔离性、持久性</p><h1 id="1、Spring事务"><a href="#1、Spring事务" class="headerlink" title="1、Spring事务"></a>1、Spring事务</h1><h3 id="1、spring事务失效三种情况"><a href="#1、spring事务失效三种情况" class="headerlink" title="1、spring事务失效三种情况"></a>1、spring事务失效三种情况</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、方法修饰符不为public</span><br><span class="line"></span><br><span class="line">2、被try cath没抛出异常</span><br><span class="line"></span><br><span class="line">3、Transactional默认为runtime异常其他的不会回滚</span><br></pre></td></tr></table></figure><h3 id="2、spring事务传播机制"><a href="#2、spring事务传播机制" class="headerlink" title="2、spring事务传播机制"></a>2、spring事务传播机制</h3>]]></content>
-      
-      
-      <categories>
-          
-          <category> spring事务 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> spring事务 </tag>
             
         </tags>
       
