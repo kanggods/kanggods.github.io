@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/08/04/docker-compose%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://minkimm.cn/2022/08/04/docker-compose%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2023-03-10</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/JVM%E5%85%A5%E9%97%A8/</loc>
+    <loc>https://minkimm.cn/2022/09/14/JVM%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2023-01-29</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/29/nacos%E6%8F%90%E7%A4%BAGrpc%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://minkimm.cn/2022/09/29/nacos%E6%8F%90%E7%A4%BAGrpc%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/10/26/%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90XXL-JOB%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</loc>
+    <loc>https://minkimm.cn/2022/10/26/%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90XXL-JOB%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</loc>
+    <loc>https://minkimm.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85RabbitMQ/</loc>
+    <loc>https://minkimm.cn/2022/07/01/docker%E5%AE%89%E8%A3%85RabbitMQ/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85nacos/</loc>
+    <loc>https://minkimm.cn/2022/07/01/docker%E5%AE%89%E8%A3%85nacos/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/</loc>
+    <loc>https://minkimm.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85MySQL/</loc>
+    <loc>https://minkimm.cn/2022/07/01/docker%E5%AE%89%E8%A3%85MySQL/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://minkimm.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://minkimm.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/07/01/centos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://minkimm.cn/2022/07/01/centos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/centos%E5%AE%89%E8%A3%85maven/</loc>
+    <loc>https://minkimm.cn/2022/09/14/centos%E5%AE%89%E8%A3%85maven/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/07/01/centos%E5%AE%89%E8%A3%85nginx/</loc>
+    <loc>https://minkimm.cn/2022/07/01/centos%E5%AE%89%E8%A3%85nginx/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/07/01/centos%E5%AE%89%E8%A3%85docker-compose/</loc>
+    <loc>https://minkimm.cn/2022/07/01/centos%E5%AE%89%E8%A3%85docker-compose/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/centos%E5%AE%89%E8%A3%85docker/</loc>
+    <loc>https://minkimm.cn/2022/09/14/centos%E5%AE%89%E8%A3%85docker/</loc>
     
     <lastmod>2022-10-28</lastmod>
     
@@ -146,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/29/linux%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83/</loc>
+    <loc>https://minkimm.cn/2022/09/29/linux%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83/</loc>
     
     <lastmod>2022-10-08</lastmod>
     
@@ -155,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/</loc>
+    <loc>https://minkimm.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/</loc>
     
     <lastmod>2022-09-29</lastmod>
     
@@ -164,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/</loc>
+    <loc>https://minkimm.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/</loc>
     
     <lastmod>2022-09-29</lastmod>
     
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/</loc>
+    <loc>https://minkimm.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/</loc>
     
     <lastmod>2022-09-16</lastmod>
     
@@ -182,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>https://minkimm.cn/2022/09/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     
     <lastmod>2022-09-16</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>https://minkimm.cn/2022/09/14/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     
     <lastmod>2022-09-16</lastmod>
     
@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://minkimm.cn/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2022-09-16</lastmod>
     
@@ -209,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/09/14/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/</loc>
+    <loc>https://minkimm.cn/2022/09/14/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/</loc>
     
     <lastmod>2022-09-16</lastmod>
     
@@ -218,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/2022/07/01/git%E9%85%8D%E7%BD%AEssh/</loc>
+    <loc>https://minkimm.cn/2022/07/01/git%E9%85%8D%E7%BD%AEssh/</loc>
     
     <lastmod>2022-08-04</lastmod>
     
@@ -228,7 +228,7 @@
   
 
   <url>
-    <loc>https://mink.yoonada.cn/</loc>
+    <loc>https://minkimm.cn/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -236,161 +236,161 @@
 
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/JVM/</loc>
+    <loc>https://minkimm.cn/tags/JVM/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/centos/</loc>
+    <loc>https://minkimm.cn/tags/centos/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/docker-compose/</loc>
+    <loc>https://minkimm.cn/tags/docker-compose/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/maven/</loc>
+    <loc>https://minkimm.cn/tags/maven/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/docker/</loc>
+    <loc>https://minkimm.cn/tags/docker/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/nginx/</loc>
+    <loc>https://minkimm.cn/tags/nginx/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://minkimm.cn/tags/%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/MySQL/</loc>
+    <loc>https://minkimm.cn/tags/RabbitMQ/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/RabbitMQ/</loc>
+    <loc>https://minkimm.cn/tags/MySQL/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/nacos/</loc>
+    <loc>https://minkimm.cn/tags/nacos/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/redis/</loc>
+    <loc>https://minkimm.cn/tags/redis/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/Git/</loc>
+    <loc>https://minkimm.cn/tags/Git/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/SSH/</loc>
+    <loc>https://minkimm.cn/tags/SSH/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</loc>
+    <loc>https://minkimm.cn/tags/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/RPC/</loc>
+    <loc>https://minkimm.cn/tags/RPC/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/sql/</loc>
+    <loc>https://minkimm.cn/tags/spring%E4%BA%8B%E5%8A%A1/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/spring%E4%BA%8B%E5%8A%A1/</loc>
+    <loc>https://minkimm.cn/tags/sql/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</loc>
+    <loc>https://minkimm.cn/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/</loc>
+    <loc>https://minkimm.cn/tags/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/Java%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://minkimm.cn/tags/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https://minkimm.cn/tags/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/SpringBoot/</loc>
+    <loc>https://minkimm.cn/tags/SpringBoot/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</loc>
+    <loc>https://minkimm.cn/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -399,77 +399,77 @@
 
   
   <url>
-    <loc>https://mink.yoonada.cn/categories/Java%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://minkimm.cn/categories/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/</loc>
+    <loc>https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/docker/</loc>
+    <loc>https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/docker/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/categories/docker/</loc>
+    <loc>https://minkimm.cn/categories/docker/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/%E7%8E%AF%E5%A2%83/</loc>
+    <loc>https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/categories/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://minkimm.cn/categories/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/categories/SpringBoot/</loc>
+    <loc>https://minkimm.cn/categories/SpringBoot/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/categories/docker/%E9%83%A8%E7%BD%B2/</loc>
+    <loc>https://minkimm.cn/categories/spring%E4%BA%8B%E5%8A%A1/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/categories/spring%E4%BA%8B%E5%8A%A1/</loc>
+    <loc>https://minkimm.cn/categories/docker/%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mink.yoonada.cn/categories/SpringBoot/%E9%9B%86%E6%88%90%E6%A1%86%E6%9E%B6/</loc>
+    <loc>https://minkimm.cn/categories/SpringBoot/%E9%9B%86%E6%88%90%E6%A1%86%E6%9E%B6/</loc>
     <lastmod>2023-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

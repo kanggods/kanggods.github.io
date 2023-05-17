@@ -3,11 +3,11 @@
   <title>Mink的博客</title>
   
   
-  <link href="https://mink.yoonada.cn/atom.xml" rel="self"/>
+  <link href="https://minkimm.cn/atom.xml" rel="self"/>
   
-  <link href="https://mink.yoonada.cn/"/>
+  <link href="https://minkimm.cn/"/>
   <updated>2022-10-28T06:15:21.366Z</updated>
-  <id>https://mink.yoonada.cn/</id>
+  <id>https://minkimm.cn/</id>
   
   <author>
     <name>Mink</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>SpringBoot集成Xxl-job做定时任务</title>
-    <link href="https://mink.yoonada.cn/2022/10/26/%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90XXL-JOB%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
-    <id>https://mink.yoonada.cn/2022/10/26/%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90XXL-JOB%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</id>
+    <link href="https://minkimm.cn/2022/10/26/%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90XXL-JOB%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
+    <id>https://minkimm.cn/2022/10/26/%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90XXL-JOB%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</id>
     <published>2022-10-26T10:12:24.276Z</published>
     <updated>2022-10-28T06:15:21.366Z</updated>
     
@@ -33,21 +33,45 @@
     
     
     
-    <category term="SpringBoot" scheme="https://mink.yoonada.cn/categories/SpringBoot/"/>
+    <category term="SpringBoot" scheme="https://minkimm.cn/categories/SpringBoot/"/>
     
-    <category term="集成框架" scheme="https://mink.yoonada.cn/categories/SpringBoot/%E9%9B%86%E6%88%90%E6%A1%86%E6%9E%B6/"/>
+    <category term="集成框架" scheme="https://minkimm.cn/categories/SpringBoot/%E9%9B%86%E6%88%90%E6%A1%86%E6%9E%B6/"/>
     
     
-    <category term="SpringBoot" scheme="https://mink.yoonada.cn/tags/SpringBoot/"/>
+    <category term="SpringBoot" scheme="https://minkimm.cn/tags/SpringBoot/"/>
     
-    <category term="定时任务" scheme="https://mink.yoonada.cn/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
+    <category term="定时任务" scheme="https://minkimm.cn/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nacos集群出现Grpc问题</title>
+    <link href="https://minkimm.cn/2022/09/29/nacos%E6%8F%90%E7%A4%BAGrpc%E9%97%AE%E9%A2%98/"/>
+    <id>https://minkimm.cn/2022/09/29/nacos%E6%8F%90%E7%A4%BAGrpc%E9%97%AE%E9%A2%98/</id>
+    <published>2022-09-29T06:13:27.000Z</published>
+    <updated>2022-10-28T06:52:29.174Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、问题产生原因"><a href="#1、问题产生原因" class="headerlink" title="1、问题产生原因"></a>1、问题产生原因</h3><p>nacos2.x版本以后引入grpc，端口是默认偏移+1000。原来8848偏移1000就是9848。所以我们要开启两个端口。</p><h3 id="2、问题解决"><a href="#2、问题解决" class="headerlink" title="2、问题解决"></a>2、问题解决</h3><p>1、在nginx.conf文件下加入这行。</p><p>stream {<br>upstream nacosgrpcc {<br>server 116.62.190.20:9848;<br>server 47.98.236.213:9848;<br>server 114.55.238.234:9848;<br>}<br>server {<br>listen 9858;<br>proxy_connect_timeout 300s;<br>proxy_timeout 300s;<br>proxy_pass nacosgrpcc;<br>}<br>}</p><p>2、安装stream使nginx支持这个模块</p><p>yum install -y nginx-mod-stream</p><p>3、 nginx -s reload</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1、问题产生原因&quot;&gt;&lt;a href=&quot;#1、问题产生原因&quot; class=&quot;headerlink&quot; title=&quot;1、问题产生原因&quot;&gt;&lt;/a&gt;1、问题产生原因&lt;/h3&gt;&lt;p&gt;nacos2.x版本以后引入grpc，端口是默认偏移+1000。原来8848偏移1000就是</summary>
+      
+    
+    
+    
+    <category term="日常问题" scheme="https://minkimm.cn/categories/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98/"/>
+    
+    
+    <category term="nginx" scheme="https://minkimm.cn/tags/nginx/"/>
     
   </entry>
   
   <entry>
     <title>linux部署环境</title>
-    <link href="https://mink.yoonada.cn/2022/09/29/linux%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83/"/>
-    <id>https://mink.yoonada.cn/2022/09/29/linux%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83/</id>
+    <link href="https://minkimm.cn/2022/09/29/linux%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83/"/>
+    <id>https://minkimm.cn/2022/09/29/linux%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83/</id>
     <published>2022-09-29T06:13:27.000Z</published>
     <updated>2022-10-08T08:18:21.936Z</updated>
     
@@ -62,38 +86,14 @@
     
     
     
-    <category term="环境部署" scheme="https://mink.yoonada.cn/tags/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nacos集群出现Grpc问题</title>
-    <link href="https://mink.yoonada.cn/2022/09/29/nacos%E6%8F%90%E7%A4%BAGrpc%E9%97%AE%E9%A2%98/"/>
-    <id>https://mink.yoonada.cn/2022/09/29/nacos%E6%8F%90%E7%A4%BAGrpc%E9%97%AE%E9%A2%98/</id>
-    <published>2022-09-29T06:13:27.000Z</published>
-    <updated>2022-10-28T06:52:29.174Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1、问题产生原因"><a href="#1、问题产生原因" class="headerlink" title="1、问题产生原因"></a>1、问题产生原因</h3><p>nacos2.x版本以后引入grpc，端口是默认偏移+1000。原来8848偏移1000就是9848。所以我们要开启两个端口。</p><h3 id="2、问题解决"><a href="#2、问题解决" class="headerlink" title="2、问题解决"></a>2、问题解决</h3><p>1、在nginx.conf文件下加入这行。</p><p>stream {<br>upstream nacosgrpcc {<br>server 116.62.190.20:9848;<br>server 47.98.236.213:9848;<br>server 114.55.238.234:9848;<br>}<br>server {<br>listen 9858;<br>proxy_connect_timeout 300s;<br>proxy_timeout 300s;<br>proxy_pass nacosgrpcc;<br>}<br>}</p><p>2、安装stream使nginx支持这个模块</p><p>yum install -y nginx-mod-stream</p><p>3、 nginx -s reload</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;1、问题产生原因&quot;&gt;&lt;a href=&quot;#1、问题产生原因&quot; class=&quot;headerlink&quot; title=&quot;1、问题产生原因&quot;&gt;&lt;/a&gt;1、问题产生原因&lt;/h3&gt;&lt;p&gt;nacos2.x版本以后引入grpc，端口是默认偏移+1000。原来8848偏移1000就是</summary>
-      
-    
-    
-    
-    <category term="日常问题" scheme="https://mink.yoonada.cn/categories/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98/"/>
-    
-    
-    <category term="nginx" scheme="https://mink.yoonada.cn/tags/nginx/"/>
+    <category term="环境部署" scheme="https://minkimm.cn/tags/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"/>
     
   </entry>
   
   <entry>
     <title>centos安装maven</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/centos%E5%AE%89%E8%A3%85maven/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/centos%E5%AE%89%E8%A3%85maven/</id>
+    <link href="https://minkimm.cn/2022/09/14/centos%E5%AE%89%E8%A3%85maven/"/>
+    <id>https://minkimm.cn/2022/09/14/centos%E5%AE%89%E8%A3%85maven/</id>
     <published>2022-09-14T10:00:51.498Z</published>
     <updated>2022-10-28T03:16:31.801Z</updated>
     
@@ -107,21 +107,21 @@
     
     
     
-    <category term="centos装机必备" scheme="https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/"/>
+    <category term="centos装机必备" scheme="https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/"/>
     
-    <category term="环境" scheme="https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/%E7%8E%AF%E5%A2%83/"/>
+    <category term="环境" scheme="https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/%E7%8E%AF%E5%A2%83/"/>
     
     
-    <category term="centos" scheme="https://mink.yoonada.cn/tags/centos/"/>
+    <category term="centos" scheme="https://minkimm.cn/tags/centos/"/>
     
-    <category term="maven" scheme="https://mink.yoonada.cn/tags/maven/"/>
+    <category term="maven" scheme="https://minkimm.cn/tags/maven/"/>
     
   </entry>
   
   <entry>
     <title>centos安装docker</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/centos%E5%AE%89%E8%A3%85docker/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/centos%E5%AE%89%E8%A3%85docker/</id>
+    <link href="https://minkimm.cn/2022/09/14/centos%E5%AE%89%E8%A3%85docker/"/>
+    <id>https://minkimm.cn/2022/09/14/centos%E5%AE%89%E8%A3%85docker/</id>
     <published>2022-09-14T10:00:51.469Z</published>
     <updated>2022-10-28T03:13:20.813Z</updated>
     
@@ -135,21 +135,21 @@
     
     
     
-    <category term="centos装机必备" scheme="https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/"/>
+    <category term="centos装机必备" scheme="https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/"/>
     
-    <category term="docker" scheme="https://mink.yoonada.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/categories/centos%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/docker/"/>
     
     
-    <category term="centos" scheme="https://mink.yoonada.cn/tags/centos/"/>
+    <category term="centos" scheme="https://minkimm.cn/tags/centos/"/>
     
-    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/tags/docker/"/>
     
   </entry>
   
   <entry>
     <title>JVM入门</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/JVM%E5%85%A5%E9%97%A8/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/JVM%E5%85%A5%E9%97%A8/</id>
+    <link href="https://minkimm.cn/2022/09/14/JVM%E5%85%A5%E9%97%A8/"/>
+    <id>https://minkimm.cn/2022/09/14/JVM%E5%85%A5%E9%97%A8/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2023-01-29T01:40:58.392Z</updated>
     
@@ -163,17 +163,17 @@
     
     
     
-    <category term="Java基础" scheme="https://mink.yoonada.cn/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://minkimm.cn/categories/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="JVM" scheme="https://mink.yoonada.cn/tags/JVM/"/>
+    <category term="JVM" scheme="https://minkimm.cn/tags/JVM/"/>
     
   </entry>
   
   <entry>
     <title>docker部署ELK</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/</id>
+    <link href="https://minkimm.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/"/>
+    <id>https://minkimm.cn/2022/09/14/docker%E9%83%A8%E7%BD%B2ELK%E5%91%BD%E4%BB%A4/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-10-28T03:17:47.376Z</updated>
     
@@ -187,19 +187,19 @@
     
     
     
-    <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/categories/docker/"/>
     
-    <category term="部署" scheme="https://mink.yoonada.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
+    <category term="部署" scheme="https://minkimm.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
     
     
-    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/tags/docker/"/>
     
   </entry>
   
   <entry>
     <title>Hadoop</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://minkimm.cn/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>https://minkimm.cn/2022/09/14/hadoop%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-16T03:17:33.692Z</updated>
     
@@ -213,17 +213,17 @@
     
     
     
-    <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/categories/docker/"/>
     
     
-    <category term="环境部署" scheme="https://mink.yoonada.cn/tags/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"/>
+    <category term="环境部署" scheme="https://minkimm.cn/tags/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"/>
     
   </entry>
   
   <entry>
     <title>springboot集成dubbo以nacos为注册中心</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</id>
+    <link href="https://minkimm.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
+    <id>https://minkimm.cn/2022/09/14/springboot%E9%9B%86%E6%88%90dubbo%E4%BB%A5nacos%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-10-28T03:20:49.684Z</updated>
     
@@ -238,19 +238,44 @@
     
     
     
-    <category term="SpringBoot" scheme="https://mink.yoonada.cn/categories/SpringBoot/"/>
+    <category term="SpringBoot" scheme="https://minkimm.cn/categories/SpringBoot/"/>
     
-    <category term="集成框架" scheme="https://mink.yoonada.cn/categories/SpringBoot/%E9%9B%86%E6%88%90%E6%A1%86%E6%9E%B6/"/>
+    <category term="集成框架" scheme="https://minkimm.cn/categories/SpringBoot/%E9%9B%86%E6%88%90%E6%A1%86%E6%9E%B6/"/>
     
     
-    <category term="RPC" scheme="https://mink.yoonada.cn/tags/RPC/"/>
+    <category term="RPC" scheme="https://minkimm.cn/tags/RPC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>spring事务</title>
+    <link href="https://minkimm.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/"/>
+    <id>https://minkimm.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/</id>
+    <published>2022-09-14T10:00:05.000Z</published>
+    <updated>2022-09-16T03:17:58.433Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="事务基本知识"><a href="#事务基本知识" class="headerlink" title="事务基本知识"></a>事务基本知识</h1><p>事务的四大特性分别是：原子性、一致性、隔离性、持久性</p><h1 id="1、Spring事务"><a href="#1、Spring事务" class="headerlink" title="1、Spring事务"></a>1、Spring事务</h1><h3 id="1、spring事务失效三种情况"><a href="#1、spring事务失效三种情况" class="headerlink" title="1、spring事务失效三种情况"></a>1、spring事务失效三种情况</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、方法修饰符不为public</span><br><span class="line"></span><br><span class="line">2、被try cath没抛出异常</span><br><span class="line"></span><br><span class="line">3、Transactional默认为runtime异常其他的不会回滚</span><br></pre></td></tr></table></figure><h3 id="2、spring事务传播机制"><a href="#2、spring事务传播机制" class="headerlink" title="2、spring事务传播机制"></a>2、spring事务传播机制</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;事务基本知识&quot;&gt;&lt;a href=&quot;#事务基本知识&quot; class=&quot;headerlink&quot; title=&quot;事务基本知识&quot;&gt;&lt;/a&gt;事务基本知识&lt;/h1&gt;&lt;p&gt;事务的四大特性分别是：原子性、一致性、隔离性、持久性&lt;/p&gt;
+&lt;h1 id=&quot;1、Spring事务&quot;&gt;&lt;a </summary>
+      
+    
+    
+    
+    <category term="spring事务" scheme="https://minkimm.cn/categories/spring%E4%BA%8B%E5%8A%A1/"/>
+    
+    
+    <category term="spring事务" scheme="https://minkimm.cn/tags/spring%E4%BA%8B%E5%8A%A1/"/>
     
   </entry>
   
   <entry>
     <title>SQL优化</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/</id>
+    <link href="https://minkimm.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/"/>
+    <id>https://minkimm.cn/2022/09/14/sql%E4%BC%98%E5%8C%96/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-29T06:26:23.927Z</updated>
     
@@ -266,39 +291,14 @@
     
     
     
-    <category term="sql" scheme="https://mink.yoonada.cn/tags/sql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>spring事务</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/</id>
-    <published>2022-09-14T10:00:05.000Z</published>
-    <updated>2022-09-16T03:17:58.433Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="事务基本知识"><a href="#事务基本知识" class="headerlink" title="事务基本知识"></a>事务基本知识</h1><p>事务的四大特性分别是：原子性、一致性、隔离性、持久性</p><h1 id="1、Spring事务"><a href="#1、Spring事务" class="headerlink" title="1、Spring事务"></a>1、Spring事务</h1><h3 id="1、spring事务失效三种情况"><a href="#1、spring事务失效三种情况" class="headerlink" title="1、spring事务失效三种情况"></a>1、spring事务失效三种情况</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、方法修饰符不为public</span><br><span class="line"></span><br><span class="line">2、被try cath没抛出异常</span><br><span class="line"></span><br><span class="line">3、Transactional默认为runtime异常其他的不会回滚</span><br></pre></td></tr></table></figure><h3 id="2、spring事务传播机制"><a href="#2、spring事务传播机制" class="headerlink" title="2、spring事务传播机制"></a>2、spring事务传播机制</h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;事务基本知识&quot;&gt;&lt;a href=&quot;#事务基本知识&quot; class=&quot;headerlink&quot; title=&quot;事务基本知识&quot;&gt;&lt;/a&gt;事务基本知识&lt;/h1&gt;&lt;p&gt;事务的四大特性分别是：原子性、一致性、隔离性、持久性&lt;/p&gt;
-&lt;h1 id=&quot;1、Spring事务&quot;&gt;&lt;a </summary>
-      
-    
-    
-    
-    <category term="spring事务" scheme="https://mink.yoonada.cn/categories/spring%E4%BA%8B%E5%8A%A1/"/>
-    
-    
-    <category term="spring事务" scheme="https://mink.yoonada.cn/tags/spring%E4%BA%8B%E5%8A%A1/"/>
+    <category term="sql" scheme="https://minkimm.cn/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>微服务环境搭建</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/</id>
+    <link href="https://minkimm.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/"/>
+    <id>https://minkimm.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-29T06:26:23.993Z</updated>
     
@@ -313,14 +313,14 @@
     
     
     
-    <category term="微服务" scheme="https://mink.yoonada.cn/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    <category term="微服务" scheme="https://minkimm.cn/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
   </entry>
   
   <entry>
     <title>后端存储实战</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/</id>
+    <link href="https://minkimm.cn/2022/09/14/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/"/>
+    <id>https://minkimm.cn/2022/09/14/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-16T03:01:38.179Z</updated>
     
@@ -335,14 +335,14 @@
     
     
     
-    <category term="后端存储实战" scheme="https://mink.yoonada.cn/tags/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/"/>
+    <category term="后端存储实战" scheme="https://minkimm.cn/tags/%E5%90%8E%E7%AB%AF%E5%AD%98%E5%82%A8%E5%AE%9E%E6%88%98/"/>
     
   </entry>
   
   <entry>
     <title>多线程</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B/</id>
+    <link href="https://minkimm.cn/2022/09/14/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <id>https://minkimm.cn/2022/09/14/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-16T03:17:33.699Z</updated>
     
@@ -356,17 +356,17 @@
     
     
     
-    <category term="Java基础" scheme="https://mink.yoonada.cn/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://minkimm.cn/categories/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java基础" scheme="https://mink.yoonada.cn/tags/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://minkimm.cn/tags/Java%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>设计模式</title>
-    <link href="https://mink.yoonada.cn/2022/09/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://mink.yoonada.cn/2022/09/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://minkimm.cn/2022/09/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://minkimm.cn/2022/09/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
     <published>2022-09-14T10:00:05.000Z</published>
     <updated>2022-09-16T03:17:33.711Z</updated>
     
@@ -385,17 +385,17 @@
     
     
     
-    <category term="Java基础" scheme="https://mink.yoonada.cn/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    <category term="Java基础" scheme="https://minkimm.cn/categories/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="面对对象编程" scheme="https://mink.yoonada.cn/tags/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
+    <category term="面对对象编程" scheme="https://minkimm.cn/tags/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>docker-compose命令</title>
-    <link href="https://mink.yoonada.cn/2022/08/04/docker-compose%E5%91%BD%E4%BB%A4/"/>
-    <id>https://mink.yoonada.cn/2022/08/04/docker-compose%E5%91%BD%E4%BB%A4/</id>
+    <link href="https://minkimm.cn/2022/08/04/docker-compose%E5%91%BD%E4%BB%A4/"/>
+    <id>https://minkimm.cn/2022/08/04/docker-compose%E5%91%BD%E4%BB%A4/</id>
     <published>2022-08-04T06:53:08.000Z</published>
     <updated>2023-03-10T06:52:32.025Z</updated>
     
@@ -409,21 +409,21 @@
     
     
     
-    <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/categories/docker/"/>
     
-    <category term="部署" scheme="https://mink.yoonada.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
+    <category term="部署" scheme="https://minkimm.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
     
     
-    <category term="docker-compose" scheme="https://mink.yoonada.cn/tags/docker-compose/"/>
+    <category term="docker-compose" scheme="https://minkimm.cn/tags/docker-compose/"/>
     
-    <category term="命令" scheme="https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/"/>
+    <category term="命令" scheme="https://minkimm.cn/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>docker常用命令</title>
-    <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://mink.yoonada.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <link href="https://minkimm.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://minkimm.cn/2022/07/01/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
     <published>2022-07-01T07:53:36.000Z</published>
     <updated>2022-10-28T03:17:20.644Z</updated>
     
@@ -437,21 +437,21 @@
     
     
     
-    <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/categories/docker/"/>
     
-    <category term="部署" scheme="https://mink.yoonada.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
+    <category term="部署" scheme="https://minkimm.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
     
     
-    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/tags/docker/"/>
     
-    <category term="命令" scheme="https://mink.yoonada.cn/tags/%E5%91%BD%E4%BB%A4/"/>
+    <category term="命令" scheme="https://minkimm.cn/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>git配置ssh</title>
-    <link href="https://mink.yoonada.cn/2022/07/01/git%E9%85%8D%E7%BD%AEssh/"/>
-    <id>https://mink.yoonada.cn/2022/07/01/git%E9%85%8D%E7%BD%AEssh/</id>
+    <link href="https://minkimm.cn/2022/07/01/git%E9%85%8D%E7%BD%AEssh/"/>
+    <id>https://minkimm.cn/2022/07/01/git%E9%85%8D%E7%BD%AEssh/</id>
     <published>2022-07-01T07:40:04.000Z</published>
     <updated>2022-08-04T08:40:07.000Z</updated>
     
@@ -466,16 +466,16 @@
     
     
     
-    <category term="Git" scheme="https://mink.yoonada.cn/tags/Git/"/>
+    <category term="Git" scheme="https://minkimm.cn/tags/Git/"/>
     
-    <category term="SSH" scheme="https://mink.yoonada.cn/tags/SSH/"/>
+    <category term="SSH" scheme="https://minkimm.cn/tags/SSH/"/>
     
   </entry>
   
   <entry>
     <title>docker安装RabbitMQ</title>
-    <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85RabbitMQ/"/>
-    <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85RabbitMQ/</id>
+    <link href="https://minkimm.cn/2022/07/01/docker%E5%AE%89%E8%A3%85RabbitMQ/"/>
+    <id>https://minkimm.cn/2022/07/01/docker%E5%AE%89%E8%A3%85RabbitMQ/</id>
     <published>2022-07-01T03:49:55.000Z</published>
     <updated>2022-10-28T03:17:47.624Z</updated>
     
@@ -489,21 +489,21 @@
     
     
     
-    <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/categories/docker/"/>
     
-    <category term="部署" scheme="https://mink.yoonada.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
+    <category term="部署" scheme="https://minkimm.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
     
     
-    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/tags/docker/"/>
     
-    <category term="RabbitMQ" scheme="https://mink.yoonada.cn/tags/RabbitMQ/"/>
+    <category term="RabbitMQ" scheme="https://minkimm.cn/tags/RabbitMQ/"/>
     
   </entry>
   
   <entry>
     <title>docker安装redis</title>
-    <link href="https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/"/>
-    <id>https://mink.yoonada.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/</id>
+    <link href="https://minkimm.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/"/>
+    <id>https://minkimm.cn/2022/07/01/docker%E5%AE%89%E8%A3%85redis/</id>
     <published>2022-07-01T03:49:20.000Z</published>
     <updated>2022-10-28T03:17:47.552Z</updated>
     
@@ -517,14 +517,14 @@
     
     
     
-    <category term="docker" scheme="https://mink.yoonada.cn/categories/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/categories/docker/"/>
     
-    <category term="部署" scheme="https://mink.yoonada.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
+    <category term="部署" scheme="https://minkimm.cn/categories/docker/%E9%83%A8%E7%BD%B2/"/>
     
     
-    <category term="docker" scheme="https://mink.yoonada.cn/tags/docker/"/>
+    <category term="docker" scheme="https://minkimm.cn/tags/docker/"/>
     
-    <category term="redis" scheme="https://mink.yoonada.cn/tags/redis/"/>
+    <category term="redis" scheme="https://minkimm.cn/tags/redis/"/>
     
   </entry>
   
