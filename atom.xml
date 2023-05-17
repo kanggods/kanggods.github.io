@@ -271,6 +271,28 @@
   </entry>
   
   <entry>
+    <title>微服务环境搭建</title>
+    <link href="https://minkimm.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/"/>
+    <id>https://minkimm.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/</id>
+    <published>2022-09-14T10:00:05.000Z</published>
+    <updated>2022-09-29T06:26:23.993Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="从0到1搭建微服务项目-核心模块"><a href="#从0到1搭建微服务项目-核心模块" class="headerlink" title="从0到1搭建微服务项目-核心模块"></a>从0到1搭建微服务项目-核心模块</h3><p>1，微服务对应的springboot版本很重要，可以去官网查看对应版本知道你们懒，所以帮你们截图下来了。</p><p><img src="http://114.55.238.234:9000/images/image-20220901175350918.png" alt="image-20220901175350918"></p><p>  <strong>最新版本有很多坑</strong>，但是我们</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">spring-boot.version</span>&gt;</span>2.5.5<span class="tag">&lt;/<span class="name">spring-boot.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">spring-cloud.version</span>&gt;</span>2020.0.4<span class="tag">&lt;/<span class="name">spring-cloud.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">spring-cloud-alibaba.version</span>&gt;</span>2021.1<span class="tag">&lt;/<span class="name">spring-cloud-alibaba.version</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;从0到1搭建微服务项目-核心模块&quot;&gt;&lt;a href=&quot;#从0到1搭建微服务项目-核心模块&quot; class=&quot;headerlink&quot; title=&quot;从0到1搭建微服务项目-核心模块&quot;&gt;&lt;/a&gt;从0到1搭建微服务项目-核心模块&lt;/h3&gt;&lt;p&gt;1，微服务对应的spring</summary>
+      
+    
+    
+    
+    
+    <category term="微服务" scheme="https://minkimm.cn/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>spring事务</title>
     <link href="https://minkimm.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/"/>
     <id>https://minkimm.cn/2022/09/14/%E4%BA%8B%E5%8A%A1%E7%9B%B8%E5%85%B3/</id>
@@ -292,28 +314,6 @@
     
     
     <category term="spring事务" scheme="https://minkimm.cn/tags/spring%E4%BA%8B%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微服务环境搭建</title>
-    <link href="https://minkimm.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/"/>
-    <id>https://minkimm.cn/2022/09/14/%E4%BB%8E0%E5%88%B01%E6%90%AD%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE-%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/</id>
-    <published>2022-09-14T10:00:05.000Z</published>
-    <updated>2022-09-29T06:26:23.993Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="从0到1搭建微服务项目-核心模块"><a href="#从0到1搭建微服务项目-核心模块" class="headerlink" title="从0到1搭建微服务项目-核心模块"></a>从0到1搭建微服务项目-核心模块</h3><p>1，微服务对应的springboot版本很重要，可以去官网查看对应版本知道你们懒，所以帮你们截图下来了。</p><p><img src="http://114.55.238.234:9000/images/image-20220901175350918.png" alt="image-20220901175350918"></p><p>  <strong>最新版本有很多坑</strong>，但是我们</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">spring-boot.version</span>&gt;</span>2.5.5<span class="tag">&lt;/<span class="name">spring-boot.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">spring-cloud.version</span>&gt;</span>2020.0.4<span class="tag">&lt;/<span class="name">spring-cloud.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">spring-cloud-alibaba.version</span>&gt;</span>2021.1<span class="tag">&lt;/<span class="name">spring-cloud-alibaba.version</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;从0到1搭建微服务项目-核心模块&quot;&gt;&lt;a href=&quot;#从0到1搭建微服务项目-核心模块&quot; class=&quot;headerlink&quot; title=&quot;从0到1搭建微服务项目-核心模块&quot;&gt;&lt;/a&gt;从0到1搭建微服务项目-核心模块&lt;/h3&gt;&lt;p&gt;1，微服务对应的spring</summary>
-      
-    
-    
-    
-    
-    <category term="微服务" scheme="https://minkimm.cn/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
   </entry>
   
